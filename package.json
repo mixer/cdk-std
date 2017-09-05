@@ -1,0 +1,44 @@
+{
+  "name": "@mcph/miix-std",
+  "version": "0.1.0",
+  "description": "Standard library for Mixer Interactive controls",
+  "main": "dist/index.min.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "npm-run-all --parallel --silent test:lint fmt",
+    "test:lint": "tslint --type-check --project tsconfig.json '{src,test}/**/*.ts'",
+    "fmt": "prettier --single-quote --trailing-comma all --parser typescript --print-width 100 --write \"{src,test}/**/*.ts\"",
+    "build": "npm-run-all --parallel --silent build:ts build:bundle",
+    "build:ts": "tsc",
+    "build:bundle": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mixer/miix-std.git"
+  },
+  "keywords": [
+    "mixer",
+    "miix",
+    "interactive",
+    "controls",
+    "custom"
+  ],
+  "author": "Connor Peet <connor@peet.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mixer/miix-std/issues"
+  },
+  "homepage": "https://github.com/mixer/miix-std#readme",
+  "dependencies": {
+    "@types/eventemitter3": "^2.0.2"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.2.3",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.6.1",
+    "tslint": "^5.7.0",
+    "tslint-microsoft-contrib": "^5.0.1",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.5"
+  }
+}
