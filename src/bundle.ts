@@ -178,6 +178,48 @@ window.addEventListener('beforeunload', () => {
   rpc.call('unloading', {}, false);
 });
 
+/**
+ * Since your interactive controls can be run by any client, it's sometimes
+ * useful (particularly if you do fancier service integration) to be able to
+ * verify that the player is who they say they are. This method provides a
+ * means for you to do that. This is what happens:
+ *
+ *  1. You create a cryptographically secure challenge for the user. This MUST
+ *     be done on your service; the challenge is used so that adversaries
+ *     cannot impersonate users (for instance, by gathering challenge
+ *     responses for their own integrations then injecting
+ *     those into your controls).
+ *
+ *  2. Mixer servers will create a token based on the challenge and a
+ *     secret, and return that in the response to this method.
+ *
+ *  3. You may transmit the token and challenge to your services and call
+ *     /api/v1/interactive/identity/verify to get the user ID that corresponds
+ *     to the token. The API will return a 400 if the challenge is invalid.
+ *
+ * Visualized, that's something like this:
+ *
+ *
+ * ┌──────────┐    challenge  ┌──────────┐                ┌───────┐
+ * │          ├───────────────▶          │                │       │
+ * │          │               │          │─ ─ ─ ─ ─ ─ ─ ─ ▶       │
+ * │   Your   │               │          │                │       │
+ * │ Service  │               │ Controls │                │       │
+ * │          │               │          │                │       │
+ * │          │      token    │          │                │       │
+ * │          │◀──────────────│          ◀ ─ ─ ─ ─ ─ ─ ─ ─│ Mixer │
+ * └─────┬────┘               └──────────┘                │       │
+ *       │                                                │       │
+ *       │                                                │       │
+ *       │    POST /interactive/identity/verify           │       │
+ *       └────────────────────────────────────────────────▶       │
+ *             { "challenge":"...","token:"..." }         │       │
+ *                                                        └───────┘
+ */
+export function getIdentityVerification(challenge: string): Promise<string> {
+  return rpc.call('verificationChallenge', { challenge }, true);
+}
+
 export const packageConfig: IPackageConfig = <any>null; // overridden by the MixerPlugin
 export const socket = new Socket();
 export const display = new Display();
