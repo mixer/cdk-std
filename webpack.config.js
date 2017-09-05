@@ -2,10 +2,10 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: [path.resolve(__dirname, './src/index.ts')],
+  entry: [path.resolve(__dirname, './src/bundle.ts')],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'index.min.js',
+    filename: 'bundle.min.js',
     libraryTarget: 'var',
     library: 'mixer',
   },

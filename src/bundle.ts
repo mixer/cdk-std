@@ -18,7 +18,7 @@ import {
   IVideoPositionOptions,
 } from './typings';
 
-export { RPCError } from './rpc';
+export * from './rpc';
 export * from './typings';
 export * from './decoration';
 export * from './package';
