@@ -178,6 +178,9 @@ window.addEventListener('beforeunload', () => {
   rpc.call('unloading', {}, false);
 });
 
-export const packageConfig: IPackageConfig = <any>null; // overridden by the MixerPlugin
+// These are overridden by the MixerPlugin:
+export const packageConfig: IPackageConfig = <any>null;
+export const locales: string[] = [];
+
 export const socket = new Socket();
 export const display = new Display();
