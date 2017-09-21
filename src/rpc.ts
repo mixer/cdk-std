@@ -2,6 +2,8 @@ import { EventEmitter } from 'eventemitter3';
 
 export type RPCMessage<T> = IRPCMethod<T> | IRPCReply<T>;
 
+export type RPCMessageWithCounter<T> = RPCMessage<T> & { counter: number };
+
 export interface IRPCMethod<T> {
   type: 'method';
   id: number;
@@ -19,6 +21,19 @@ export interface IRPCReply<T> {
     message: string;
     path?: string[];
   };
+}
+
+/**
+ * Checks whether the message duck-types into an Interactive message.
+ * This is needed to distinguish between postmessages that we get,
+ * and postmessages from other sources.
+ */
+function isRPCMessage(data: any): data is RPCMessageWithCounter<any> {
+  return (
+    (data.type === 'method' || data.type === 'reply') &&
+    typeof data.id === 'number' &&
+    typeof data.counter === 'number'
+  );
 }
 
 /**
@@ -45,11 +60,15 @@ export function objToError(obj: { code: number; message: string; path?: string[]
  * parent frame.
  */
 export class RPC extends EventEmitter {
-  private static origin = '*'; // todo(connor4312): do we need to restrict this?
-  private callCounter = 0;
+  private static origin = '*';
+  private idCounter = 0;
   private calls: {
     [id: number]: (err: null | RPCError, result: any) => void;
   } = Object.create(null);
+
+  private callCounter = 0;
+  private remoteCallQueue: RPCMessageWithCounter<any>[] = [];
+  private lastSequentialCall = -1;
 
   constructor(private readonly target: Window) {
     super();
@@ -84,8 +103,15 @@ export class RPC extends EventEmitter {
   public call<T>(method: string, params: object, waitForReply: true): Promise<T>;
   public call(method: string, params: object, waitForReply: false): void;
   public call<T>(method: string, params: object, waitForReply: boolean): Promise<T> | void {
-    const id = this.callCounter++;
-    this.post({ type: 'method', id, params, method, discard: !waitForReply });
+    const id = this.idCounter++;
+    this.post({
+      type: 'method',
+      id,
+      params,
+      method,
+      discard: !waitForReply,
+    });
+
     if (!waitForReply) {
       return;
     }
@@ -123,12 +149,47 @@ export class RPC extends EventEmitter {
     delete this.calls[packet.id];
   }
 
-  private post(message: RPCMessage<any>) {
+  private post<T>(message: RPCMessage<T>) {
+    (<RPCMessageWithCounter<T>>message).counter = this.callCounter++;
     this.target.postMessage(message, RPC.origin);
   }
 
   private listener = (ev: MessageEvent) => {
-    const packet: RPCMessage<any> = ev.data;
+    const packet: RPCMessageWithCounter<any> = ev.data;
+    if (!isRPCMessage(packet)) {
+      return;
+    }
+
+    // postMessage does not guarantee message order, reorder messages as needed.
+    // Reset the call counter when we get a "ready" so that the other end sees
+    // calls starting from 0.
+
+    if (packet.type === 'method' && packet.method === 'ready') {
+      this.lastSequentialCall = packet.counter - 1;
+      this.callCounter = 0;
+    }
+
+    if (packet.counter <= this.lastSequentialCall + 1) {
+      this.dispatchIncoming(packet);
+      while (this.remoteCallQueue.length) {
+        this.dispatchIncoming(this.remoteCallQueue.shift()!);
+      }
+      return;
+    }
+
+    for (let i = 0; i < this.remoteCallQueue.length; i++) {
+      if (this.remoteCallQueue[i].counter > packet.counter) {
+        this.remoteCallQueue.splice(i, 0, packet);
+        return;
+      }
+    }
+
+    this.remoteCallQueue.push(packet);
+  };
+
+  private dispatchIncoming(packet: RPCMessageWithCounter<any>) {
+    this.lastSequentialCall = packet.counter;
+
     switch (packet.type) {
       case 'method':
         if (this.listeners(packet.method).length > 0) {
@@ -147,8 +208,7 @@ export class RPC extends EventEmitter {
         this.handleReply(packet);
         break;
       default:
-      // Ignore. We can get postmessage from other sources (webpack in
-      // development), we don't want to error.
+      // Ignore
     }
-  };
+  }
 }
