@@ -149,6 +149,11 @@ export interface IInputOptions {
   displayName?: string;
 
   /**
+   * Default value for the option.
+   */
+  defaultValue?: any;
+
+  /**
    * The type of data this input takes. See the InputKind enum for more
    * information and a description. If you are not using TypeScript, this
    * MUST be defined!
