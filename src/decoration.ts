@@ -1,3 +1,5 @@
+import { IPackageConfig } from './package';
+
 /**
  * Dimensions exist on every Interactive control and define its display.
  */
@@ -52,7 +54,7 @@ export interface IControlOptions {
    * if you use the @Input decorator, but this may come in handy if you
    * don't want to or can't use them in your environment.
    */
-  inputs?: { [property: string]: IInputOptions };
+  inputs?: IInputDescriptor[];
 }
 
 /**
@@ -100,7 +102,7 @@ export interface ISceneOptions {
    * if you use the @Input decorator, but this may come in handy if you
    * don't want to or can't use them in your environment.
    */
-  inputs?: { [property: string]: IInputOptions };
+  inputs?: IInputDescriptor[];
 }
 
 /**
@@ -130,6 +132,7 @@ export enum InputKind {
   Color, // string, hex code in the format "#123456"           (not inferrable)
   Duration, // number, duration give in milliseconds           (not inferrable)
   Url, // string, fully qualified with the http prefix         (not inferrable)
+  JSON, // any JSON data, allows users to enter raw JSON       (not inferrable)
 }
 
 /**
@@ -163,7 +166,7 @@ export interface IInputOptions {
 
 const sceneMetaKey = '__mix_scene';
 const controlMetaKey = '__miix_control';
-const inputsMetaKey = '__miix_input';
+const descriptorMetaKey = '__miix_descriptor';
 
 /**
  * ISceneDescriptor is returned from the Registry's .getScene(). This contains
@@ -197,6 +200,7 @@ export class Registry {
   private defaultScene: ISceneDescriptor | undefined;
   private scenes: { [id: string]: ISceneDescriptor } = Object.create(null);
   private controls: { [id: string]: IControlDescriptor } = Object.create(null);
+  private config: IPackageConfig = (<any>window).mixerPackageConfig;
 
   /**
    * Adds a collection of controls and scenes to the registry. This will throw
@@ -257,28 +261,38 @@ export class Registry {
    * Returns inputs defined on the given control instance.
    */
   public getInputs(control: object): ReadonlyArray<Readonly<IInputDescriptor>> {
-    const inputs = (<any>control.constructor)[inputsMetaKey];
-    if (!inputs) {
+    const descriptor: ISceneDescriptor | IControlDescriptor = (<any>control.constructor)[
+      descriptorMetaKey
+    ];
+    if (!descriptor) {
       throw new Error(
         `Tried to get inputs on ${control.constructor.name}, but it isn't a ` +
           `@Scene or @Control object!`,
       );
     }
 
-    return inputs;
+    return descriptor.inputs || [];
   }
 
   private registerScene(scene: Function, options: ISceneOptions) {
     const existing = options.id && this.scenes[options.id];
+    const id = options.id || 'default';
     if (existing) {
       throw new Error(
         `Duplicate scene IDs registered! Both ${existing.ctor.name} and ` +
-          `${scene.name} registered themselves for scene ID ${options.id}`,
+          `${scene.name} registered themselves for scene ID ${id}`,
       );
     }
 
-    const descriptor: ISceneDescriptor = { ...options, ctor: scene };
-    this.scenes[options.id || 'default'] = descriptor;
+    const descriptor: ISceneDescriptor = {
+      ...options,
+      ...this.config.scenes[id],
+      ctor: scene,
+    };
+
+    Object.defineProperty(scene, descriptorMetaKey, { value: descriptor });
+    this.scenes[id] = descriptor;
+
     if (options.default) {
       this.defaultScene = descriptor;
     }
@@ -293,19 +307,15 @@ export class Registry {
       );
     }
 
-    this.controls[options.kind] = { ...options, ctor: control };
-  }
-}
+    const descriptor = {
+      ...options,
+      ...this.config.controls[options.kind],
+      ctor: control,
+    };
 
-function ensureInputsDefined(ctor: Function): IInputDescriptor[] {
-  const loose: any = ctor;
-  let value = loose[inputsMetaKey];
-  if (!value) {
-    value = [];
-    Object.defineProperty(ctor, inputsMetaKey, { value });
+    Object.defineProperty(control, descriptorMetaKey, { value: descriptor });
+    this.controls[options.kind] = descriptor;
   }
-
-  return value;
 }
 
 /**
@@ -315,7 +325,6 @@ function ensureInputsDefined(ctor: Function): IInputDescriptor[] {
 export function Scene(options: ISceneOptions = { default: true }) {
   return (ctor: Function) => {
     Object.defineProperty(ctor, sceneMetaKey, { value: options });
-    ensureInputsDefined(ctor);
   };
 }
 
@@ -326,7 +335,6 @@ export function Scene(options: ISceneOptions = { default: true }) {
 export function Control(options: IControlOptions) {
   return (ctor: Function) => {
     Object.defineProperty(ctor, controlMetaKey, { value: options });
-    ensureInputsDefined(ctor);
   };
 }
 /**
@@ -334,12 +342,8 @@ export function Control(options: IControlOptions) {
  * Interactive studio and settable for Preact components. See the
  * {@link IInputOptions} for more info.
  */
-export function Input(options: IInputOptions = {}) {
-  return (host: object, propertyName: string): void => {
-    const inputs = ensureInputsDefined(host.constructor);
-    inputs.push({
-      ...options,
-      propertyName,
-    });
+export function Input(_options: IInputOptions = {}) {
+  return (_host: object, _propertyName: string): void => {
+    // noop, this is handled by static analysis
   };
 }

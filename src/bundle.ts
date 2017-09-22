@@ -221,8 +221,8 @@ export function getIdentityVerification(challenge: string): Promise<string> {
 }
 
 // These are overridden by the MixerPlugin:
-export const packageConfig: IPackageConfig = <any>null;
-export const locales: string[] = [];
+export const packageConfig: IPackageConfig = (<any>window).mixerPackageConfig;
+export const locales: string[] = (<any>window).mixerLocales;
 
 export const socket = new Socket();
 export const display = new Display();
