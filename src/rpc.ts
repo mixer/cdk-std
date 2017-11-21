@@ -6,6 +6,7 @@ export type RPCMessageWithCounter<T> = RPCMessage<T> & { counter: number };
 
 export interface IRPCMethod<T> {
   type: 'method';
+  serviceID: string;
   id: number;
   method: string;
   discard?: boolean;
@@ -14,6 +15,7 @@ export interface IRPCMethod<T> {
 
 export interface IRPCReply<T> {
   type: 'reply';
+  serviceID: string;
   id: number;
   result: T;
   error?: {
@@ -29,11 +31,7 @@ export interface IRPCReply<T> {
  * and postmessages from other sources.
  */
 function isRPCMessage(data: any): data is RPCMessageWithCounter<any> {
-  return (
-    (data.type === 'method' || data.type === 'reply') &&
-    typeof data.id === 'number' &&
-    typeof data.counter === 'number'
-  );
+  return (data.type === 'method' || data.type === 'reply') && typeof data.counter === 'number';
 }
 
 /**
@@ -56,11 +54,25 @@ export function objToError(obj: { code: number; message: string; path?: string[]
 }
 
 /**
+ * IPostable is an interface that describes something that can receive a
+ * browser postMessage. It's implemented by the `window`, and is mocked
+ * in tests.
+ */
+export interface IPostable {
+  postMessage(data: any, targetOrigin: string): void;
+}
+
+/**
  * Primitive postMessage based RPC for the controls to interact with the
  * parent frame.
  */
 export class RPC extends EventEmitter {
-  private static origin = '*';
+  /**
+   * Service ID for this module. This is used to prevent
+   * multiple postMessage-based APIs for clobbering each other.
+   */
+  public static serviceID = '8f5b3a83-dd7b-4b8a-84ad-146948bc8d27';
+
   private idCounter = 0;
   private calls: {
     [id: number]: (err: null | RPCError, result: any) => void;
@@ -69,11 +81,16 @@ export class RPC extends EventEmitter {
   private callCounter = 0;
   private remoteCallQueue: RPCMessageWithCounter<any>[] = [];
   private lastSequentialCall = -1;
+  private remoteProtocolVersion: string | undefined;
 
-  constructor(private readonly target: Window) {
+  constructor(
+    private readonly target: IPostable,
+    protocolVersion: string,
+    private readonly origin: string = '*',
+  ) {
     super();
     window.addEventListener('message', this.listener);
-    this.call('ready', {}, false);
+    this.call('ready', { protocolVersion }, false);
   }
 
   /**
@@ -90,6 +107,7 @@ export class RPC extends EventEmitter {
       Promise.resolve(handler(data.params)).then(result => {
         this.post({
           type: 'reply',
+          serviceID: RPC.serviceID,
           id: data.id,
           result,
         });
@@ -100,12 +118,13 @@ export class RPC extends EventEmitter {
   /**
    * Makes an RPC call out to the target window.
    */
-  public call<T>(method: string, params: object, waitForReply: true): Promise<T>;
+  public call<T>(method: string, params: object, waitForReply?: true): Promise<T>;
   public call(method: string, params: object, waitForReply: false): void;
-  public call<T>(method: string, params: object, waitForReply: boolean): Promise<T> | void {
+  public call<T>(method: string, params: object, waitForReply: boolean = true): Promise<T> | void {
     const id = this.idCounter++;
     this.post({
       type: 'method',
+      serviceID: RPC.serviceID,
       id,
       params,
       method,
@@ -134,6 +153,14 @@ export class RPC extends EventEmitter {
     window.removeEventListener('message', this.listener);
   }
 
+  /**
+   * Returns the protocol version that the remote client implements. This
+   * will return `undefined` until we get a `ready` event.
+   */
+  public remoteVersion(): string | undefined {
+    return this.remoteProtocolVersion;
+  }
+
   private handleReply(packet: IRPCReply<any>) {
     const handler = this.calls[packet.id];
     if (!handler) {
@@ -151,12 +178,23 @@ export class RPC extends EventEmitter {
 
   private post<T>(message: RPCMessage<T>) {
     (<RPCMessageWithCounter<T>>message).counter = this.callCounter++;
-    this.target.postMessage(message, RPC.origin);
+    this.target.postMessage(message, this.origin);
+  }
+
+  private replayQueue() {
+    while (this.remoteCallQueue.length) {
+      const next = this.remoteCallQueue[0];
+      if (next.counter > this.lastSequentialCall + 1) {
+        return;
+      }
+
+      this.dispatchIncoming(this.remoteCallQueue.shift()!);
+    }
   }
 
   private listener = (ev: MessageEvent) => {
     const packet: RPCMessageWithCounter<any> = ev.data;
-    if (!isRPCMessage(packet)) {
+    if (!isRPCMessage(packet) || packet.serviceID !== RPC.serviceID) {
       return;
     }
 
@@ -166,14 +204,13 @@ export class RPC extends EventEmitter {
 
     if (packet.type === 'method' && packet.method === 'ready') {
       this.lastSequentialCall = packet.counter - 1;
+      this.remoteProtocolVersion = packet.params.protocolVersion;
       this.callCounter = 0;
     }
 
     if (packet.counter <= this.lastSequentialCall + 1) {
       this.dispatchIncoming(packet);
-      while (this.remoteCallQueue.length) {
-        this.dispatchIncoming(this.remoteCallQueue.shift()!);
-      }
+      this.replayQueue();
       return;
     }
 
@@ -199,6 +236,7 @@ export class RPC extends EventEmitter {
 
         this.post({
           type: 'reply',
+          serviceID: RPC.serviceID,
           id: packet.id,
           error: { code: 4003, message: 'Unknown method name' },
           result: null,
