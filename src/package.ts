@@ -12,10 +12,6 @@ export interface IPackageConfig {
   keywords?: string[];
   private?: boolean;
   homepage?: string;
-
-  display: {
-    mode: 'fixed-grid' | 'flex';
-  };
   controls: {
     [id: string]: IControlOptions;
   };
