@@ -73,8 +73,20 @@ export class Display extends EventEmitter {
   }
 
   /**
-   * Returns the current display settings.
-   * @deprecated use `settings` instead
+   * Returns the video position at this moment in time. Returns undefined if
+   * the video position hasn't been sent yet. If undefined, you should retry,
+   * or listen to the `display.position()` observable to be notified when
+   * it comes in.
+   */
+  public getPosition(): ClientRect | undefined {
+    return this.videoPositionSubj.hasValue() ? this.videoPositionSubj.getValue() : undefined;
+  }
+
+  /**
+   * Returns the current display settings at this instant in time. It will
+   * be `undefined` if the settings have not been sent yet. If undefined,
+   * you should retry, or listen to the `display.settings()` observable to
+   * be notified when it comes in.
    */
   public getSettings(): ISettings | undefined {
     return this.settingsSubj.hasValue() ? this.settingsSubj.getValue() : undefined;
