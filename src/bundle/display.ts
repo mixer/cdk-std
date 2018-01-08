@@ -1,18 +1,26 @@
 import { EventEmitter } from 'eventemitter3';
+import { Observable } from 'rxjs/Observable';
 
 import { RPC } from '../internal';
+import { MemorizingSubject } from '../reactive';
 import { ISettings, IVideoPositionOptions } from '../typings';
 
 /**
  * Display modified the display of interactive controls.
  */
 export class Display extends EventEmitter {
-  private lastSettings: ISettings;
+  private settingsSubj = new MemorizingSubject<ISettings>();
+  private videoPositionSubj = new MemorizingSubject<ClientRect>();
 
   constructor(private readonly rpc: RPC) {
     super();
+
+    rpc.expose('updateVideoPosition', (pos: ClientRect) => {
+      this.videoPositionSubj.next(pos);
+    });
+
     rpc.expose('updateSettings', (settings: ISettings) => {
-      this.lastSettings = settings;
+      this.settingsSubj.next(settings);
       this.emit('settings', settings);
     });
   }
@@ -40,12 +48,41 @@ export class Display extends EventEmitter {
   }
 
   /**
-   * Returns the current display settings.
+   * Returns an observable of the video's current position, relative to
+   * the frame's screen. For example, you can use it to set the position
+   * of an overlaid div:
+   *
+   * ```
+   * mixer.display.position().subscribe(position => {
+   *   videoOverlay.style.top = `${position.top}px`;
+   *   videoOverlay.style.left = `${position.left}px`;
+   *   videoOverlay.style.height = `${position.height}px`;
+   *   videoOverlay.style.width = `${position.width}px`;
+   * });
+   * ```
    */
-  public getSettings(): ISettings | undefined {
-    return this.lastSettings;
+  public position(): Observable<ClientRect> {
+    return this.videoPositionSubj;
   }
 
+  /**
+   * Returns an observable of the current project settings.
+   */
+  public settings(): Observable<ISettings> {
+    return this.settingsSubj;
+  }
+
+  /**
+   * Returns the current display settings.
+   * @deprecated use `settings` instead
+   */
+  public getSettings(): ISettings | undefined {
+    return this.settingsSubj.hasValue() ? this.settingsSubj.getValue() : undefined;
+  }
+
+  /**
+   * @deprecated use `settings` instead.
+   */
   public on(event: 'settings', handler: (ev: ISettings) => void): this;
   public on(event: string, handler: (...args: any[]) => void): this {
     super.on(event, handler);
