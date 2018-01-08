@@ -6,16 +6,48 @@ import { MemorizingSubject } from '../reactive';
 import { ISettings, IVideoPositionOptions } from '../typings';
 
 /**
+ * IVideoPosition contains data about the position of the video relative
+ * to the iframe, in addition to its channel ID.
+ */
+export interface IVideoPosition extends ClientRect {
+  channelId: number;
+}
+
+/**
+ * IVideoPositionList is given in the `positions()`
+ * observable from the display.
+ */
+export interface IVideoPositionList {
+  /**
+   * connectedPlayer is the position of the video which the interactive
+   * integration is currently connected to. (In a Mixer costream, there can
+   * be multiple players displayed at once.)
+   */
+  connectedPlayer: IVideoPosition;
+
+  /**
+   * costreamPlayers is a list of all players in a Mixer costream. Costreaming
+   * allows multiple people to stream together, you can read more about it at
+   * the link below. This will always contain, at minimumum, the
+   * connectedPlayer. Additional channels may come and go over
+   * the course of the broadcast.
+   *
+   * @see https://watchbeam.zendesk.com/hc/en-us/articles/115003032426-Co-Stream-FAQ
+   */
+  costreamPlayers: IVideoPosition[];
+}
+
+/**
  * Display modified the display of interactive controls.
  */
 export class Display extends EventEmitter {
   private settingsSubj = new MemorizingSubject<ISettings>();
-  private videoPositionSubj = new MemorizingSubject<ClientRect>();
+  private videoPositionSubj = new MemorizingSubject<IVideoPositionList>();
 
   constructor(private readonly rpc: RPC) {
     super();
 
-    rpc.expose('updateVideoPosition', (pos: ClientRect) => {
+    rpc.expose('updateVideoPosition', (pos: IVideoPositionList) => {
       this.videoPositionSubj.next(pos);
     });
 
@@ -61,7 +93,7 @@ export class Display extends EventEmitter {
    * });
    * ```
    */
-  public position(): Observable<ClientRect> {
+  public position(): Observable<IVideoPositionList> {
     return this.videoPositionSubj;
   }
 
@@ -78,8 +110,10 @@ export class Display extends EventEmitter {
    * or listen to the `display.position()` observable to be notified when
    * it comes in.
    */
-  public getPosition(): ClientRect | undefined {
-    return this.videoPositionSubj.hasValue() ? this.videoPositionSubj.getValue() : undefined;
+  public getPosition(): IVideoPositionList | undefined {
+    return this.videoPositionSubj.hasValue()
+      ? this.videoPositionSubj.getValue()
+      : undefined;
   }
 
   /**
