@@ -6,9 +6,9 @@ const wpconfig = require('../webpack.config');
 const { version } = require('../package.json');
 
 const [major, minor] = version.split('.');
-const blobName = `std-v${major}.${minor}.js`;
+const blobVersion = process.argv[2] || `v${major}.${minor}`;
 
-console.log(' → Compiling library');
+console.log(` → Compiling library ${blobVersion}`);
 webpack(wpconfig, err => {
   if (err) {
     console.error(err);
@@ -23,7 +23,7 @@ webpack(wpconfig, err => {
     '--content-type "text/javascript; charset=utf-8"',
     '-c lib',
     '-f ../dist/bundle.min.js',
-    `-n ${blobName}`
+    `-n std-${blobVersion}.js`
   ].join(' '), {
     cwd: __dirname,
     env: process.env,
