@@ -376,6 +376,11 @@ export interface ISettings {
    * mobile layouts, this will generally be false.
    */
   placesVideo: boolean;
+
+  /**
+   * The platform the controls are currently running on.
+   */
+  platform: 'mobile' | 'xbox' | 'desktop';
 }
 
 /**
