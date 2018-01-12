@@ -57,7 +57,9 @@
     "webpack": "^3.8.1"
   },
   "dependencies": {
+    "@types/winjs": "^4.4.0",
     "eventemitter3": "^2.0.3",
-    "rxjs": "^5.5.6"
+    "rxjs": "^5.5.6",
+    "winjs": "^4.4.3"
   }
 }

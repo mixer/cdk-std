@@ -1,5 +1,6 @@
 import { Clock } from './bundle/clock';
 import { Display } from './bundle/display';
+import { Navigation } from './bundle/navigation';
 import { Socket } from './bundle/socket';
 import { IPackageConfig } from './package';
 import { RPC } from './rpc';
@@ -147,4 +148,5 @@ export const locales: string[] = (<any>window).mixerLocales;
 
 export const socket = new Socket(rpc);
 export const display = new Display(rpc);
+export const navigation = new Navigation(rpc);
 export const clock = new Clock(socket);
