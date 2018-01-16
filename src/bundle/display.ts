@@ -111,9 +111,7 @@ export class Display extends EventEmitter {
    * it comes in.
    */
   public getPosition(): IVideoPositionList | undefined {
-    return this.videoPositionSubj.hasValue()
-      ? this.videoPositionSubj.getValue()
-      : undefined;
+    return this.videoPositionSubj.hasValue() ? this.videoPositionSubj.getValue() : undefined;
   }
 
   /**

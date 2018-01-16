@@ -105,12 +105,15 @@ export class RPC extends EventEmitter {
 
       // tslint:disable-next-line
       Promise.resolve(handler(data.params)).then(result => {
-        this.post({
+        const packet: IRPCReply<any> = {
           type: 'reply',
           serviceID: RPC.serviceID,
           id: data.id,
           result,
-        });
+        };
+
+        this.emit('sendReply', packet);
+        this.post(packet);
       });
     });
   }
@@ -122,14 +125,17 @@ export class RPC extends EventEmitter {
   public call(method: string, params: object, waitForReply: false): void;
   public call<T>(method: string, params: object, waitForReply: boolean = true): Promise<T> | void {
     const id = this.idCounter++;
-    this.post({
+    const packet: IRPCMethod<any> = {
       type: 'method',
       serviceID: RPC.serviceID,
       id,
       params,
       method,
       discard: !waitForReply,
-    });
+    };
+
+    this.emit('sendMethod', packet);
+    this.post(packet);
 
     if (!waitForReply) {
       return;
@@ -150,6 +156,7 @@ export class RPC extends EventEmitter {
    * Tears down resources associated with the RPC client.
    */
   public destroy() {
+    this.emit('destroy');
     window.removeEventListener('message', this.listener);
   }
 
@@ -229,6 +236,7 @@ export class RPC extends EventEmitter {
 
     switch (packet.type) {
       case 'method':
+        this.emit('recvMethod', packet);
         if (this.listeners(packet.method).length > 0) {
           this.emit(packet.method, packet);
           return;
@@ -243,6 +251,7 @@ export class RPC extends EventEmitter {
         });
         break;
       case 'reply':
+        this.emit('recvReply', packet);
         this.handleReply(packet);
         break;
       default:
