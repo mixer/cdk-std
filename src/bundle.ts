@@ -50,6 +50,54 @@ window.addEventListener('beforeunload', () => {
 });
 
 /**
+ * Logs an exception to Mixer, called by the exported `log` object.
+ */
+function captureLogMessage(level: string, params: any[]) {
+  rpc.call(
+    'log',
+    {
+      level,
+      params: params.map(param => {
+        if (param instanceof Error) {
+          return {
+            message: param.message,
+            stack: param.stack,
+            metadata: typeof (<any>param).cause === 'function' ? (<any>param).cause() : null,
+          };
+        }
+
+        return param;
+      }),
+    },
+    false,
+  );
+}
+
+/**
+ * `log` has methods to capture messages from your controls. These'll be
+ * exposed in the miix UI, and we will continue to build further telemetry
+ * around them.
+ */
+export const log = {
+  debug(...params: any[]) {
+    captureLogMessage('debug', params);
+  },
+  info(...params: any[]) {
+    captureLogMessage('info', params);
+  },
+  warn(...params: any[]) {
+    captureLogMessage('warn', params);
+  },
+  error(...params: any[]) {
+    captureLogMessage('error', params);
+  },
+};
+
+window.onerror = (_message, _source, _lineno, _colno, error) => {
+  log.error('An uncaught exception occurred.', error);
+};
+
+/**
  * Since your interactive controls can be run by any client, it's sometimes
  * useful (particularly if you do fancier service integration) to be able to
  * verify that the player is who they say they are. This method provides a

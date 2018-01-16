@@ -395,6 +395,16 @@ export interface IStateDump {
 }
 
 /**
+ * ILogEntry can be sent up in a `log()` method call when something notable
+ * occurs. Log entries are surfaced in the miix UI and further telemetry
+ * may be built around them.
+ */
+export interface ILogEntry {
+  level: string;
+  params: any[];
+}
+
+/**
  * Enumeration of Interactive error codes. More docs and descriptions can be found in:
  * {@link https://dev.mixer.com/reference/interactive/protocol/protocol.pdf}
  */
