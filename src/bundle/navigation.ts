@@ -19,10 +19,10 @@ export const enum keys {
  */
 export class Navigation extends EventEmitter {
 
-  constructor(public readonly rpc: RPC) {
+  constructor(private readonly rpc: RPC) {
     super();
 
-    window.addEventListener('keydown', this.handleKeydown, true);
+    window.addEventListener('keydown', (ev: KeyboardEvent) => { this.handleKeydown(ev) }, true);
 
     rpc.expose('navigate', (navigate: IDirection) => {
       if (navigate.name === 'move') {
@@ -43,9 +43,9 @@ export class Navigation extends EventEmitter {
   /**
    * Handle exiting via escape and Game
    */
-  private handleKeydown(ev: KeyboardEvent) {
+  public handleKeydown(ev: KeyboardEvent) {
     if (ev.keyCode === keys.Escape || ev.keyCode === keys.GamepadB) {
-      window.parent.postMessage('exit', '*');
+      this.rpc.call('focusOut', {}, false);
     }
   }
 
