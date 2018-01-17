@@ -1,11 +1,17 @@
 import { EventEmitter } from 'eventemitter3';
-import * as winjs from 'winjs';
+// import * as winjs from 'winjs';
+require('../directionalnavigation-1.0.0.0.js');
 
 import { RPC } from '../internal';
 
 interface IDirection {
   name: string,
   data?: any,
+}
+
+export const enum keys {
+  Escape = 27,
+  GamepadB = 196,
 }
 
 /**
@@ -16,9 +22,9 @@ export class Navigation extends EventEmitter {
   constructor(public readonly rpc: RPC) {
     super();
 
-    rpc.expose('navigate', (navigate: IDirection) => {
-      console.log('navigating', navigate);
+    window.addEventListener('keydown', this.handleKeydown, true);
 
+    rpc.expose('navigate', (navigate: IDirection) => {
       if (navigate.name === 'move') {
         this.move(navigate.data);
       }
@@ -26,7 +32,7 @@ export class Navigation extends EventEmitter {
       if (navigate.name === 'submit') {
         const clickEvent = document.createEvent('MouseEvents');
         clickEvent.initEvent('mousedown', true, true);
-        const currentEl = document.querySelector('.arc--selected');
+        const currentEl = document.querySelector('.active');
         if (currentEl) {
           currentEl.dispatchEvent(clickEvent);
         }
@@ -34,17 +40,34 @@ export class Navigation extends EventEmitter {
     });
   }
 
-  private move(direction: any) {
-    console.log('moving', direction);
-    const currentEl = document.querySelector('.arc--selected');
-    const el = winjs.UI.XYFocus.findNextFocusElement(direction);
+  /**
+   * Handle exiting via escape and Game
+   */
+  private handleKeydown(ev: KeyboardEvent) {
+    if (ev.keyCode === keys.Escape || ev.keyCode === keys.GamepadB) {
+      window.parent.postMessage('exit', '*');
+    }
+  }
 
-    if (currentEl) {
-      currentEl.classList.remove('arc--selected');
+  private move(direction: any) {
+    const currentEl = <HTMLElement>document.querySelector('.active') || <HTMLElement>document.body;
+    const focusRoot = <HTMLElement>document.querySelector('.alchemy-grid-layout') || <HTMLElement>document.body;
+
+    (<any>window).TVJS.DirectionalNavigation.focusRoot = focusRoot;
+
+    const el = (<any>window).TVJS.DirectionalNavigation.findNextFocusElement(direction, {
+      focusRoot: focusRoot,
+    });
+
+    // don't change focus if no next element in this direction
+    if (typeof currentEl !== null && typeof el !== null) {
+      currentEl.classList.remove('active');
+      return;
     }
 
-    if (el) {
-        el.classList.add('arc--selected');
+    if (typeof el !== null) {
+        el.classList.add('active');
+        el.focus();
     }
   }
 }
