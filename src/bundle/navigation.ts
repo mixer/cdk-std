@@ -1,16 +1,17 @@
 import { EventEmitter } from 'eventemitter3';
-// import * as winjs from 'winjs';
-require('../directionalnavigation-1.0.0.0.js');
+require('./directionalnavigation.min.js');
 
 import { RPC } from '../internal';
 
 interface IDirection {
-  name: string,
-  data?: any,
+  name: string;
+  data?: any;
 }
 
-export const enum keys {
+export enum Keys {
+  Enter = 13,
   Escape = 27,
+  GamepadA = 195,
   GamepadB = 196,
 }
 
@@ -18,11 +19,16 @@ export const enum keys {
  * Receive navigational input.
  */
 export class Navigation extends EventEmitter {
-
   constructor(private readonly rpc: RPC) {
     super();
 
-    window.addEventListener('keydown', (ev: KeyboardEvent) => { this.handleKeydown(ev) }, true);
+    window.addEventListener(
+      'keydown',
+      (ev: KeyboardEvent) => {
+        this.handleKeydown(ev);
+      },
+      true,
+    );
 
     rpc.expose('navigate', (navigate: IDirection) => {
       if (navigate.name === 'move') {
@@ -30,12 +36,7 @@ export class Navigation extends EventEmitter {
       }
 
       if (navigate.name === 'submit') {
-        const clickEvent = document.createEvent('MouseEvents');
-        clickEvent.initEvent('mousedown', true, true);
-        const currentEl = document.querySelector('.active');
-        if (currentEl) {
-          currentEl.dispatchEvent(clickEvent);
-        }
+        this.handleSubmit();
       }
     });
   }
@@ -44,14 +45,28 @@ export class Navigation extends EventEmitter {
    * Handle exiting via escape and Game
    */
   public handleKeydown(ev: KeyboardEvent) {
-    if (ev.keyCode === keys.Escape || ev.keyCode === keys.GamepadB) {
+    if (ev.keyCode === Keys.Escape || ev.keyCode === Keys.GamepadB) {
       this.rpc.call('focusOut', {}, false);
+    }
+
+    if (ev.keyCode === Keys.Enter || ev.keyCode === Keys.GamepadA) {
+      this.handleSubmit();
+    }
+  }
+
+  private handleSubmit() {
+    const clickEvent = document.createEvent('MouseEvents');
+    clickEvent.initEvent('mousedown', true, true);
+    const currentEl = document.activeElement;
+
+    if (currentEl) {
+      currentEl.dispatchEvent(clickEvent);
     }
   }
 
   private move(direction: any) {
-    const currentEl = <HTMLElement>document.querySelector('.active') || <HTMLElement>document.body;
-    const focusRoot = <HTMLElement>document.querySelector('.alchemy-grid-layout') || <HTMLElement>document.body;
+    const currentEl = <HTMLElement>document.activeElement || <HTMLElement>document.body;
+    const focusRoot = <HTMLElement>document.querySelector('#app') || <HTMLElement>document.body;
 
     (<any>window).TVJS.DirectionalNavigation.focusRoot = focusRoot;
 
@@ -62,12 +77,11 @@ export class Navigation extends EventEmitter {
     // don't change focus if no next element in this direction
     if (typeof currentEl !== null && typeof el !== null) {
       currentEl.classList.remove('active');
-      return;
     }
 
     if (typeof el !== null) {
-        el.classList.add('active');
-        el.focus();
+      el.classList.add('active');
+      el.focus();
     }
   }
 }

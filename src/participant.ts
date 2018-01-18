@@ -328,7 +328,7 @@ export class Participant extends EventEmitter {
 
     this.rpc.expose('focusOut', () => {
       this.emit('focusOut');
-    })
+    });
 
     this.rpc.call('resendReady', {}, false);
   }
