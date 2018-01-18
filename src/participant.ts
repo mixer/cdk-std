@@ -241,10 +241,16 @@ export class Participant extends EventEmitter {
    * they're ready.
    */
   public on(event: 'loaded', handler: () => void): this;
+
   /**
    * Log is fired when the controls intentionally log some data.
    */
   public on(event: 'log', handler: (entry: ILogEntry) => void): this;
+
+  /**
+   * Focusout is fired when we hit escape or gamepad B
+   */
+  public on(event: 'focusOut', handler: () => void): this;
 
   public on(event: string, handler: (...args: any[]) => void): this {
     super.on(event, handler);
@@ -318,6 +324,10 @@ export class Participant extends EventEmitter {
 
     this.rpc.expose('log', params => {
       this.emit('log', params);
+    });
+
+    this.rpc.expose('focusOut', () => {
+      this.emit('focusOut');
     });
 
     this.rpc.call('resendReady', {}, false);
