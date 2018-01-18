@@ -24,7 +24,7 @@ export class Navigation extends EventEmitter {
 
     window.addEventListener(
       'keydown',
-      (ev: KeyboardEvent) => {
+      (ev) => {
         this.handleKeydown(ev);
       },
       true,
