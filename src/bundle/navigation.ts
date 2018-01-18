@@ -65,22 +65,15 @@ export class Navigation extends EventEmitter {
   }
 
   private move(direction: any) {
-    const currentEl = <HTMLElement>document.activeElement || <HTMLElement>document.body;
     const focusRoot = <HTMLElement>document.querySelector('#app') || <HTMLElement>document.body;
 
     (<any>window).TVJS.DirectionalNavigation.focusRoot = focusRoot;
 
     const el = (<any>window).TVJS.DirectionalNavigation.findNextFocusElement(direction, {
-      focusRoot: focusRoot,
+      focusRoot: focusRoot
     });
 
-    // don't change focus if no next element in this direction
-    if (typeof currentEl !== null && typeof el !== null) {
-      currentEl.classList.remove('active');
-    }
-
     if (typeof el !== null) {
-      el.classList.add('active');
       el.focus();
     }
   }
