@@ -24,7 +24,7 @@ export class Navigation extends EventEmitter {
 
     window.addEventListener(
       'keydown',
-      (ev) => {
+      ev => {
         this.handleKeydown(ev);
       },
       true,
@@ -70,7 +70,7 @@ export class Navigation extends EventEmitter {
     (<any>window).TVJS.DirectionalNavigation.focusRoot = focusRoot;
 
     const el = (<any>window).TVJS.DirectionalNavigation.findNextFocusElement(direction, {
-      focusRoot: focusRoot
+      focusRoot: focusRoot,
     });
 
     if (el !== null) {
