@@ -73,7 +73,7 @@ export class Navigation extends EventEmitter {
       focusRoot: focusRoot
     });
 
-    if (typeof el !== null) {
+    if (el !== null) {
       el.focus();
     }
   }
