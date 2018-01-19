@@ -43,7 +43,7 @@ export class Navigation extends EventEmitter {
     rpc.expose('focusIn', () => {
       const firstFocus = document.querySelector('[tabindex="0"]') || document.body;
       (<HTMLElement>firstFocus).focus();
-    })
+    });
   }
 
   /**
