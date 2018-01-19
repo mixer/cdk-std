@@ -51,6 +51,8 @@ export class Navigation extends EventEmitter {
    */
   public handleKeydown(ev: KeyboardEvent) {
     if (ev.keyCode === Keys.Escape || ev.keyCode === Keys.GamepadB) {
+      ev.preventDefault();
+      ev.stopPropagation();
       this.rpc.call('focusOut', {}, false);
     }
 
