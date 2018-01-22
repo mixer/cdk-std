@@ -3,11 +3,6 @@ require('./directionalnavigation.min.js');
 
 import { RPC } from '../internal';
 
-interface IDirection {
-  name: string;
-  data?: any;
-}
-
 export enum Keys {
   Enter = 13,
   Escape = 27,
@@ -30,16 +25,6 @@ export class Navigation extends EventEmitter {
       true,
     );
 
-    rpc.expose('navigate', (navigate: IDirection) => {
-      if (navigate.name === 'move') {
-        this.move(navigate.data);
-      }
-
-      if (navigate.name === 'submit') {
-        this.handleSubmit();
-      }
-    });
-
     rpc.expose('focusIn', () => {
       const firstFocus = document.querySelector('[tabindex="0"]') || document.body;
       (<HTMLElement>firstFocus).focus();
@@ -54,11 +39,15 @@ export class Navigation extends EventEmitter {
       ev.preventDefault();
       ev.stopPropagation();
       this.rpc.call('focusOut', {}, false);
+      return;
     }
 
     if (ev.keyCode === Keys.Enter || ev.keyCode === Keys.GamepadA) {
       this.handleSubmit();
+      return;
     }
+
+    this.rpc.call('navigate', {}, false);
   }
 
   private handleSubmit() {
@@ -68,20 +57,6 @@ export class Navigation extends EventEmitter {
 
     if (currentEl) {
       currentEl.dispatchEvent(clickEvent);
-    }
-  }
-
-  private move(direction: any) {
-    const focusRoot = <HTMLElement>document.querySelector('#app') || <HTMLElement>document.body;
-
-    (<any>window).TVJS.DirectionalNavigation.focusRoot = focusRoot;
-
-    const el = (<any>window).TVJS.DirectionalNavigation.findNextFocusElement(direction, {
-      focusRoot: focusRoot,
-    });
-
-    if (el !== null) {
-      el.focus();
     }
   }
 }

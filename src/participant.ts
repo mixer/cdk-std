@@ -252,6 +252,11 @@ export class Participant extends EventEmitter {
    */
   public on(event: 'focusOut', handler: () => void): this;
 
+  /**
+   * Navigate is fired when using keyboard nav
+   */
+  public on(event: 'navigate', handler: () => void): this;
+
   public on(event: string, handler: (...args: any[]) => void): this {
     super.on(event, handler);
     return this;
@@ -328,6 +333,10 @@ export class Participant extends EventEmitter {
 
     this.rpc.expose('focusOut', () => {
       this.emit('focusOut');
+    });
+
+    this.rpc.expose('navigate', () => {
+      this.emit('navigate');
     });
 
     this.rpc.call('resendReady', {}, false);
