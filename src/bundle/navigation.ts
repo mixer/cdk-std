@@ -43,6 +43,7 @@ export class Navigation extends EventEmitter {
     }
 
     if (ev.keyCode === Keys.Enter || ev.keyCode === Keys.GamepadA) {
+      ev.preventDefault();
       this.handleSubmit();
       return;
     }
@@ -51,12 +52,11 @@ export class Navigation extends EventEmitter {
   }
 
   private handleSubmit() {
-    const clickEvent = document.createEvent('MouseEvents');
-    clickEvent.initEvent('mousedown', true, true);
+    const evt = new MouseEvent('click');
     const currentEl = document.activeElement;
 
     if (currentEl) {
-      currentEl.dispatchEvent(clickEvent);
+      currentEl.dispatchEvent(evt);
     }
   }
 }
