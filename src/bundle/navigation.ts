@@ -8,12 +8,19 @@ export enum Keys {
   Escape = 27,
   GamepadA = 195,
   GamepadB = 196,
+  Menu = 207,
+  View = 208,
 }
 
 /**
  * Receive navigational input.
  */
 export class Navigation extends EventEmitter {
+  private escapeKeys = {
+    menu: false,
+    view: false,
+  }
+
   constructor(private readonly rpc: RPC) {
     super();
 
@@ -21,6 +28,14 @@ export class Navigation extends EventEmitter {
       'keydown',
       ev => {
         this.handleKeydown(ev);
+      },
+      true,
+    );
+
+    window.addEventListener(
+      'keyup',
+      ev => {
+        this.handleKeyup(ev);
       },
       true,
     );
@@ -35,7 +50,15 @@ export class Navigation extends EventEmitter {
    * Handle exiting via escape and Game
    */
   public handleKeydown(ev: KeyboardEvent) {
-    if (ev.keyCode === Keys.Escape || ev.keyCode === Keys.GamepadB) {
+    if (ev.keyCode === Keys.Menu) {
+      this.escapeKeys.menu = true;
+    }
+
+    if (ev.keyCode === Keys.Menu) {
+      this.escapeKeys.view = true;
+    }
+
+    if (ev.keyCode === Keys.Escape || ev.keyCode === Keys.GamepadB || (this.escapeKeys.menu && this.escapeKeys.view)) {
       ev.preventDefault();
       ev.stopPropagation();
       this.rpc.call('focusOut', {}, false);
@@ -48,6 +71,19 @@ export class Navigation extends EventEmitter {
     }
 
     this.rpc.call('navigate', {}, false);
+  }
+
+  /**
+   * Handle exiting via escape and Game
+   */
+  public handleKeyup(ev: KeyboardEvent) {
+    if (ev.keyCode === Keys.Menu) {
+      this.escapeKeys.menu = false;
+    }
+
+    if (ev.keyCode === Keys.Menu) {
+      this.escapeKeys.view = false;
+    }
   }
 
   private handleSubmit() {
