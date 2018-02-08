@@ -50,12 +50,11 @@ export class Navigation extends EventEmitter {
    * Handle exiting via escape and Game
    */
   public handleKeydown(ev: KeyboardEvent) {
-    if (ev.keyCode === Keys.Menu) {
-      this.escapeKeys.menu = true;
-    }
-
-    if (ev.keyCode === Keys.Menu) {
-      this.escapeKeys.view = true;
+    if (ev.keyCode === Keys.Menu || ev.keyCode === Keys.View) {
+      ev.keyCode === Keys.Menu ? this.escapeKeys.menu = true : this.escapeKeys.view = true;
+    } else {
+      this.escapeKeys.menu = false;
+      this.escapeKeys.view = false;
     }
 
     if (
@@ -65,6 +64,8 @@ export class Navigation extends EventEmitter {
     ) {
       ev.preventDefault();
       ev.stopPropagation();
+      this.escapeKeys.menu = false;
+      this.escapeKeys.view = false;
       this.rpc.call('focusOut', {}, false);
       return;
     }
@@ -85,7 +86,7 @@ export class Navigation extends EventEmitter {
       this.escapeKeys.menu = false;
     }
 
-    if (ev.keyCode === Keys.Menu) {
+    if (ev.keyCode === Keys.View) {
       this.escapeKeys.view = false;
     }
   }
