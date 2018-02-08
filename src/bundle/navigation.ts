@@ -51,7 +51,7 @@ export class Navigation extends EventEmitter {
    */
   public handleKeydown(ev: KeyboardEvent) {
     if (ev.keyCode === Keys.Menu || ev.keyCode === Keys.View) {
-      ev.keyCode === Keys.Menu ? this.escapeKeys.menu = true : this.escapeKeys.view = true;
+      ev.keyCode === Keys.Menu ? (this.escapeKeys.menu = true) : (this.escapeKeys.view = true);
     } else {
       this.escapeKeys.menu = false;
       this.escapeKeys.view = false;
