@@ -39,6 +39,8 @@ export class Socket extends EventEmitter {
     this.rpc.expose('dumpState', fn);
   }
 
+  public on(event: 'onWorldCreate', handler: (ev: any) => void): this;
+  public on(event: 'onWorldUpdate', handler: (ev: any) => void): this;
   public on(event: 'onParticipantJoin', handler: (ev: IParticipantUpdate) => void): this;
   public on(event: 'onParticipantUpdate', handler: (ev: IParticipantUpdate) => void): this;
   public on(event: 'onGroupCreate', handler: (ev: IGroupCreate) => void): this;
@@ -51,6 +53,7 @@ export class Socket extends EventEmitter {
   public on(event: 'onControlDelete', handler: (ev: IControlChange) => void): this;
   public on(event: 'onControlUpdate', handler: (ev: IControlChange) => void): this;
   public on(event: 'onReady', handler: (ev: IReady) => void): this;
+  public on(event: string, handler: (ev: any) => void): this;
   public on(event: string, handler: (...args: any[]) => void): this {
     super.on(event, handler);
     return this;
