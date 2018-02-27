@@ -60,6 +60,7 @@ export class Socket extends EventEmitter {
   }
 
   public call(method: 'giveInput', params: IInput): Promise<object>;
+  public call(method: 'getTime', params: {}): Promise<{ time: number }>;
   public call(method: string, params: object): Promise<object>;
   public call(method: string, params: object, waitForReply: true): Promise<object>;
   public call(method: string, params: object, waitForReply: false): void;

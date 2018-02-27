@@ -81,12 +81,12 @@ export class Participant extends EventEmitter {
   /**
    * Websocket connecte
    */
-  private websocket: WebSocket;
+  private websocket?: WebSocket;
 
   /**
    * RPC wrapper around the controls.
    */
-  private rpc: RPC;
+  private rpc?: RPC;
 
   /**
    * Buffer of packets from to replay once the controls load.
@@ -130,7 +130,7 @@ export class Participant extends EventEmitter {
     });
 
     ws.addEventListener('close', ev => {
-      this.emit('close', <ICloseData>{
+      this.emit('close', {
         code: ev.code,
         message: ev.reason,
         expected: this.state === State.Closing,
@@ -202,7 +202,9 @@ export class Participant extends EventEmitter {
     }
 
     try {
-      this.websocket.close();
+      if (this.websocket) {
+        this.websocket.close();
+      }
     } catch (_e) {
       // Ignored. Sockets can be fussy if they're closed at
       // the wrong time but it doesn't cause issues.
@@ -269,7 +271,7 @@ export class Participant extends EventEmitter {
     if (this.state !== State.Ready) {
       this.replayBuffer.push(fn);
     } else {
-      fn(this.rpc);
+      fn(this.rpc!);
     }
   }
 
@@ -293,7 +295,7 @@ export class Participant extends EventEmitter {
     this.rpc = new RPC(this.frame.contentWindow, '1.0');
 
     this.rpc.expose('sendInteractivePacket', data => {
-      this.websocket.send(
+      this.websocket!.send(
         JSON.stringify({
           ...data,
           type: 'method',
@@ -309,7 +311,7 @@ export class Participant extends EventEmitter {
 
       this.state = State.Ready;
       this.replayBuffer.forEach(p => {
-        p(this.rpc);
+        p(this.rpc!);
       });
       this.replayBuffer = [];
       this.emit('loaded');
@@ -349,7 +351,7 @@ export class Participant extends EventEmitter {
    */
   private handleWebsocketError(ev: Event) {
     // tslint:disable-next-line
-    fetch(this.websocket.url.replace(/^ws/, 'http'))
+    fetch(this.websocket!.url.replace(/^ws/, 'http'))
       .then(res => {
         return res.text().then(message => {
           this.emit('close', {

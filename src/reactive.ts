@@ -9,7 +9,7 @@ import { ObjectUnsubscribedError } from 'rxjs/util/ObjectUnsubscribedError';
  * and it does not push a value to subscribers if `next` has not been called.
  */
 export class MemorizingSubject<T> extends Subject<T> {
-  protected value: T;
+  protected value?: T;
   protected hasSet = false;
 
   public hasValue(): boolean {
@@ -38,7 +38,7 @@ export class MemorizingSubject<T> extends Subject<T> {
           'which did not previous have its value set.',
       );
     }
-    return this.value;
+    return this.value!;
   }
 
   // tslint:disable-next-line

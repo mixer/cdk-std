@@ -1,38 +1,25 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "noImplicitAny": true,
+    "strict": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strictNullChecks": true,
     "skipLibCheck": true,
+    "noStrictGenericChecks": true,
     "module": "commonjs",
     "target": "es5",
     "outDir": "dist",
     "lib": [
-      "es5",
       "es6",
       "dom"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
     ],
     "types": [
       "mocha",
       "node"
     ],
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "src/types/*"
-      ]
-    }
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "*.d.ts"
+  "include": [
+    "src"
   ]
 }

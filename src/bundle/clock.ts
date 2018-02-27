@@ -41,7 +41,7 @@ export class Clock {
     return (
       this.socket
         .call('getTime', {})
-        .then(({ time }: { time: number }) => {
+        .then(({ time }) => {
           const now = Date.now();
 
           // To get the clock delta, add the latency to the time the server
