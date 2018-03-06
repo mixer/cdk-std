@@ -23,6 +23,8 @@ export class Navigation extends EventEmitter {
     view: false,
   };
 
+  private handlingExit = false;
+
   constructor(private readonly rpc: RPC) {
     super();
 
@@ -57,9 +59,23 @@ export class Navigation extends EventEmitter {
   }
 
   /**
+   * Allow game to handle exit
+   */
+  public handleExit(): void {
+    this.handlingExit = true;
+  }
+
+  /**
    * Handle exiting via escape and Game
    */
   public handleKeydown(ev: KeyboardEvent) {
+    if (this.handlingExit) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      this.handlingExit = false;
+      return;
+    }
+
     if (ev.keyCode === Keys.Menu || ev.keyCode === Keys.View) {
       ev.keyCode === Keys.Menu ? (this.escapeKeys.menu = true) : (this.escapeKeys.view = true);
     } else {
