@@ -4,8 +4,6 @@ import { stringify } from 'querystring';
 import { RPC, RPCError } from './rpc';
 import { ErrorCode, ILogEntry, ISettings, IStateDump, IVideoPositionOptions } from './typings';
 
-declare const window: any;
-
 /**
  * This is file contains a websocket implementation to coordinate messaging
  * between the Interactive iframe and the Interactive service.
@@ -107,8 +105,9 @@ export class Participant extends EventEmitter {
     super();
     this.runOnRpc(rpc => {
       rpc.call('updateSettings', settings, false);
-      if (window.Windows) {
-        const viewPane = window.Windows.UI.ViewManagement.InputPane.getForCurrentView();
+      const windowsAPI = (<any>window).Windows;
+      if (windowsAPI) {
+        const viewPane = windowsAPI.UI.ViewManagement.InputPane.getForCurrentView();
         viewPane.onshowing = () => {
           rpc.call('keyboardShowing', {}, false);
         };
