@@ -69,7 +69,7 @@ export class Navigation extends EventEmitter {
    * Handle exiting via escape and Game
    */
   public handleKeydown(ev: KeyboardEvent) {
-    if (this.handlingExit) {
+    if (this.handlingExit && ev.keyCode === Keys.GamepadB) {
       ev.preventDefault();
       ev.stopPropagation();
       this.handlingExit = false;
