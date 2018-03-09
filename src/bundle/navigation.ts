@@ -3,6 +3,8 @@ require('./directionalnavigation.min.js');
 
 import { RPC } from '../internal';
 
+declare const window: any;
+
 export enum Keys {
   Enter = 13,
   Escape = 27,
@@ -26,7 +28,7 @@ export class Navigation extends EventEmitter {
 
     window.addEventListener(
       'keydown',
-      ev => {
+      (ev: KeyboardEvent) => {
         this.handleKeydown(ev);
       },
       true,
@@ -34,11 +36,19 @@ export class Navigation extends EventEmitter {
 
     window.addEventListener(
       'keyup',
-      ev => {
+      (ev: KeyboardEvent) => {
         this.handleKeyup(ev);
       },
       true,
     );
+
+    rpc.expose('keyboardShowing', () => {
+      window.TVJS.DirectionalNavigation.enabled = false;
+    });
+
+    rpc.expose('keyboardHiding', () => {
+      window.TVJS.DirectionalNavigation.enabled = true;
+    });
 
     rpc.expose('focusIn', () => {
       const firstFocus = document.querySelector('[tabindex="0"]') || document.body;
