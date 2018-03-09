@@ -43,11 +43,11 @@ export class Navigation extends EventEmitter {
     );
 
     rpc.expose('keyboardShowing', () => {
-      window.TVJS.Directionalnavigation.Enabled = false;
+      window.TVJS.DirectionalNavigation.enabled = false;
     });
 
     rpc.expose('keyboardHiding', () => {
-      window.TVJS.Directionalnavigation.Enabled = true;
+      window.TVJS.DirectionalNavigation.enabled = true;
     });
 
     rpc.expose('focusIn', () => {

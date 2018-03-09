@@ -108,15 +108,13 @@ export class Participant extends EventEmitter {
     this.runOnRpc(rpc => {
       rpc.call('updateSettings', settings, false);
       if (window.Windows) {
-        const viewPane = window.Windows.UI.ViewManagement.InputPane.GetForCurrentView();
-
-        viewPane.on('showing', () => {
+        const viewPane = window.Windows.UI.ViewManagement.InputPane.getForCurrentView();
+        viewPane.onshowing = () => {
           rpc.call('keyboardShowing', {}, false);
-        });
-
-        viewPane.on('hiding', () => {
+        };
+        viewPane.onhiding = () => {
           rpc.call('keyboardHiding', {}, false);
-        })
+        };
       }
     });
   }
