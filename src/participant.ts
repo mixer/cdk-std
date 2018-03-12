@@ -265,6 +265,11 @@ export class Participant extends EventEmitter {
   public on(event: 'focusOut', handler: () => void): this;
 
   /**
+   * HandleExit is sent if we want to disable exiting with gamepadB
+   */
+  public on(event: 'handleExit', handler: () => void): this;
+
+  /**
    * Navigate is fired when using keyboard nav
    */
   public on(event: 'navigate', handler: () => void): this;
@@ -345,6 +350,10 @@ export class Participant extends EventEmitter {
 
     this.rpc.expose('focusOut', () => {
       this.emit('focusOut');
+    });
+
+    this.rpc.expose('handleExit', () => {
+      this.emit('handleExit');
     });
 
     this.rpc.expose('navigate', () => {
