@@ -1,6 +1,6 @@
 {
   "name": "@mcph/miix-std",
-  "version": "0.2.12",
+  "version": "0.2.13-0",
   "description": "Standard library for Mixer Interactive controls",
   "main": "dist/bundle.min.js",
   "typings": "dist/bundle.d.ts",
