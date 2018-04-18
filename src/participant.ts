@@ -307,7 +307,7 @@ export class Participant extends EventEmitter {
    * the RPC system.
    */
   private attachListeners() {
-    this.rpc = new RPC(this.frame.contentWindow, '1.0');
+    this.rpc = new RPC(this.frame.contentWindow!, '1.0');
 
     this.rpc.expose('sendInteractivePacket', data => {
       this.websocket!.send(
