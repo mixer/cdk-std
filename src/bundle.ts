@@ -4,6 +4,7 @@ import { Navigation } from './bundle/navigation';
 import { Socket } from './bundle/socket';
 import { IPackageConfig } from './package';
 import { RPC } from './rpc';
+import './doc';
 
 export * from './rpc';
 export * from './typings';
@@ -13,8 +14,10 @@ export * from './package';
 const rpc = new RPC(window.top, '1.0');
 
 /**
- * Returns the fully qualified URL to a static project asset, from the
- * `src/static` folder.
+ * Returns the fully qualified URL to a static project asset.
+ * You can pass multiple path segments to join them together.
+ * @param {...string} path
+ * @returns {string}
  */
 export function asset(...path: string[]): string {
   // For now this is fairly stub-ish, it serves as an injection point if we
@@ -37,9 +40,11 @@ rpc.expose('resendReady', () => {
 });
 
 /**
- * Called by the MState automatically when all hooks are set up. This signals
- * to Mixer that the controls have been bound and are ready to start taking
- * Interactive calls.
+ * This signals to Mixer that the controls have been bound and are ready to
+ * start taking Interactive calls. You need to call this to allow your
+ * controls to be displayed.
+ *
+ * In the Preact starter, this is called automatically by the MState class.
  */
 export function isLoaded() {
   isReady = true;
@@ -52,6 +57,8 @@ window.addEventListener('beforeunload', () => {
 
 /**
  * Logs an exception to Mixer, called by the exported `log` object.
+ * @param {string} level
+ * @param {any[]} params
  */
 function captureLogMessage(level: string, params: any[]) {
   rpc.call(
@@ -137,16 +144,49 @@ window.onerror = (_message, _source, _lineno, _colno, error) => {
  *             { "challenge":"...","token:"..." }         │       │
  *                                                        └───────┘
  * ```
+ *
+ * @param {string} challenge
+ * @returns {Promise.<string>}
  */
 export function getIdentityVerification(challenge: string): Promise<string> {
   return rpc.call('verificationChallenge', { challenge }, true);
 }
 
-// These are overridden by the MixerPlugin:
+/**
+ * Your project's package configuration.
+ * @type {IPackageConfig}
+ */
 export const packageConfig: IPackageConfig = (<any>window).mixerPackageConfig;
+
+/**
+ * The list of available locales. This is populated when the build is run
+ * with the cdk-webpack-plugin and contains the files in the configured locale
+ * folder. For example, this might be set to `['en', 'es']` if you have English
+ * and Spanish translation files.
+ * @type {Array.<string>}
+ */
 export const locales: string[] = (<any>window).mixerLocales;
 
+/**
+ * Singleton {@link Socket} instance.
+ * @type {Socket}
+ */
 export const socket = new Socket(rpc);
+
+/**
+ * Singleton {@link Display} instance.
+ * @type {Display}
+ */
 export const display = new Display(rpc);
+
+/**
+ * Singleton {@link Navigation} instance.
+ * @type {Navigation}
+ */
 export const navigation = new Navigation(rpc);
+
+/**
+ * Singleton {@link Clock} instance.
+ * @type {Clock}
+ */
 export const clock = new Clock(socket);

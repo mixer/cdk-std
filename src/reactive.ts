@@ -7,6 +7,7 @@ import { ObjectUnsubscribedError } from 'rxjs/util/ObjectUnsubscribedError';
  * MemorizingSubject acts like a BehaviorSubject, except that it is seeded
  * with no value, calls to getValue() will fail before the first `next` call,
  * and it does not push a value to subscribers if `next` has not been called.
+ * @private
  */
 export class MemorizingSubject<T> extends Subject<T> {
   protected value?: T;

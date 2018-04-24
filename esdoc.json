@@ -1,0 +1,25 @@
+{
+  "source": "./dist",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "undocumentIdentifier": { "enable": false },
+        "accessor": {"access": ["public", "protected", ""], "autoPrivate": true},
+        "test": {
+          "type": "mocha",
+          "source": "./dist",
+          "includes": ["\\.test\\.js$"]
+        }
+      },
+      "brand": {
+        "title": "cdk-std"
+      },
+      "manual": {
+        "files": ["./CHANGELOG.md"]
+      }
+    },
+    { "name": "./esdoc-plugin.js" }
+  ]
+}

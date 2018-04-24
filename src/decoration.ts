@@ -205,6 +205,8 @@ export class Registry {
   /**
    * Adds a collection of controls and scenes to the registry. This will throw
    * if anything given is not a scene or control.
+   * @param {...*} things
+   * @returns {Registry}
    */
   public register(...things: any[]): this {
     things.forEach(thing => {
@@ -226,6 +228,9 @@ export class Registry {
   /**
    * Returns the Control descriptor for a control of the given kind, or
    * thows if it's not found.
+   * @param {string} kind
+   * @returns {IControlDescriptor}
+   * @throws {Error} if the control kind is not found
    */
   public getControl(kind: string): Readonly<IControlDescriptor> {
     const control = this.controls[kind];
@@ -243,6 +248,9 @@ export class Registry {
    * Returns the Scene descriptor for the given scene ID, returning the
    * default scene if a specific handler wasn't found. Throws if no default
    * scene is present and the specific ID is not registered.
+   * @param {string} id
+   * @returns {ISceneDescriptor}
+   * @throws {Error} if an appropriate scene implementation is not found
    */
   public getScene(id: string): Readonly<ISceneDescriptor> {
     const scene = this.scenes[id] || this.defaultScene;
@@ -259,6 +267,10 @@ export class Registry {
 
   /**
    * Returns inputs defined on the given control instance.
+   * @param {object} control
+   * @returns {IInputDescriptor[]}
+   * @throws {Error} if the passed object is not decorated with @{@link Scene}
+   * or @{@link Control}.
    */
   public getInputs(control: object): ReadonlyArray<Readonly<IInputDescriptor>> {
     const descriptor: ISceneDescriptor | IControlDescriptor = (<any>control.constructor)[
@@ -321,6 +333,7 @@ export class Registry {
 /**
  * Scene is a decorator you can use to designate a class as a Scene. See
  * documentation on {@link ISceneOptions} for more info.
+ * @param {ISceneOptions} [options]
  */
 export function Scene(options: ISceneOptions = { default: true }) {
   return (ctor: Function) => {
@@ -331,6 +344,7 @@ export function Scene(options: ISceneOptions = { default: true }) {
 /**
  * Scene is a decorator you can use to designate a class as a Scene. See
  * documentation on {@link IControlOptions} for more info.
+ * @param {IControlOptions} [options]
  */
 export function Control(options: IControlOptions) {
   return (ctor: Function) => {
@@ -341,6 +355,7 @@ export function Control(options: IControlOptions) {
  * @Input decorates a property on a control. It makes it configurable in the
  * Interactive studio and settable for Preact components. See the
  * {@link IInputOptions} for more info.
+ * @param {IInputOptions} [_options]
  */
 export function Input(_options: IInputOptions = {}) {
   return (_host: object, _propertyName: string): void => {

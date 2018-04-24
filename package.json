@@ -1,6 +1,6 @@
 {
-  "name": "@mcph/miix-std",
-  "version": "0.2.13",
+  "name": "@mixer/cdk-std",
+  "version": "0.2.14",
   "description": "Standard library for Mixer Interactive controls",
   "main": "dist/bundle.min.js",
   "typings": "dist/bundle.d.ts",
@@ -13,16 +13,17 @@
     "build": "npm-run-all --parallel --silent build:ts build:bundle",
     "build:ts": "tsc",
     "build:bundle": "webpack",
+    "build:doc": "rimraf dist && tsc -m es2015 -t es6 --moduleResolution node && esdoc -c esdoc.json",
     "publish:azure": "node bin/upload-to-azure.js",
     "prepare": "npm run -s build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mixer/miix-std.git"
+    "url": "git+https://github.com/mixer/cdk-std.git"
   },
   "keywords": [
     "mixer",
-    "miix",
+    "cdk",
     "interactive",
     "controls",
     "custom"
@@ -30,9 +31,9 @@
   "author": "Connor Peet <connor@peet.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mixer/miix-std/issues"
+    "url": "https://github.com/mixer/cdk-std/issues"
   },
-  "homepage": "https://github.com/mixer/miix-std#readme",
+  "homepage": "https://github.com/mixer/cdk-std#readme",
   "devDependencies": {
     "@types/chai": "^4.1.2",
     "@types/mocha": "^2.2.48",
@@ -40,6 +41,9 @@
     "@types/sinon": "^4.1.3",
     "awesome-typescript-loader": "^3.4.1",
     "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "esdoc": "^1.0.4",
+    "esdoc-standard-plugin": "^1.0.0",
     "karma": "^1.7.1",
     "karma-browserstack-launcher": "^1.3.0",
     "karma-chrome-launcher": "^2.2.0",
@@ -49,6 +53,7 @@
     "mocha": "^4.1.0",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.10.2",
+    "rimraf": "^2.6.2",
     "sinon": "^4.3.0",
     "tslint": "^5.9.1",
     "tslint-microsoft-contrib": "^5.0.3",

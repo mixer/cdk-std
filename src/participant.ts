@@ -71,6 +71,7 @@ function appendQueryString(url: string, qs: object) {
  * Participant is a bridge between the Interactive service and an iframe that
  * shows custom controls. It proxies calls between them and emits events
  * when states change.
+ * @private (at least to most consumers!)
  */
 export class Participant extends EventEmitter {
   /**
@@ -397,6 +398,7 @@ export class Participant extends EventEmitter {
 
   /**
    * onFrameLoad is called once the iframe loads.
+   * @private
    */
   private onFrameLoad = () => {
     if (this.state === State.Loading) {

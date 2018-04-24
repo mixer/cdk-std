@@ -1,42 +1,10 @@
 import { EventEmitter } from 'eventemitter3';
 import { Observable } from 'rxjs/Observable';
 
-import { RPC } from '../internal';
+import { RPC } from '../rpc';
+import { IVideoPositionList } from '../typings';
 import { MemorizingSubject } from '../reactive';
 import { ISettings, IVideoPositionOptions } from '../typings';
-
-/**
- * IVideoPosition contains data about the position of the video relative
- * to the iframe, in addition to its channel ID.
- */
-export interface IVideoPosition extends ClientRect {
-  channelId: number;
-}
-
-/**
- * IVideoPositionList is given in the `positions()`
- * observable from the display.
- */
-export interface IVideoPositionList {
-  /**
-   * connectedPlayer is the position of the video which the interactive
-   * integration is currently connected to. (In a Mixer costream, there can
-   * be multiple players displayed at once.)
-   */
-  connectedPlayer: IVideoPosition;
-
-  /**
-   * costreamPlayers is a list of all players in a Mixer costream. Costreaming
-   * allows multiple people to stream together, you can read more about it at
-   * the link below. This will always contain, at minimumum, the
-   * connectedPlayer. Additional channels may come and go over
-   * the course of the broadcast.
-   *
-   * @see https://watchbeam.zendesk.com/hc/en-us/articles/115003032426-Co-Stream-FAQ
-   */
-  costreamPlayers: IVideoPosition[];
-}
-
 /**
  * Display modified the display of interactive controls.
  */
@@ -60,6 +28,7 @@ export class Display extends EventEmitter {
    * Hides the controls and displays a loading spinner, optionally
    * with a custom message. This is useful for transitioning. If called
    * while the controls are already minimized, it will update the message.
+   * @param {string} [message]
    */
   public minimize(message?: string): void {
     this.rpc.call('maximize', { maximized: false, message }, false);
@@ -74,6 +43,7 @@ export class Display extends EventEmitter {
 
   /**
    * Moves the position of the video on the screen.
+   * @param {IVideoPositionOptions} options
    */
   public moveVideo(options: IVideoPositionOptions): void {
     this.rpc.call('moveVideo', options, false);
@@ -92,6 +62,7 @@ export class Display extends EventEmitter {
    *   videoOverlay.style.width = `${position.width}px`;
    * });
    * ```
+   * @return {Observable.<IVideoPositionList>}
    */
   public position(): Observable<IVideoPositionList> {
     return this.videoPositionSubj;
@@ -99,6 +70,7 @@ export class Display extends EventEmitter {
 
   /**
    * Returns an observable of the current project settings.
+   * @return {Observable.<ISettings>}
    */
   public settings(): Observable<ISettings> {
     return this.settingsSubj;
@@ -109,6 +81,7 @@ export class Display extends EventEmitter {
    * the video position hasn't been sent yet. If undefined, you should retry,
    * or listen to the `display.position()` observable to be notified when
    * it comes in.
+   * @return {IVideoPositionList | undefined}
    */
   public getPosition(): IVideoPositionList | undefined {
     return this.videoPositionSubj.hasValue() ? this.videoPositionSubj.getValue() : undefined;
@@ -119,6 +92,7 @@ export class Display extends EventEmitter {
    * be `undefined` if the settings have not been sent yet. If undefined,
    * you should retry, or listen to the `display.settings()` observable to
    * be notified when it comes in.
+   * @return {ISettings | undefined}
    */
   public getSettings(): ISettings | undefined {
     return this.settingsSubj.hasValue() ? this.settingsSubj.getValue() : undefined;

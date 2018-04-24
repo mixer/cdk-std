@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">dist/bundle.js | @mixer/cdk-std</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Standard library for Mixer Interactive controls"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@mixer/cdk-std"><meta property="twitter:description" content="Standard library for Mixer Interactive controls"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/mixer/cdk-std"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/decoration.js~Registry.html">Registry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/reactive.js~MemorizingSubject.html">MemorizingSubject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPC.html">RPC</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPCError.html">RPCError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-asset">asset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdentityVerification">getIdentityVerification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isLoaded">isLoaded</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Control">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Input">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Scene">Scene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-clock">clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-display">display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-locales">locales</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-log">log</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-navigation">navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-packageConfig">packageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-socket">socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlDescriptor">IControlDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlOptions">IControlOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputDescriptor">IInputDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputOptions">IInputOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IPackageConfig">IPackageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneDescriptor">ISceneDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneOptions">ISceneOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISettings">ISettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IStateDump">IStateDump</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPosition">IVideoPosition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionList">IVideoPositionList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionOptions">IVideoPositionOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#bundle">bundle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/clock.js~Clock.html">Clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/display.js~Display.html">Display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/navigation.js~Navigation.html">Navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/socket.js~Socket.html">Socket</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">dist/bundle.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { Clock } from &apos;./bundle/clock&apos;;
+import { Display } from &apos;./bundle/display&apos;;
+import { Navigation } from &apos;./bundle/navigation&apos;;
+import { Socket } from &apos;./bundle/socket&apos;;
+import { RPC } from &apos;./rpc&apos;;
+import &apos;./doc&apos;;
+export * from &apos;./rpc&apos;;
+export * from &apos;./typings&apos;;
+export * from &apos;./decoration&apos;;
+const rpc = new RPC(window.top, &apos;1.0&apos;);
+/**
+ * Returns the fully qualified URL to a static project asset.
+ * You can pass multiple path segments to join them together.
+ * @param {...string} path
+ * @returns {string}
+ */
+export function asset(...path) {
+    // For now this is fairly stub-ish, it serves as an injection point if we
+    // decide to change how assets are delivered in the future.
+    return `./${path.map(segment =&gt; segment.replace(/^\/+|\/+$/, &apos;&apos;)).join(&apos;/&apos;)}`;
+}
+let isReady = false;
+/**
+ * resendReady is called by the host when it detects the iframe loads. It seems
+ * that loading can be fired &quot;slowly&quot; in some cases causing the isLoaded event
+ * to fire off before the host sets up listeners, so that host will call this
+ * method when it first boots to make sure that it didn&apos;t miss anything!
+ */
+rpc.expose(&apos;resendReady&apos;, () =&gt; {
+    if (isReady) {
+        rpc.call(&apos;controlsReady&apos;, {}, false);
+    }
+});
+/**
+ * This signals to Mixer that the controls have been bound and are ready to
+ * start taking Interactive calls. You need to call this to allow your
+ * controls to be displayed.
+ *
+ * In the Preact starter, this is called automatically by the MState class.
+ */
+export function isLoaded() {
+    isReady = true;
+    rpc.call(&apos;controlsReady&apos;, {}, false);
+}
+window.addEventListener(&apos;beforeunload&apos;, () =&gt; {
+    rpc.call(&apos;unloading&apos;, {}, false);
+});
+/**
+ * Logs an exception to Mixer, called by the exported `log` object.
+ * @param {string} level
+ * @param {any[]} params
+ */
+function captureLogMessage(level, params) {
+    rpc.call(&apos;log&apos;, {
+        level,
+        params: params.map(param =&gt; {
+            if (param instanceof Error) {
+                return {
+                    message: param.message,
+                    stack: param.stack,
+                    metadata: typeof param.cause === &apos;function&apos; ? param.cause() : null,
+                };
+            }
+            return param;
+        }),
+    }, false);
+}
+/**
+ * `log` has methods to capture messages from your controls. These&apos;ll be
+ * exposed in the miix UI, and we will continue to build further telemetry
+ * around them.
+ */
+export const log = {
+    debug(...params) {
+        captureLogMessage(&apos;debug&apos;, params);
+    },
+    info(...params) {
+        captureLogMessage(&apos;info&apos;, params);
+    },
+    warn(...params) {
+        captureLogMessage(&apos;warn&apos;, params);
+    },
+    error(...params) {
+        captureLogMessage(&apos;error&apos;, params);
+    },
+};
+window.onerror = (_message, _source, _lineno, _colno, error) =&gt; {
+    log.error(&apos;An uncaught exception occurred.&apos;, error);
+};
+/**
+ * Since your interactive controls can be run by any client, it&apos;s sometimes
+ * useful (particularly if you do fancier service integration) to be able to
+ * verify that the player is who they say they are. This method provides a
+ * means for you to do that. This is what happens:
+ *
+ *  1. You create a cryptographically secure challenge for the user. This MUST
+ *     be done on your service; the challenge is used so that adversaries
+ *     cannot impersonate users (for instance, by gathering challenge
+ *     responses for their own integrations then injecting
+ *     those into your controls).
+ *
+ *  2. Mixer servers will create a token based on the challenge and a
+ *     secret, and return that in the response to this method.
+ *
+ *  3. You may transmit the token and challenge to your services and call
+ *     /api/v1/interactive/identity/verify to get the user ID that corresponds
+ *     to the token. The API will return a 400 if the challenge is invalid.
+ *
+ * Visualized, that&apos;s something like this:
+ *
+ * ```
+ *
+ * &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;    challenge  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;                &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+ * &#x2502;          &#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x25B6;          &#x2502;                &#x2502;       &#x2502;
+ * &#x2502;          &#x2502;               &#x2502;          &#x2502;&#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x25B6;       &#x2502;
+ * &#x2502;   Your   &#x2502;               &#x2502;          &#x2502;                &#x2502;       &#x2502;
+ * &#x2502; Service  &#x2502;               &#x2502; Controls &#x2502;                &#x2502;       &#x2502;
+ * &#x2502;          &#x2502;               &#x2502;          &#x2502;                &#x2502;       &#x2502;
+ * &#x2502;          &#x2502;      token    &#x2502;          &#x2502;                &#x2502;       &#x2502;
+ * &#x2502;          &#x2502;&#x25C0;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2502;          &#x25C0; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500; &#x2500;&#x2502; Mixer &#x2502;
+ * &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;               &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;                &#x2502;       &#x2502;
+ *       &#x2502;                                                &#x2502;       &#x2502;
+ *       &#x2502;                                                &#x2502;       &#x2502;
+ *       &#x2502;    POST /interactive/identity/verify           &#x2502;       &#x2502;
+ *       &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x25B6;       &#x2502;
+ *             { &quot;challenge&quot;:&quot;...&quot;,&quot;token:&quot;...&quot; }         &#x2502;       &#x2502;
+ *                                                        &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+ * ```
+ *
+ * @param {string} challenge
+ * @returns {Promise.&lt;string&gt;}
+ */
+export function getIdentityVerification(challenge) {
+    return rpc.call(&apos;verificationChallenge&apos;, { challenge }, true);
+}
+/**
+ * Your project&apos;s package configuration.
+ * @type {IPackageConfig}
+ */
+export const packageConfig = window.mixerPackageConfig;
+/**
+ * The list of available locales. This is populated when the build is run
+ * with the cdk-webpack-plugin and contains the files in the configured locale
+ * folder. For example, this might be set to `[&apos;en&apos;, &apos;es&apos;]` if you have English
+ * and Spanish translation files.
+ * @type {Array.&lt;string&gt;}
+ */
+export const locales = window.mixerLocales;
+/**
+ * Singleton {@link Socket} instance.
+ * @type {Socket}
+ */
+export const socket = new Socket(rpc);
+/**
+ * Singleton {@link Display} instance.
+ * @type {Display}
+ */
+export const display = new Display(rpc);
+/**
+ * Singleton {@link Navigation} instance.
+ * @type {Navigation}
+ */
+export const navigation = new Navigation(rpc);
+/**
+ * Singleton {@link Clock} instance.
+ * @type {Clock}
+ */
+export const clock = new Clock(socket);
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
