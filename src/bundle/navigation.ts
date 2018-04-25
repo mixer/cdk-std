@@ -72,7 +72,9 @@ export class Navigation extends EventEmitter {
     if (this.handlingExit && ev.keyCode === Keys.GamepadB) {
       ev.preventDefault();
       ev.stopPropagation();
-      this.handlingExit = false;
+      setTimeout(() => {
+        this.handlingExit = false;
+      });
       return;
     }
 
