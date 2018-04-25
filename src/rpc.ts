@@ -82,6 +82,7 @@ export class RPC extends EventEmitter {
   private remoteCallQueue: RPCMessageWithCounter<any>[] = [];
   private lastSequentialCall = -1;
   private remoteProtocolVersion: string | undefined;
+  private handler: Window | Document = window;
 
   /**
    * Creates a new RPC instance. Note: you should use the `rpc` singleton,
@@ -97,9 +98,17 @@ export class RPC extends EventEmitter {
     private readonly target: IPostable,
     protocolVersion: string,
     private readonly origin: string = '*',
+    private readonly setOnMessage?: (fn: (ev: any) => void) => void,
+    private readonly removeOnMessage?: (fn: (ev: any) => void) => void,
+    private readonly isApp?: boolean,
   ) {
     super();
-    document.addEventListener('message', this.listener);
+    this.handler = this.isApp ? document : window;
+    if (this.setOnMessage) {
+      this.setOnMessage(this.listener);
+    } else {
+      this.handler.addEventListener('message', this.listener);
+    }
     this.call('ready', { protocolVersion }, false);
   }
 
@@ -179,7 +188,11 @@ export class RPC extends EventEmitter {
    */
   public destroy() {
     this.emit('destroy');
-    document.removeEventListener('message', this.listener);
+    if (this.removeOnMessage) {
+      this.removeOnMessage(this.listener);
+    } else {
+      this.handler.removeEventListener('message', this.listener);
+    }
   }
 
   /**
@@ -223,7 +236,8 @@ export class RPC extends EventEmitter {
   }
 
   private listener = (ev: any) => {
-    const packet: RPCMessageWithCounter<any> = JSON.parse(ev.data);
+    const packet: RPCMessageWithCounter<any> =
+      typeof ev.data === 'string' ? JSON.parse(ev.data) : ev.data;
     if (!isRPCMessage(packet) || packet.serviceID !== RPC.serviceID) {
       return;
     }
@@ -256,7 +270,6 @@ export class RPC extends EventEmitter {
 
   private dispatchIncoming(packet: RPCMessageWithCounter<any>) {
     this.lastSequentialCall = packet.counter;
-
     switch (packet.type) {
       case 'method':
         this.emit('recvMethod', packet);

@@ -1,7 +1,7 @@
 import { EventEmitter } from 'eventemitter3';
 import { stringify } from 'querystring';
 
-import { RPC, RPCError } from './rpc';
+import { IPostable, RPC, RPCError } from './rpc';
 import { ErrorCode, ILogEntry, ISettings, IStateDump, IVideoPositionOptions } from './typings';
 
 /**
@@ -29,6 +29,15 @@ export interface IConnectionOptions {
     Username?: string;
     XP?: string;
   };
+}
+
+export interface IInteractiveFrame {
+  src: string;
+  contentWindow: IPostable;
+  addEventListener(event: string, listener: (ev: any) => void): void;
+  removeEventListener(event: string, listener: (ev: any) => void): void;
+  setOnMessage?(listener: (ev: any) => void): void;
+  removeOnMessage?(listener: (ev: any) => void): void;
 }
 
 /**
@@ -210,7 +219,7 @@ export class Participant extends EventEmitter {
    */
   private controls = new ControlsState();
 
-  constructor(private readonly frame: HTMLIFrameElement, settings: ISettings) {
+  constructor(private readonly frame: IInteractiveFrame, settings: ISettings) {
     super();
     this.runOnRpc(rpc => {
       rpc.call('updateSettings', settings, false);
@@ -435,7 +444,13 @@ export class Participant extends EventEmitter {
    * the RPC system.
    */
   private attachListeners() {
-    this.rpc = new RPC(this.frame.contentWindow!, '1.0');
+    this.rpc = new RPC(
+      this.frame.contentWindow,
+      '1.0',
+      '*',
+      this.frame.setOnMessage,
+      this.frame.removeOnMessage,
+    );
 
     this.rpc.expose<{ method: string; params: any }>('sendInteractivePacket', data => {
       this.websocket!.send(

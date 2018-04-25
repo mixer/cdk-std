@@ -13,7 +13,14 @@ export * from './typings';
 export * from './decoration';
 export * from './package';
 
-const rpc = new RPC(window.top, '1.0');
+const rpc = new RPC(
+  window.top,
+  '1.0',
+  '*',
+  undefined,
+  undefined,
+  document.location.href.indexOf('app=1') > -1,
+);
 
 /**
  * Returns the fully qualified URL to a static project asset.
