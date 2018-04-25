@@ -62,8 +62,12 @@ export class Navigation {
    * the "X" button on the user's controller when watching on their Xbox.
    * Calling this will cause the next press of "X" to have no effect.
    */
-  public handleExit(): void {
+  public preventExit(): void {
     this.handlingExit = true;
+  }
+
+  public allowExit(): void {
+    this.handlingExit = false;
   }
 
   /**
@@ -75,9 +79,6 @@ export class Navigation {
     if (this.handlingExit && ev.keyCode === Keys.GamepadB) {
       ev.preventDefault();
       ev.stopPropagation();
-      setTimeout(() => {
-        this.handlingExit = false;
-      });
       return;
     }
 
