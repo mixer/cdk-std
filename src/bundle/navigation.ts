@@ -76,7 +76,7 @@ export class Navigation {
    * Should be called when the integration wants to intercept all events which
    * would otherwise cause the Interactive integration to close, such as
    * the "B" button on the user's controller when watching on their Xbox.
-   * Calling this will cause the next press of "B" to have no effect.
+   * Calling this will prevent every press of "B" from closing the integration.
    */
   public preventExit(): void {
     this.handlingExit = ExitHandler.Enabled;
@@ -86,7 +86,7 @@ export class Navigation {
    * Should be called when the integration wants to re-enable event which
    * would cause the Interactive integration to close, such as
    * the "B" button on the user's controller when watching on their Xbox.
-   * Calling this will cause the next press of "B" to have no effect.
+   * Calling this will allow subsequent presses of "B" to close the integration.
    */
   public allowExit(): void {
     this.handlingExit = ExitHandler.Disabled;
