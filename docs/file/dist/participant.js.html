@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">dist/participant.js | @mixer/cdk-std</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Standard library for Mixer Interactive controls"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@mixer/cdk-std"><meta property="twitter:description" content="Standard library for Mixer Interactive controls"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/mixer/cdk-std"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/decoration.js~Registry.html">Registry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/reactive.js~MemorizingSubject.html">MemorizingSubject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPC.html">RPC</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPCError.html">RPCError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-asset">asset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdentityVerification">getIdentityVerification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isLoaded">isLoaded</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Control">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Input">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Scene">Scene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-clock">clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-display">display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-locales">locales</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-log">log</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-navigation">navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-packageConfig">packageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-socket">socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlDescriptor">IControlDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlOptions">IControlOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputDescriptor">IInputDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputOptions">IInputOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IPackageConfig">IPackageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneDescriptor">ISceneDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneOptions">ISceneOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISettings">ISettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IStateDump">IStateDump</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPosition">IVideoPosition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionList">IVideoPositionList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionOptions">IVideoPositionOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#bundle">bundle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/clock.js~Clock.html">Clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/display.js~Display.html">Display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/navigation.js~Navigation.html">Navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/socket.js~Socket.html">Socket</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">dist/participant.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { EventEmitter } from &apos;eventemitter3&apos;;
+import { stringify } from &apos;querystring&apos;;
+import { RPC, RPCError } from &apos;./rpc&apos;;
+import { ErrorCode } from &apos;./typings&apos;;
+/**
+ * Stringifies and appends the given query string to the URL.
+ */
+function appendQueryString(url, qs) {
+    const delimiter = url.indexOf(&apos;?&apos;) &gt; -1 ? &apos;&amp;&apos; : &apos;?&apos;;
+    return `${url}${delimiter}${stringify(qs)}`;
+}
+/**
+ * Participant is a bridge between the Interactive service and an iframe that
+ * shows custom controls. It proxies calls between them and emits events
+ * when states change.
+ * @private (at least to most consumers!)
+ */
+export class Participant extends EventEmitter {
+    constructor(frame, settings) {
+        super();
+        this.frame = frame;
+        /**
+         * Buffer of packets from to replay once the controls load.
+         * As soon as we connect to interactive it&apos;ll send the initial state
+         * messages, but there&apos;s a good chance we won&apos;t have loaded the controls
+         * by that time, so buffer &apos;em until the controls say they&apos;re ready.
+         */
+        this.replayBuffer = [];
+        /**
+         * Controls state.
+         */
+        this.state = 0 /* Loading */;
+        /**
+         * onFrameLoad is called once the iframe loads.
+         * @private
+         */
+        this.onFrameLoad = () =&gt; {
+            if (this.state === 0 /* Loading */) {
+                this.attachListeners();
+            }
+            this.frame.removeEventListener(&apos;load&apos;, this.onFrameLoad);
+        };
+        this.runOnRpc(rpc =&gt; {
+            rpc.call(&apos;updateSettings&apos;, settings, false);
+            const windowsAPI = window.Windows;
+            if (windowsAPI) {
+                const viewPane = windowsAPI.UI.ViewManagement.InputPane.getForCurrentView();
+                viewPane.onshowing = () =&gt; {
+                    rpc.call(&apos;keyboardShowing&apos;, {}, false);
+                };
+                viewPane.onhiding = () =&gt; {
+                    rpc.call(&apos;keyboardHiding&apos;, {}, false);
+                };
+            }
+        });
+    }
+    /**
+     * Creates a connection to the given Interactive address.
+     */
+    connect(options) {
+        const qs = {
+            // cache bust the iframe to ensure that it reloads
+            // whenever we get a new connection.
+            bustCache: Date.now(),
+            key: options.key,
+            &apos;x-protocol-version&apos;: Participant.protocolVersion,
+            &apos;x-auth-user&apos;: options.xAuthUser ? JSON.stringify(options.xAuthUser) : undefined,
+        };
+        const ws = (this.websocket = new WebSocket(appendQueryString(options.socketAddress, qs)));
+        this.frame.src = options.contentAddress;
+        this.frame.addEventListener(&apos;load&apos;, this.onFrameLoad);
+        ws.addEventListener(&apos;message&apos;, data =&gt; {
+            this.sendInteractive(data.data);
+        });
+        ws.addEventListener(&apos;close&apos;, ev =&gt; {
+            this.emit(&apos;close&apos;, {
+                code: ev.code,
+                message: ev.reason,
+                expected: this.state === 2 /* Closing */,
+                ev,
+            });
+            this.state = 3 /* Closed */;
+            this.destroy();
+        });
+        ws.addEventListener(&apos;error&apos;, ev =&gt; {
+            this.handleWebsocketError(ev);
+        });
+        return this;
+    }
+    add(method, fn) {
+        this.runOnRpc(rpc =&gt; {
+            rpc.expose(method, fn);
+        });
+        return this;
+    }
+    /**
+     * Updates the controls&apos; settings.
+     */
+    updateSettings(settings) {
+        this.runOnRpc(rpc =&gt; {
+            rpc.call(&apos;updateSettings&apos;, settings, false);
+        });
+    }
+    /**
+     * Triggers a dump of state from the nested controls. Returns undefined if
+     * the controls do not expose a dumpState method.
+     */
+    dumpState() {
+        if (!this.rpc) {
+            return Promise.resolve(undefined);
+        }
+        return this.rpc.call(&apos;dumpState&apos;, {}, true).catch(err =&gt; {
+            if (err instanceof RPCError &amp;&amp; err.code === ErrorCode.AppBadMethod) {
+                return undefined; // controls don&apos;t expose dumpState, sad but we&apos;ll hide our sadness
+            }
+            throw new err();
+        });
+    }
+    /**
+     * Closes the participant connection and frees resources.
+     */
+    destroy() {
+        if (this.state &lt; 2 /* Closing */) {
+            this.state = 2 /* Closing */;
+        }
+        if (this.rpc) {
+            this.rpc.destroy();
+        }
+        try {
+            if (this.websocket) {
+                this.websocket.close();
+            }
+        }
+        catch (_e) {
+            // Ignored. Sockets can be fussy if they&apos;re closed at
+            // the wrong time but it doesn&apos;t cause issues.
+        }
+    }
+    on(event, handler) {
+        super.on(event, handler);
+        return this;
+    }
+    /**
+     * Calls the function with the RPC instance once it&apos;s ready and attached.
+     */
+    runOnRpc(fn) {
+        if (this.state !== 1 /* Ready */) {
+            this.replayBuffer.push(fn);
+        }
+        else {
+            fn(this.rpc);
+        }
+    }
+    /**
+     * sendInteractive broadcasts the interactive payload down to the controls,
+     * and emits a `transmit` event.
+     */
+    sendInteractive(data) {
+        const parsed = JSON.parse(data);
+        this.runOnRpc(rpc =&gt; {
+            rpc.call(&apos;recieveInteractivePacket&apos;, parsed, false);
+        });
+        this.emit(&apos;transmit&apos;, parsed);
+    }
+    /**
+     * attachListeners is called once the frame contents load to boot up
+     * the RPC system.
+     */
+    attachListeners() {
+        this.rpc = new RPC(this.frame.contentWindow, &apos;1.0&apos;);
+        this.rpc.expose(&apos;sendInteractivePacket&apos;, data =&gt; {
+            this.websocket.send(JSON.stringify(Object.assign({}, data, { type: &apos;method&apos;, discard: true })));
+        });
+        this.rpc.expose(&apos;controlsReady&apos;, () =&gt; {
+            if (this.state !== 0 /* Loading */) {
+                return;
+            }
+            this.state = 1 /* Ready */;
+            this.replayBuffer.forEach(p =&gt; {
+                p(this.rpc);
+            });
+            this.replayBuffer = [];
+            this.emit(&apos;loaded&apos;);
+        });
+        this.rpc.expose(&apos;maximize&apos;, (params) =&gt; {
+            this.emit(&apos;maximize&apos;, params.maximized, params.message);
+        });
+        this.rpc.expose(&apos;moveVideo&apos;, (options) =&gt; {
+            this.emit(&apos;moveVideo&apos;, options);
+        });
+        this.rpc.expose(&apos;unloading&apos;, () =&gt; {
+            this.emit(&apos;unload&apos;);
+        });
+        this.rpc.expose(&apos;log&apos;, params =&gt; {
+            this.emit(&apos;log&apos;, params);
+        });
+        this.rpc.expose(&apos;focusOut&apos;, () =&gt; {
+            this.emit(&apos;focusOut&apos;);
+        });
+        this.rpc.expose(&apos;handleExit&apos;, () =&gt; {
+            this.emit(&apos;handleExit&apos;);
+        });
+        this.rpc.expose(&apos;navigate&apos;, () =&gt; {
+            this.emit(&apos;navigate&apos;);
+        });
+        this.rpc.call(&apos;resendReady&apos;, {}, false);
+    }
+    /**
+     * handleWebsocketError is called when the websocket emits an `error`. This
+     * is generally called when the connection is terminated before a socket
+     * connection is established. We want to go back and get the error code/body.
+     */
+    handleWebsocketError(ev) {
+        // tslint:disable-next-line
+        fetch(this.websocket.url.replace(/^ws/, &apos;http&apos;))
+            .then(res =&gt; {
+            return res.text().then(message =&gt; {
+                this.emit(&apos;close&apos;, {
+                    message,
+                    code: res.status,
+                    expected: this.state === 2 /* Closing */,
+                    ev,
+                });
+            });
+        })
+            .catch(err =&gt; {
+            this.emit(&apos;close&apos;, {
+                code: -1,
+                message: err.message,
+                expected: this.state === 2 /* Closing */,
+                ev,
+            });
+        })
+            .then(() =&gt; {
+            this.state = 3 /* Closed */;
+            this.destroy();
+        });
+    }
+}
+/**
+ * Interactive protocol version this participant implements.
+ */
+Participant.protocolVersion = &apos;2.0&apos;;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

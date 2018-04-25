@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">dist/decoration.js | @mixer/cdk-std</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Standard library for Mixer Interactive controls"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@mixer/cdk-std"><meta property="twitter:description" content="Standard library for Mixer Interactive controls"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  <a href="test.html" data-ice="testLink">Test</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/mixer/cdk-std"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/decoration.js~Registry.html">Registry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/reactive.js~MemorizingSubject.html">MemorizingSubject</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPC.html">RPC</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/rpc.js~RPCError.html">RPCError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-asset">asset</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getIdentityVerification">getIdentityVerification</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-isLoaded">isLoaded</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Control">Control</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Input">Input</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Scene">Scene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-clock">clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-display">display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-locales">locales</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-log">log</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-navigation">navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-packageConfig">packageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-socket">socket</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlDescriptor">IControlDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IControlOptions">IControlOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputDescriptor">IInputDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IInputOptions">IInputOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IPackageConfig">IPackageConfig</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneDescriptor">ISceneDescriptor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISceneOptions">ISceneOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-ISettings">ISettings</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IStateDump">IStateDump</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPosition">IVideoPosition</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionList">IVideoPositionList</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-IVideoPositionOptions">IVideoPositionOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-Observable">Observable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#bundle">bundle</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/clock.js~Clock.html">Clock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/display.js~Display.html">Display</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/navigation.js~Navigation.html">Navigation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/dist/bundle/socket.js~Socket.html">Socket</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">dist/decoration.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * InputKinds are passed into the @Input() decorator to define what data
+ * type the inputs takes. If you&apos;re using TypeScript and you define the
+ * types of your properties, we can automatically infer some of these
+ * except for the ones marked &quot;not inferrable&quot;.
+ *
+ * For example:
+ *
+ * ```
+ * @Control({ name: &apos;button&apos; })
+ * class Button {
+ *   @Input()
+ *   public dimensions: Mixer.IDimensions;
+ *
+ *   @Input({ kind: Mixer.InputKind.Color })
+ *   public background: string;
+ * }
+ * ```
+ */
+export var InputKind;
+(function (InputKind) {
+    InputKind[InputKind[&quot;Dimensions&quot;] = 0] = &quot;Dimensions&quot;;
+    InputKind[InputKind[&quot;Number&quot;] = 1] = &quot;Number&quot;;
+    InputKind[InputKind[&quot;String&quot;] = 2] = &quot;String&quot;;
+    InputKind[InputKind[&quot;Boolean&quot;] = 3] = &quot;Boolean&quot;;
+    InputKind[InputKind[&quot;Color&quot;] = 4] = &quot;Color&quot;;
+    InputKind[InputKind[&quot;Duration&quot;] = 5] = &quot;Duration&quot;;
+    InputKind[InputKind[&quot;Url&quot;] = 6] = &quot;Url&quot;;
+    InputKind[InputKind[&quot;JSON&quot;] = 7] = &quot;JSON&quot;;
+})(InputKind || (InputKind = {}));
+const sceneMetaKey = &apos;__mix_scene&apos;;
+const controlMetaKey = &apos;__miix_control&apos;;
+const descriptorMetaKey = &apos;__miix_descriptor&apos;;
+/**
+ * The Registry is a simple class that maintains a list of available
+ * controls and scenes, and can return them given control kinds or scene IDs.
+ */
+export class Registry {
+    constructor() {
+        this.scenes = Object.create(null);
+        this.controls = Object.create(null);
+        this.config = window.mixerPackageConfig;
+    }
+    /**
+     * Adds a collection of controls and scenes to the registry. This will throw
+     * if anything given is not a scene or control.
+     * @param {...*} things
+     * @returns {Registry}
+     */
+    register(...things) {
+        things.forEach(thing =&gt; {
+            if (thing[sceneMetaKey]) {
+                this.registerScene(thing, thing[sceneMetaKey]);
+            }
+            else if (thing[controlMetaKey]) {
+                this.registerControl(thing, thing[controlMetaKey]);
+            }
+            else {
+                throw new Error(`Passed ${thing.name} to the miix registry, but it wasn&apos;t decorated with ` +
+                    &apos;@Control or @Scene!&apos;);
+            }
+        });
+        return this;
+    }
+    /**
+     * Returns the Control descriptor for a control of the given kind, or
+     * thows if it&apos;s not found.
+     * @param {string} kind
+     * @returns {IControlDescriptor}
+     * @throws {Error} if the control kind is not found
+     */
+    getControl(kind) {
+        const control = this.controls[kind];
+        if (!control) {
+            throw new Error(`No control was found for kind &quot;${kind}&quot;! If you have a class already, ` +
+                `make sure you&apos;re passing it to the Registry.register() function.`);
+        }
+        return control;
+    }
+    /**
+     * Returns the Scene descriptor for the given scene ID, returning the
+     * default scene if a specific handler wasn&apos;t found. Throws if no default
+     * scene is present and the specific ID is not registered.
+     * @param {string} id
+     * @returns {ISceneDescriptor}
+     * @throws {Error} if an appropriate scene implementation is not found
+     */
+    getScene(id) {
+        const scene = this.scenes[id] || this.defaultScene;
+        if (!scene) {
+            throw new Error(`No scene class was found for scene ID &quot;${id}&quot; and no default scene was ` +
+                `registered! If you have a default handler, make sure you pass it to the ` +
+                `Registry.register() function, or create a specific class for this scene.`);
+        }
+        return scene;
+    }
+    /**
+     * Returns inputs defined on the given control instance.
+     * @param {object} control
+     * @returns {IInputDescriptor[]}
+     * @throws {Error} if the passed object is not decorated with @{@link Scene}
+     * or @{@link Control}.
+     */
+    getInputs(control) {
+        const descriptor = control.constructor[descriptorMetaKey];
+        if (!descriptor) {
+            throw new Error(`Tried to get inputs on ${control.constructor.name}, but it isn&apos;t a ` +
+                `@Scene or @Control object!`);
+        }
+        return descriptor.inputs || [];
+    }
+    registerScene(scene, options) {
+        const existing = options.id &amp;&amp; this.scenes[options.id];
+        const id = options.id || &apos;default&apos;;
+        if (existing) {
+            throw new Error(`Duplicate scene IDs registered! Both ${existing.ctor.name} and ` +
+                `${scene.name} registered themselves for scene ID ${id}`);
+        }
+        const descriptor = Object.assign({}, options, this.config.scenes[id], { ctor: scene });
+        Object.defineProperty(scene, descriptorMetaKey, { value: descriptor });
+        this.scenes[id] = descriptor;
+        if (options.default) {
+            this.defaultScene = descriptor;
+        }
+    }
+    registerControl(control, options) {
+        const existing = options.kind &amp;&amp; this.controls[options.kind];
+        if (existing) {
+            throw new Error(`Duplicate controls registered! Both ${existing.ctor.name} and ` +
+                `${control.name} registered themselves for control kind ${options.kind}`);
+        }
+        const descriptor = Object.assign({}, options, this.config.controls[options.kind], { ctor: control });
+        Object.defineProperty(control, descriptorMetaKey, { value: descriptor });
+        this.controls[options.kind] = descriptor;
+    }
+}
+/**
+ * Scene is a decorator you can use to designate a class as a Scene. See
+ * documentation on {@link ISceneOptions} for more info.
+ * @param {ISceneOptions} [options]
+ */
+export function Scene(options = { default: true }) {
+    return (ctor) =&gt; {
+        Object.defineProperty(ctor, sceneMetaKey, { value: options });
+    };
+}
+/**
+ * Scene is a decorator you can use to designate a class as a Scene. See
+ * documentation on {@link IControlOptions} for more info.
+ * @param {IControlOptions} [options]
+ */
+export function Control(options) {
+    return (ctor) =&gt; {
+        Object.defineProperty(ctor, controlMetaKey, { value: options });
+    };
+}
+/**
+ * @Input decorates a property on a control. It makes it configurable in the
+ * Interactive studio and settable for Preact components. See the
+ * {@link IInputOptions} for more info.
+ * @param {IInputOptions} [_options]
+ */
+export function Input(_options = {}) {
+    return (_host, _propertyName) =&gt; {
+        // noop, this is handled by static analysis
+    };
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

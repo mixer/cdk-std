@@ -1,11 +1,10 @@
-import { EventEmitter } from 'eventemitter3';
 require('./directionalnavigation.min.js');
 
 import { RPC } from '../internal';
 
 declare const window: any;
 
-export enum Keys {
+const enum Keys {
   Enter = 13,
   Escape = 27,
   GamepadA = 195,
@@ -15,9 +14,10 @@ export enum Keys {
 }
 
 /**
- * Receive navigational input.
+ * The Navigation class provides utilities for dealing with user requests
+ * to nevigate around or away from the interactive controls.
  */
-export class Navigation extends EventEmitter {
+export class Navigation {
   private escapeKeys = {
     menu: false,
     view: false,
@@ -26,8 +26,6 @@ export class Navigation extends EventEmitter {
   private handlingExit = false;
 
   constructor(private readonly rpc: RPC) {
-    super();
-
     window.addEventListener(
       'keydown',
       (ev: KeyboardEvent) => {
@@ -59,16 +57,21 @@ export class Navigation extends EventEmitter {
   }
 
   /**
-   * Allow game to handle exit
+   * Should be called when the integration wants to intercept an event which
+   * would otherwise cause the Interactive integration to close, such as
+   * the "X" button on the user's controller when watching on their Xbox.
+   * Calling this will cause the next press of "X" to have no effect.
    */
   public handleExit(): void {
     this.handlingExit = true;
   }
 
   /**
-   * Handle exiting via escape and Game
+   * Handle exiting via escape and Game.
+   * @private
+   * @param {KeyboardEvent} ev
    */
-  public handleKeydown(ev: KeyboardEvent) {
+  private handleKeydown(ev: KeyboardEvent) {
     if (this.handlingExit && ev.keyCode === Keys.GamepadB) {
       ev.preventDefault();
       ev.stopPropagation();
@@ -107,9 +110,11 @@ export class Navigation extends EventEmitter {
   }
 
   /**
-   * Handle exiting via escape and Game
+   * Handle exiting via escape and Game.
+   * @private
+   * @param {KeyboardEvent} ev
    */
-  public handleKeyup(ev: KeyboardEvent) {
+  private handleKeyup(ev: KeyboardEvent) {
     if (ev.keyCode === Keys.Menu) {
       this.escapeKeys.menu = false;
     }

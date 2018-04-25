@@ -7,6 +7,7 @@ import { ObjectUnsubscribedError } from 'rxjs/util/ObjectUnsubscribedError';
  * MemorizingSubject acts like a BehaviorSubject, except that it is seeded
  * with no value, calls to getValue() will fail before the first `next` call,
  * and it does not push a value to subscribers if `next` has not been called.
+ * @private
  */
 export class MemorizingSubject<T> extends Subject<T> {
   protected value?: T;
@@ -42,7 +43,7 @@ export class MemorizingSubject<T> extends Subject<T> {
   }
 
   // tslint:disable-next-line
-  protected _subscribe(subscriber: Subscriber<T>): Subscription {
+  _subscribe(subscriber: Subscriber<T>): Subscription {
     const subscription = super._subscribe(subscriber);
     if (subscription && this.hasSet && !(<ISubscription>subscription).closed) {
       subscriber.next(this.value);

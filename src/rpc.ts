@@ -83,6 +83,16 @@ export class RPC extends EventEmitter {
   private lastSequentialCall = -1;
   private remoteProtocolVersion: string | undefined;
 
+  /**
+   * Creates a new RPC instance. Note: you should use the `rpc` singleton,
+   * rather than creating this class directly, in your controls.
+   *
+   * @param {window} target The window instance to make calls to or from.
+   * @param {string} protocolVersion The protocol version to communicate
+   * to the remote.
+   * @param {string} [origin='*'] Optionally, allow communication with the
+   * target if its origin matches this.
+   */
   constructor(
     private readonly target: IPostable,
     protocolVersion: string,
@@ -94,7 +104,12 @@ export class RPC extends EventEmitter {
   }
 
   /**
-   * Attaches a method callable by the other window, to this one.
+   * Attaches a method callable by the other window, to this one. The handler
+   * function will be invoked with whatever the other window gives us. Can
+   * return a Promise, or the results directly.
+   *
+   * @param {string} method
+   * @param {function(params: any): Promise.<*>|*} handler
    */
   public expose<T>(method: string, handler: (params: T) => Promise<any> | any) {
     this.on(method, (data: IRPCMethod<T>) => {
@@ -118,11 +133,18 @@ export class RPC extends EventEmitter {
     });
   }
 
-  /**
-   * Makes an RPC call out to the target window.
-   */
   public call<T>(method: string, params: object, waitForReply?: true): Promise<T>;
   public call(method: string, params: object, waitForReply: false): void;
+
+  /**
+   * Makes an RPC call out to the target window.
+   *
+   * @param {string} method
+   * @param {*} params
+   * @param {boolean} [waitForReply=true]
+   * @return {Promise.<object> | undefined} If waitForReply is true, a
+   * promise is returned that resolves once the server responds.
+   */
   public call<T>(method: string, params: object, waitForReply: boolean = true): Promise<T> | void {
     const id = this.idCounter++;
     const packet: IRPCMethod<any> = {
@@ -163,6 +185,7 @@ export class RPC extends EventEmitter {
   /**
    * Returns the protocol version that the remote client implements. This
    * will return `undefined` until we get a `ready` event.
+   * @return {string | undefined}
    */
   public remoteVersion(): string | undefined {
     return this.remoteProtocolVersion;

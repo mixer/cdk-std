@@ -20,7 +20,21 @@ interface IInteractiveRPCMethod<T> extends IRPCMethod<T> {} // tslint:disable-li
 // interface IInteractiveRPCReply<T> extends IRPCReply<T> {} // tslint:disable-line
 
 /**
- * Attaches a handler function that will be triggered when the call comes in.
+ * The socket wraps the RPC instance and provides an event emitter than
+ * fires when various Interactive events come in. These events correspond
+ * with the `onSomething...` methods as documented in the [protocol
+ * specification](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf).
+ * The payload of the event corresponds with the `params` from the events
+ * that the Interactive service sends. For example:
+ *
+ * ```js
+ * mixer.socket.on('onReady', data => {
+ *  console.log('Are the controls ready?', data.isReady);
+ * });
+ * mixer.socket.on('onSceneCreate', scene => {
+ *   // do something with the newly created scene...
+ * });
+ * ```
  */
 export class Socket extends EventEmitter {
   constructor(private readonly rpc: RPC) {
@@ -32,8 +46,10 @@ export class Socket extends EventEmitter {
   }
 
   /**
-   * Sets the handler to use when the editor requests a dump of the current
-   * controls state.
+   * Sets the handler to use when the CDK requests a dump of the current
+   * controls state. It should return metadata about the scenes. This will
+   * help in your debugging, but you do not have to implement it.
+   * @param {function(): IStateDump} fn
    */
   public dumpHandler(fn: () => IStateDump) {
     this.rpc.expose('dumpState', fn);
@@ -64,6 +80,30 @@ export class Socket extends EventEmitter {
   public call(method: string, params: object): Promise<object>;
   public call(method: string, params: object, waitForReply: true): Promise<object>;
   public call(method: string, params: object, waitForReply: false): void;
+
+  /**
+   * Makes a call to the Interactive service. This is just like sending a call
+   * over the [Interactive protocol](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf),
+   * however the only available methods are `giveInput` and `getTime`.
+   *
+   * For example:
+   *
+   * ```js
+   * // All giveInput calls must contain at minimum the event and control ID.
+   * // Everything else is passed through to the game client verbatim.
+   * mixer.socket.call('giveInput', {
+   *   event: 'click',
+   *   controlID: 'my_button',
+   *   moreCustomData: true,
+   * });
+   * ```
+   *
+   * @param {string} method
+   * @param {*} params
+   * @param {boolean} [waitForReply=true]
+   * @return {Promise.<object> | undefined} If waitForReply is true, a
+   * promise is returned that resolves once the server responds.
+   */
   public call(
     method: string,
     params: object,

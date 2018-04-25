@@ -5,37 +5,37 @@
 export interface IVideoPositionOptions {
   /**
    * Position of the video on screen from the left-hand edge of the container.
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * If omitted, any previous setting is cleared
    */
   left?: number;
 
   /**
    * Position of the video on screen from the top edge of the container.
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * If omitted, any previous setting is cleared
    */
   top?: number;
 
   /**
    * Position of the video on screen from the right-hand edge of the container.
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * If omitted, any previous setting is cleared
    */
   right?: number;
 
   /**
    * Position of the video on screen from the bottom edge of the container.
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * If omitted, any previous setting is cleared
    */
   bottom?: number;
 
   /**
-   * Width of the video on screen as in pixels.
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * Width of the video on screen in pixels.
+   * If omitted, any previous setting is cleared
    */
   width?: number;
 
   /**
-   * Height of the video on screen as in pixels
-   * If omitted, it's not modified. If -1, any previous setting is cleared.
+   * Height of the video on screen in pixels
+   * If omitted, any previous setting is cleared
    */
   height?: number;
 
@@ -49,6 +49,38 @@ export interface IVideoPositionOptions {
    * @see https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
    */
   easing?: string;
+}
+
+/**
+ * IVideoPosition contains data about the position of the video relative
+ * to the iframe, in addition to its channel ID.
+ */
+export interface IVideoPosition extends ClientRect {
+  channelId: number;
+}
+
+/**
+ * IVideoPositionList is given in the `positions()`
+ * observable from the display.
+ */
+export interface IVideoPositionList {
+  /**
+   * connectedPlayer is the position of the video which the interactive
+   * integration is currently connected to. (In a Mixer costream, there can
+   * be multiple players displayed at once.)
+   */
+  connectedPlayer: IVideoPosition;
+
+  /**
+   * costreamPlayers is a list of all players in a Mixer costream. Costreaming
+   * allows multiple people to stream together, you can read more about it at
+   * the link below. This will always contain, at minimumum, the
+   * connectedPlayer. Additional channels may come and go over
+   * the course of the broadcast.
+   *
+   * @see https://watchbeam.zendesk.com/hc/en-us/articles/115003032426-Co-Stream-FAQ
+   */
+  costreamPlayers: IVideoPosition[];
 }
 
 /**
@@ -358,10 +390,8 @@ export interface IReady {
 }
 
 /**
- * ISettings are settings specific to each run of the custom controls. They're
- * different in that was from the packageConfig, which is a 'global' constant
- * for every user. The settings contain some data about where the controls
- * are displayed and the client displaying them.
+ * ISettings are settings specific to each run of the custom controls. They contain
+ * some data about where the controls are displayed and the client displaying them.
  */
 export interface ISettings {
   /**

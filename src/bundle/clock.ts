@@ -18,6 +18,8 @@ export class Clock {
 
   /**
    * Adjusts a timestamp given by the remote server to the local timestamp.
+   * @param {number} timestamp
+   * @returns {Promise.<number>}
    */
   public remoteToLocal(timestamp: number): Promise<number> {
     return this.awaiting.then(() => timestamp - this.delta);
@@ -25,6 +27,8 @@ export class Clock {
 
   /**
    * Adjusts a timestamp created locally to the one on the remote server.
+   * @param {number} timestamp
+   * @returns {Promise.<number>}
    */
   public localToRemote(timestamp: number): Promise<number> {
     return this.awaiting.then(() => timestamp + this.delta);
@@ -34,6 +38,7 @@ export class Clock {
    * sync runs a quick clock synchronization against the server. Recursive
    * calls itself, with the remaining samples to take as well as samples
    * of the drift between the local and server clock.
+   * @private
    */
   private sync(remaining: number = 3, deltaSamples: number[] = []): Promise<void> {
     const start = Date.now();

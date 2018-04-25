@@ -1,0 +1,120 @@
+{
+  "coverage": "50.42%",
+  "expectCount": 119,
+  "actualCount": 60,
+  "files": {
+    "dist/bundle/clock.js": {
+      "expectCount": 8,
+      "actualCount": 4,
+      "undocumentLines": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "dist/bundle/display.js": {
+      "expectCount": 13,
+      "actualCount": 8,
+      "undocumentLines": [
+        7,
+        9,
+        10,
+        11,
+        87
+      ]
+    },
+    "dist/bundle/navigation.js": {
+      "expectCount": 9,
+      "actualCount": 4,
+      "undocumentLines": [
+        7,
+        8,
+        9,
+        13,
+        88
+      ]
+    },
+    "dist/bundle/socket.js": {
+      "expectCount": 6,
+      "actualCount": 3,
+      "undocumentLines": [
+        21,
+        23,
+        38
+      ]
+    },
+    "dist/bundle.js": {
+      "expectCount": 13,
+      "actualCount": 11,
+      "undocumentLines": [
+        10,
+        22
+      ]
+    },
+    "dist/decoration.js": {
+      "expectCount": 18,
+      "actualCount": 8,
+      "undocumentLines": [
+        31,
+        32,
+        33,
+        39,
+        40,
+        41,
+        42,
+        112,
+        123,
+        126
+      ]
+    },
+    "dist/participant.js": {
+      "expectCount": 18,
+      "actualCount": 13,
+      "undocumentLines": [
+        19,
+        21,
+        90,
+        139,
+        170
+      ]
+    },
+    "dist/reactive.js": {
+      "expectCount": 8,
+      "actualCount": 1,
+      "undocumentLines": [
+        9,
+        11,
+        13,
+        16,
+        19,
+        23,
+        37
+      ]
+    },
+    "dist/rpc.js": {
+      "expectCount": 26,
+      "actualCount": 8,
+      "undocumentLines": [
+        16,
+        18,
+        19,
+        20,
+        23,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        60,
+        156,
+        169,
+        173,
+        182
+      ]
+    }
+  }
+}

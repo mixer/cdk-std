@@ -1,0 +1,4331 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "dist/.external-ecmascript.js",
+    "static": true,
+    "longname": "dist/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "dist/bundle/clock.js",
+    "content": "/**\n * Clock handles synchronizing the local time against the server, adjusting\n * for any client-size clock skew.\n */\nexport class Clock {\n    constructor(socket) {\n        this.socket = socket;\n        this.delta = 0;\n        this.awaiting = new Promise(resolve => {\n            socket.once('interactivePacket', () => {\n                resolve(this.sync());\n            });\n        });\n    }\n    /**\n     * Adjusts a timestamp given by the remote server to the local timestamp.\n     * @param {number} timestamp\n     * @returns {Promise.<number>}\n     */\n    remoteToLocal(timestamp) {\n        return this.awaiting.then(() => timestamp - this.delta);\n    }\n    /**\n     * Adjusts a timestamp created locally to the one on the remote server.\n     * @param {number} timestamp\n     * @returns {Promise.<number>}\n     */\n    localToRemote(timestamp) {\n        return this.awaiting.then(() => timestamp + this.delta);\n    }\n    /**\n     * sync runs a quick clock synchronization against the server. Recursive\n     * calls itself, with the remaining samples to take as well as samples\n     * of the drift between the local and server clock.\n     * @private\n     */\n    sync(remaining = 3, deltaSamples = []) {\n        const start = Date.now();\n        return (this.socket\n            .call('getTime', {})\n            .then(({ time }) => {\n            const now = Date.now();\n            // To get the clock delta, add the latency to the time the server\n            // said it had back then, and compare it with the current time.\n            deltaSamples.push(time + (now - start) / 2 - now);\n            if (remaining > 0) {\n                return this.sync(remaining - 1, deltaSamples);\n            }\n            this.delta = deltaSamples.sort()[Math.floor(deltaSamples.length / 2)];\n            return undefined;\n        })\n            .catch(() => undefined));\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle/clock.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Clock",
+    "memberof": "dist/bundle/clock.js",
+    "static": true,
+    "longname": "dist/bundle/clock.js~Clock",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle/clock.js",
+    "importStyle": "{Clock}",
+    "description": "Clock handles synchronizing the local time against the server, adjusting\nfor any client-size clock skew.",
+    "lineNumber": 5,
+    "interface": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "socket",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#socket",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "delta",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#delta",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "awaiting",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#awaiting",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "name": "remoteToLocal",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#remoteToLocal",
+    "access": "public",
+    "description": "Adjusts a timestamp given by the remote server to the local timestamp.",
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<number>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "timestamp",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<number>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "name": "localToRemote",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#localToRemote",
+    "access": "public",
+    "description": "Adjusts a timestamp created locally to the one on the remote server.",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<number>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "timestamp",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<number>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
+    "name": "sync",
+    "memberof": "dist/bundle/clock.js~Clock",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/clock.js~Clock#sync",
+    "access": "private",
+    "description": "sync runs a quick clock synchronization against the server. Recursive\ncalls itself, with the remaining samples to take as well as samples\nof the drift between the local and server clock.",
+    "lineNumber": 37,
+    "ignore": true,
+    "params": [
+      {
+        "name": "remaining",
+        "optional": true,
+        "types": [
+          "number"
+        ],
+        "defaultRaw": 3,
+        "defaultValue": "3"
+      },
+      {
+        "name": "deltaSamples",
+        "optional": true,
+        "types": [
+          "*[]"
+        ],
+        "defaultRaw": [],
+        "defaultValue": "[]"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "dist/bundle/display.js",
+    "content": "import { EventEmitter } from 'eventemitter3';\nimport { MemorizingSubject } from '../reactive';\n/**\n * Display modified the display of interactive controls.\n */\nexport class Display extends EventEmitter {\n    constructor(rpc) {\n        super();\n        this.rpc = rpc;\n        this.settingsSubj = new MemorizingSubject();\n        this.videoPositionSubj = new MemorizingSubject();\n        rpc.expose('updateVideoPosition', (pos) => {\n            this.videoPositionSubj.next(pos);\n        });\n        rpc.expose('updateSettings', (settings) => {\n            this.settingsSubj.next(settings);\n            this.emit('settings', settings);\n        });\n    }\n    /**\n     * Hides the controls and displays a loading spinner, optionally\n     * with a custom message. This is useful for transitioning. If called\n     * while the controls are already minimized, it will update the message.\n     * @param {string} [message]\n     */\n    minimize(message) {\n        this.rpc.call('maximize', { maximized: false, message }, false);\n    }\n    /**\n     * Restores previously minimize()'d controls.\n     */\n    maximize() {\n        this.rpc.call('maximize', { maximized: true }, false);\n    }\n    /**\n     * Moves the position of the video on the screen.\n     * @param {IVideoPositionOptions} options\n     */\n    moveVideo(options) {\n        this.rpc.call('moveVideo', options, false);\n    }\n    /**\n     * Returns an observable of the video's current position, relative to\n     * the frame's screen. For example, you can use it to set the position\n     * of an overlaid div:\n     *\n     * ```\n     * mixer.display.position().subscribe(position => {\n     *   videoOverlay.style.top = `${position.top}px`;\n     *   videoOverlay.style.left = `${position.left}px`;\n     *   videoOverlay.style.height = `${position.height}px`;\n     *   videoOverlay.style.width = `${position.width}px`;\n     * });\n     * ```\n     * @return {Observable.<IVideoPositionList>}\n     */\n    position() {\n        return this.videoPositionSubj;\n    }\n    /**\n     * Returns an observable of the current project settings.\n     * @return {Observable.<ISettings>}\n     */\n    settings() {\n        return this.settingsSubj;\n    }\n    /**\n     * Returns the video position at this moment in time. Returns undefined if\n     * the video position hasn't been sent yet. If undefined, you should retry,\n     * or listen to the `display.position()` observable to be notified when\n     * it comes in.\n     * @return {IVideoPositionList | undefined}\n     */\n    getPosition() {\n        return this.videoPositionSubj.hasValue() ? this.videoPositionSubj.getValue() : undefined;\n    }\n    /**\n     * Returns the current display settings at this instant in time. It will\n     * be `undefined` if the settings have not been sent yet. If undefined,\n     * you should retry, or listen to the `display.settings()` observable to\n     * be notified when it comes in.\n     * @return {ISettings | undefined}\n     */\n    getSettings() {\n        return this.settingsSubj.hasValue() ? this.settingsSubj.getValue() : undefined;\n    }\n    on(event, handler) {\n        super.on(event, handler);\n        return this;\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle/display.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "class",
+    "name": "Display",
+    "memberof": "dist/bundle/display.js",
+    "static": true,
+    "longname": "dist/bundle/display.js~Display",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle/display.js",
+    "importStyle": "{Display}",
+    "description": "Display modified the display of interactive controls.",
+    "lineNumber": 6,
+    "interface": false,
+    "extends": [
+      "eventemitter3~EventEmitter"
+    ]
+  },
+  {
+    "__docId__": 60,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 61,
+    "kind": "member",
+    "name": "rpc",
+    "memberof": "dist/bundle/display.js~Display",
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#rpc",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "settingsSubj",
+    "memberof": "dist/bundle/display.js~Display",
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#settingsSubj",
+    "access": "public",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "videoPositionSubj",
+    "memberof": "dist/bundle/display.js~Display",
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#videoPositionSubj",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 64,
+    "kind": "method",
+    "name": "minimize",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#minimize",
+    "access": "public",
+    "description": "Hides the controls and displays a loading spinner, optionally\nwith a custom message. This is useful for transitioning. If called\nwhile the controls are already minimized, it will update the message.",
+    "lineNumber": 26,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "message",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "maximize",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#maximize",
+    "access": "public",
+    "description": "Restores previously minimize()'d controls.",
+    "lineNumber": 32,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "name": "moveVideo",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#moveVideo",
+    "access": "public",
+    "description": "Moves the position of the video on the screen.",
+    "lineNumber": 39,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IVideoPositionOptions"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "position",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#position",
+    "access": "public",
+    "description": "Returns an observable of the video's current position, relative to\nthe frame's screen. For example, you can use it to set the position\nof an overlaid div:\n\n```\nmixer.display.position().subscribe(position => {\n  videoOverlay.style.top = `${position.top}px`;\n  videoOverlay.style.left = `${position.left}px`;\n  videoOverlay.style.height = `${position.height}px`;\n  videoOverlay.style.width = `${position.width}px`;\n});\n```",
+    "lineNumber": 57,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Observable.<IVideoPositionList>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "settings",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#settings",
+    "access": "public",
+    "description": "Returns an observable of the current project settings.",
+    "lineNumber": 64,
+    "return": {
+      "nullable": null,
+      "types": [
+        "Observable.<ISettings>"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "getPosition",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#getPosition",
+    "access": "public",
+    "description": "Returns the video position at this moment in time. Returns undefined if\nthe video position hasn't been sent yet. If undefined, you should retry,\nor listen to the `display.position()` observable to be notified when\nit comes in.",
+    "lineNumber": 74,
+    "return": {
+      "nullable": null,
+      "types": [
+        "IVideoPositionList ",
+        " undefined"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 70,
+    "kind": "method",
+    "name": "getSettings",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#getSettings",
+    "access": "public",
+    "description": "Returns the current display settings at this instant in time. It will\nbe `undefined` if the settings have not been sent yet. If undefined,\nyou should retry, or listen to the `display.settings()` observable to\nbe notified when it comes in.",
+    "lineNumber": 84,
+    "return": {
+      "nullable": null,
+      "types": [
+        "ISettings ",
+        " undefined"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "on",
+    "memberof": "dist/bundle/display.js~Display",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/display.js~Display#on",
+    "access": "public",
+    "description": null,
+    "lineNumber": 87,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "handler",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "name": "dist/bundle/navigation.js",
+    "content": "require('./directionalnavigation.min.js');\n/**\n * The Navigation class provides utilities for dealing with user requests\n * to nevigate around or away from the interactive controls.\n */\nexport class Navigation {\n    constructor(rpc) {\n        this.rpc = rpc;\n        this.escapeKeys = {\n            menu: false,\n            view: false,\n        };\n        this.handlingExit = false;\n        window.addEventListener('keydown', (ev) => {\n            this.handleKeydown(ev);\n        }, true);\n        window.addEventListener('keyup', (ev) => {\n            this.handleKeyup(ev);\n        }, true);\n        rpc.expose('keyboardShowing', () => {\n            window.TVJS.DirectionalNavigation.enabled = false;\n        });\n        rpc.expose('keyboardHiding', () => {\n            window.TVJS.DirectionalNavigation.enabled = true;\n        });\n        rpc.expose('focusIn', () => {\n            const firstFocus = document.querySelector('[tabindex=\"0\"]') || document.body;\n            firstFocus.focus();\n        });\n    }\n    /**\n     * Should be called when the integration wants to intercept an event which\n     * would otherwise cause the Interactive integration to close, such as\n     * the \"X\" button on the user's controller when watching on their Xbox.\n     * Calling this will cause the next press of \"X\" to have no effect.\n     */\n    handleExit() {\n        this.handlingExit = true;\n    }\n    /**\n     * Handle exiting via escape and Game.\n     * @private\n     * @param {KeyboardEvent} ev\n     */\n    handleKeydown(ev) {\n        if (this.handlingExit && ev.keyCode === 196 /* GamepadB */) {\n            ev.preventDefault();\n            ev.stopPropagation();\n            this.handlingExit = false;\n            return;\n        }\n        if (ev.keyCode === 207 /* Menu */ || ev.keyCode === 208 /* View */) {\n            ev.keyCode === 207 /* Menu */ ? (this.escapeKeys.menu = true) : (this.escapeKeys.view = true);\n        }\n        else {\n            this.escapeKeys.menu = false;\n            this.escapeKeys.view = false;\n        }\n        if (ev.keyCode === 27 /* Escape */ ||\n            ev.keyCode === 196 /* GamepadB */ ||\n            (this.escapeKeys.menu && this.escapeKeys.view)) {\n            ev.preventDefault();\n            ev.stopPropagation();\n            this.escapeKeys.menu = false;\n            this.escapeKeys.view = false;\n            this.rpc.call('focusOut', {}, false);\n            return;\n        }\n        if (ev.keyCode === 13 /* Enter */ || ev.keyCode === 195 /* GamepadA */) {\n            this.handleSubmit();\n            return;\n        }\n        this.rpc.call('navigate', {}, false);\n    }\n    /**\n     * Handle exiting via escape and Game.\n     * @private\n     * @param {KeyboardEvent} ev\n     */\n    handleKeyup(ev) {\n        if (ev.keyCode === 207 /* Menu */) {\n            this.escapeKeys.menu = false;\n        }\n        if (ev.keyCode === 208 /* View */) {\n            this.escapeKeys.view = false;\n        }\n    }\n    handleSubmit() {\n        const clickEvent = document.createEvent('MouseEvents');\n        clickEvent.initEvent('mousedown', true, true);\n        const currentEl = document.activeElement;\n        if (currentEl) {\n            currentEl.dispatchEvent(clickEvent);\n        }\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle/navigation.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 73,
+    "kind": "class",
+    "name": "Navigation",
+    "memberof": "dist/bundle/navigation.js",
+    "static": true,
+    "longname": "dist/bundle/navigation.js~Navigation",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle/navigation.js",
+    "importStyle": "{Navigation}",
+    "description": "The Navigation class provides utilities for dealing with user requests\nto nevigate around or away from the interactive controls.",
+    "lineNumber": 6,
+    "interface": false
+  },
+  {
+    "__docId__": 74,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "name": "rpc",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#rpc",
+    "access": "public",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "member",
+    "name": "escapeKeys",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#escapeKeys",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{\"menu\": *, \"view\": *}"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "name": "handlingExit",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#handlingExit",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "handleExit",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#handleExit",
+    "access": "public",
+    "description": "Should be called when the integration wants to intercept an event which\nwould otherwise cause the Interactive integration to close, such as\nthe \"X\" button on the user's controller when watching on their Xbox.\nCalling this will cause the next press of \"X\" to have no effect.",
+    "lineNumber": 37,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 80,
+    "kind": "method",
+    "name": "handleKeydown",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#handleKeydown",
+    "access": "private",
+    "description": "Handle exiting via escape and Game.",
+    "lineNumber": 45,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KeyboardEvent"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ev",
+        "description": ""
+      }
+    ],
+    "ignore": true,
+    "return": null
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "handleKeyup",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#handleKeyup",
+    "access": "private",
+    "description": "Handle exiting via escape and Game.",
+    "lineNumber": 80,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "KeyboardEvent"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ev",
+        "description": ""
+      }
+    ],
+    "ignore": true,
+    "return": null
+  },
+  {
+    "__docId__": 83,
+    "kind": "method",
+    "name": "handleSubmit",
+    "memberof": "dist/bundle/navigation.js~Navigation",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/navigation.js~Navigation#handleSubmit",
+    "access": "public",
+    "description": null,
+    "lineNumber": 88,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "file",
+    "name": "dist/bundle/socket.js",
+    "content": "import { EventEmitter } from 'eventemitter3';\n// interface IInteractiveRPCReply<T> extends IRPCReply<T> {} // tslint:disable-line\n/**\n * The socket wraps the RPC instance and provides an event emitter than\n * fires when various Interactive events come in. These events correspond\n * with the `onSomething...` methods as documented in the [protocol\n * specification](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf).\n * The payload of the event corresponds with the `params` from the events\n * that the Interactive service sends. For example:\n *\n * ```js\n * mixer.socket.on('onReady', data => {\n *  console.log('Are the controls ready?', data.isReady);\n * });\n * mixer.socket.on('onSceneCreate', scene => {\n *   // do something with the newly created scene...\n * });\n * ```\n */\nexport class Socket extends EventEmitter {\n    constructor(rpc) {\n        super();\n        this.rpc = rpc;\n        rpc.expose('recieveInteractivePacket', (data) => {\n            this.emit('interactivePacket', data);\n            this.emit(data.method, data.params);\n        });\n    }\n    /**\n     * Sets the handler to use when the CDK requests a dump of the current\n     * controls state. It should return metadata about the scenes. This will\n     * help in your debugging, but you do not have to implement it.\n     * @param {function(): IStateDump} fn\n     */\n    dumpHandler(fn) {\n        this.rpc.expose('dumpState', fn);\n    }\n    on(event, handler) {\n        super.on(event, handler);\n        return this;\n    }\n    /**\n     * Makes a call to the Interactive service. This is just like sending a call\n     * over the [Interactive protocol](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf),\n     * however the only available methods are `giveInput` and `getTime`.\n     *\n     * For example:\n     *\n     * ```js\n     * // All giveInput calls must contain at minimum the event and control ID.\n     * // Everything else is passed through to the game client verbatim.\n     * mixer.socket.call('giveInput', {\n     *   event: 'click',\n     *   controlID: 'my_button',\n     *   moreCustomData: true,\n     * });\n     * ```\n     *\n     * @param {string} method\n     * @param {*} params\n     * @param {boolean} [waitForReply=true]\n     * @return {Promise.<object> | undefined} If waitForReply is true, a\n     * promise is returned that resolves once the server responds.\n     */\n    call(method, params, waitForReply = true) {\n        const reply = this.rpc.call('sendInteractivePacket', {\n            method,\n            params,\n        }, waitForReply);\n        if (!waitForReply) {\n            return;\n        }\n        return reply;\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle/socket.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 85,
+    "kind": "class",
+    "name": "Socket",
+    "memberof": "dist/bundle/socket.js",
+    "static": true,
+    "longname": "dist/bundle/socket.js~Socket",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle/socket.js",
+    "importStyle": "{Socket}",
+    "description": "The socket wraps the RPC instance and provides an event emitter than\nfires when various Interactive events come in. These events correspond\nwith the `onSomething...` methods as documented in the [protocol\nspecification](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf).\nThe payload of the event corresponds with the `params` from the events\nthat the Interactive service sends. For example:\n\n```js\nmixer.socket.on('onReady', data => {\n console.log('Are the controls ready?', data.isReady);\n});\nmixer.socket.on('onSceneCreate', scene => {\n  // do something with the newly created scene...\n});\n```",
+    "lineNumber": 20,
+    "interface": false,
+    "extends": [
+      "eventemitter3~EventEmitter"
+    ]
+  },
+  {
+    "__docId__": 86,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/bundle/socket.js~Socket",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/socket.js~Socket#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "member",
+    "name": "rpc",
+    "memberof": "dist/bundle/socket.js~Socket",
+    "static": false,
+    "longname": "dist/bundle/socket.js~Socket#rpc",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "dumpHandler",
+    "memberof": "dist/bundle/socket.js~Socket",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/socket.js~Socket#dumpHandler",
+    "access": "public",
+    "description": "Sets the handler to use when the CDK requests a dump of the current\ncontrols state. It should return metadata about the scenes. This will\nhelp in your debugging, but you do not have to implement it.",
+    "lineNumber": 35,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function(): IStateDump"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "on",
+    "memberof": "dist/bundle/socket.js~Socket",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/socket.js~Socket#on",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "handler",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "call",
+    "memberof": "dist/bundle/socket.js~Socket",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/bundle/socket.js~Socket#call",
+    "access": "public",
+    "description": "Makes a call to the Interactive service. This is just like sending a call\nover the [Interactive protocol](https://dev.mixer.com/reference/interactive/protocol/protocol.pdf),\nhowever the only available methods are `giveInput` and `getTime`.\n\nFor example:\n\n```js\n// All giveInput calls must contain at minimum the event and control ID.\n// Everything else is passed through to the game client verbatim.\nmixer.socket.call('giveInput', {\n  event: 'click',\n  controlID: 'my_button',\n  moreCustomData: true,\n});\n```",
+    "lineNumber": 65,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "waitForReply",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<object> ",
+        " undefined"
+      ],
+      "spread": false,
+      "description": "If waitForReply is true, a\npromise is returned that resolves once the server responds."
+    }
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "name": "dist/bundle.js",
+    "content": "import { Clock } from './bundle/clock';\nimport { Display } from './bundle/display';\nimport { Navigation } from './bundle/navigation';\nimport { Socket } from './bundle/socket';\nimport { RPC } from './rpc';\nimport './doc';\nexport * from './rpc';\nexport * from './typings';\nexport * from './decoration';\nconst rpc = new RPC(window.top, '1.0');\n/**\n * Returns the fully qualified URL to a static project asset.\n * You can pass multiple path segments to join them together.\n * @param {...string} path\n * @returns {string}\n */\nexport function asset(...path) {\n    // For now this is fairly stub-ish, it serves as an injection point if we\n    // decide to change how assets are delivered in the future.\n    return `./${path.map(segment => segment.replace(/^\\/+|\\/+$/, '')).join('/')}`;\n}\nlet isReady = false;\n/**\n * resendReady is called by the host when it detects the iframe loads. It seems\n * that loading can be fired \"slowly\" in some cases causing the isLoaded event\n * to fire off before the host sets up listeners, so that host will call this\n * method when it first boots to make sure that it didn't miss anything!\n */\nrpc.expose('resendReady', () => {\n    if (isReady) {\n        rpc.call('controlsReady', {}, false);\n    }\n});\n/**\n * This signals to Mixer that the controls have been bound and are ready to\n * start taking Interactive calls. You need to call this to allow your\n * controls to be displayed.\n *\n * In the Preact starter, this is called automatically by the MState class.\n */\nexport function isLoaded() {\n    isReady = true;\n    rpc.call('controlsReady', {}, false);\n}\nwindow.addEventListener('beforeunload', () => {\n    rpc.call('unloading', {}, false);\n});\n/**\n * Logs an exception to Mixer, called by the exported `log` object.\n * @param {string} level\n * @param {any[]} params\n */\nfunction captureLogMessage(level, params) {\n    rpc.call('log', {\n        level,\n        params: params.map(param => {\n            if (param instanceof Error) {\n                return {\n                    message: param.message,\n                    stack: param.stack,\n                    metadata: typeof param.cause === 'function' ? param.cause() : null,\n                };\n            }\n            return param;\n        }),\n    }, false);\n}\n/**\n * `log` has methods to capture messages from your controls. These'll be\n * exposed in the miix UI, and we will continue to build further telemetry\n * around them.\n */\nexport const log = {\n    debug(...params) {\n        captureLogMessage('debug', params);\n    },\n    info(...params) {\n        captureLogMessage('info', params);\n    },\n    warn(...params) {\n        captureLogMessage('warn', params);\n    },\n    error(...params) {\n        captureLogMessage('error', params);\n    },\n};\nwindow.onerror = (_message, _source, _lineno, _colno, error) => {\n    log.error('An uncaught exception occurred.', error);\n};\n/**\n * Since your interactive controls can be run by any client, it's sometimes\n * useful (particularly if you do fancier service integration) to be able to\n * verify that the player is who they say they are. This method provides a\n * means for you to do that. This is what happens:\n *\n *  1. You create a cryptographically secure challenge for the user. This MUST\n *     be done on your service; the challenge is used so that adversaries\n *     cannot impersonate users (for instance, by gathering challenge\n *     responses for their own integrations then injecting\n *     those into your controls).\n *\n *  2. Mixer servers will create a token based on the challenge and a\n *     secret, and return that in the response to this method.\n *\n *  3. You may transmit the token and challenge to your services and call\n *     /api/v1/interactive/identity/verify to get the user ID that corresponds\n *     to the token. The API will return a 400 if the challenge is invalid.\n *\n * Visualized, that's something like this:\n *\n * ```\n *\n * ┌──────────┐    challenge  ┌──────────┐                ┌───────┐\n * │          ├───────────────▶          │                │       │\n * │          │               │          │─ ─ ─ ─ ─ ─ ─ ─ ▶       │\n * │   Your   │               │          │                │       │\n * │ Service  │               │ Controls │                │       │\n * │          │               │          │                │       │\n * │          │      token    │          │                │       │\n * │          │◀──────────────│          ◀ ─ ─ ─ ─ ─ ─ ─ ─│ Mixer │\n * └─────┬────┘               └──────────┘                │       │\n *       │                                                │       │\n *       │                                                │       │\n *       │    POST /interactive/identity/verify           │       │\n *       └────────────────────────────────────────────────▶       │\n *             { \"challenge\":\"...\",\"token:\"...\" }         │       │\n *                                                        └───────┘\n * ```\n *\n * @param {string} challenge\n * @returns {Promise.<string>}\n */\nexport function getIdentityVerification(challenge) {\n    return rpc.call('verificationChallenge', { challenge }, true);\n}\n/**\n * Your project's package configuration.\n * @type {IPackageConfig}\n */\nexport const packageConfig = window.mixerPackageConfig;\n/**\n * The list of available locales. This is populated when the build is run\n * with the cdk-webpack-plugin and contains the files in the configured locale\n * folder. For example, this might be set to `['en', 'es']` if you have English\n * and Spanish translation files.\n * @type {Array.<string>}\n */\nexport const locales = window.mixerLocales;\n/**\n * Singleton {@link Socket} instance.\n * @type {Socket}\n */\nexport const socket = new Socket(rpc);\n/**\n * Singleton {@link Display} instance.\n * @type {Display}\n */\nexport const display = new Display(rpc);\n/**\n * Singleton {@link Navigation} instance.\n * @type {Navigation}\n */\nexport const navigation = new Navigation(rpc);\n/**\n * Singleton {@link Clock} instance.\n * @type {Clock}\n */\nexport const clock = new Clock(socket);\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 92,
+    "kind": "variable",
+    "name": "rpc",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~rpc",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "type": {
+      "types": [
+        "dist/rpc.js~RPC"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "function",
+    "name": "asset",
+    "memberof": "dist/bundle.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/bundle.js~asset",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{asset}",
+    "description": "Returns the fully qualified URL to a static project asset.\nYou can pass multiple path segments to join them together.",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "...string"
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "path",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 94,
+    "kind": "variable",
+    "name": "isReady",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~isReady",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "function",
+    "name": "isLoaded",
+    "memberof": "dist/bundle.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/bundle.js~isLoaded",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{isLoaded}",
+    "description": "This signals to Mixer that the controls have been bound and are ready to\nstart taking Interactive calls. You need to call this to allow your\ncontrols to be displayed.\n\nIn the Preact starter, this is called automatically by the MState class.",
+    "lineNumber": 41,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 96,
+    "kind": "function",
+    "name": "captureLogMessage",
+    "memberof": "dist/bundle.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/bundle.js~captureLogMessage",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": null,
+    "description": "Logs an exception to Mixer, called by the exported `log` object.",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "level",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "any[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": ""
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "variable",
+    "name": "log",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~log",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{log}",
+    "description": "`log` has methods to capture messages from your controls. These'll be\nexposed in the miix UI, and we will continue to build further telemetry\naround them.",
+    "lineNumber": 73,
+    "type": {
+      "types": [
+        "{\"debug\": function, \"info\": function, \"warn\": function, \"error\": function}"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "function",
+    "name": "getIdentityVerification",
+    "memberof": "dist/bundle.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/bundle.js~getIdentityVerification",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{getIdentityVerification}",
+    "description": "Since your interactive controls can be run by any client, it's sometimes\nuseful (particularly if you do fancier service integration) to be able to\nverify that the player is who they say they are. This method provides a\nmeans for you to do that. This is what happens:\n\n 1. You create a cryptographically secure challenge for the user. This MUST\n    be done on your service; the challenge is used so that adversaries\n    cannot impersonate users (for instance, by gathering challenge\n    responses for their own integrations then injecting\n    those into your controls).\n\n 2. Mixer servers will create a token based on the challenge and a\n    secret, and return that in the response to this method.\n\n 3. You may transmit the token and challenge to your services and call\n    /api/v1/interactive/identity/verify to get the user ID that corresponds\n    to the token. The API will return a 400 if the challenge is invalid.\n\nVisualized, that's something like this:\n\n```\n\n┌──────────┐    challenge  ┌──────────┐                ┌───────┐\n│          ├───────────────▶          │                │       │\n│          │               │          │─ ─ ─ ─ ─ ─ ─ ─ ▶       │\n│   Your   │               │          │                │       │\n│ Service  │               │ Controls │                │       │\n│          │               │          │                │       │\n│          │      token    │          │                │       │\n│          │◀──────────────│          ◀ ─ ─ ─ ─ ─ ─ ─ ─│ Mixer │\n└─────┬────┘               └──────────┘                │       │\n      │                                                │       │\n      │                                                │       │\n      │    POST /interactive/identity/verify           │       │\n      └────────────────────────────────────────────────▶       │\n            { \"challenge\":\"...\",\"token:\"...\" }         │       │\n                                                       └───────┘\n```",
+    "lineNumber": 133,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<string>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "challenge",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<string>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "variable",
+    "name": "packageConfig",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~packageConfig",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{packageConfig}",
+    "description": "Your project's package configuration.",
+    "lineNumber": 140,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IPackageConfig"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "variable",
+    "name": "locales",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~locales",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{locales}",
+    "description": "The list of available locales. This is populated when the build is run\nwith the cdk-webpack-plugin and contains the files in the configured locale\nfolder. For example, this might be set to `['en', 'es']` if you have English\nand Spanish translation files.",
+    "lineNumber": 148,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array.<string>"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "variable",
+    "name": "socket",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~socket",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{socket}",
+    "description": "Singleton {@link Socket} instance.",
+    "lineNumber": 153,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Socket"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "name": "display",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~display",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{display}",
+    "description": "Singleton {@link Display} instance.",
+    "lineNumber": 158,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Display"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "variable",
+    "name": "navigation",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~navigation",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{navigation}",
+    "description": "Singleton {@link Navigation} instance.",
+    "lineNumber": 163,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Navigation"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "variable",
+    "name": "clock",
+    "memberof": "dist/bundle.js",
+    "static": true,
+    "longname": "dist/bundle.js~clock",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/bundle.js",
+    "importStyle": "{clock}",
+    "description": "Singleton {@link Clock} instance.",
+    "lineNumber": 168,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Clock"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 105,
+    "kind": "file",
+    "name": "dist/decoration.js",
+    "content": "/**\n * InputKinds are passed into the @Input() decorator to define what data\n * type the inputs takes. If you're using TypeScript and you define the\n * types of your properties, we can automatically infer some of these\n * except for the ones marked \"not inferrable\".\n *\n * For example:\n *\n * ```\n * @Control({ name: 'button' })\n * class Button {\n *   @Input()\n *   public dimensions: Mixer.IDimensions;\n *\n *   @Input({ kind: Mixer.InputKind.Color })\n *   public background: string;\n * }\n * ```\n */\nexport var InputKind;\n(function (InputKind) {\n    InputKind[InputKind[\"Dimensions\"] = 0] = \"Dimensions\";\n    InputKind[InputKind[\"Number\"] = 1] = \"Number\";\n    InputKind[InputKind[\"String\"] = 2] = \"String\";\n    InputKind[InputKind[\"Boolean\"] = 3] = \"Boolean\";\n    InputKind[InputKind[\"Color\"] = 4] = \"Color\";\n    InputKind[InputKind[\"Duration\"] = 5] = \"Duration\";\n    InputKind[InputKind[\"Url\"] = 6] = \"Url\";\n    InputKind[InputKind[\"JSON\"] = 7] = \"JSON\";\n})(InputKind || (InputKind = {}));\nconst sceneMetaKey = '__mix_scene';\nconst controlMetaKey = '__miix_control';\nconst descriptorMetaKey = '__miix_descriptor';\n/**\n * The Registry is a simple class that maintains a list of available\n * controls and scenes, and can return them given control kinds or scene IDs.\n */\nexport class Registry {\n    constructor() {\n        this.scenes = Object.create(null);\n        this.controls = Object.create(null);\n        this.config = window.mixerPackageConfig;\n    }\n    /**\n     * Adds a collection of controls and scenes to the registry. This will throw\n     * if anything given is not a scene or control.\n     * @param {...*} things\n     * @returns {Registry}\n     */\n    register(...things) {\n        things.forEach(thing => {\n            if (thing[sceneMetaKey]) {\n                this.registerScene(thing, thing[sceneMetaKey]);\n            }\n            else if (thing[controlMetaKey]) {\n                this.registerControl(thing, thing[controlMetaKey]);\n            }\n            else {\n                throw new Error(`Passed ${thing.name} to the miix registry, but it wasn't decorated with ` +\n                    '@Control or @Scene!');\n            }\n        });\n        return this;\n    }\n    /**\n     * Returns the Control descriptor for a control of the given kind, or\n     * thows if it's not found.\n     * @param {string} kind\n     * @returns {IControlDescriptor}\n     * @throws {Error} if the control kind is not found\n     */\n    getControl(kind) {\n        const control = this.controls[kind];\n        if (!control) {\n            throw new Error(`No control was found for kind \"${kind}\"! If you have a class already, ` +\n                `make sure you're passing it to the Registry.register() function.`);\n        }\n        return control;\n    }\n    /**\n     * Returns the Scene descriptor for the given scene ID, returning the\n     * default scene if a specific handler wasn't found. Throws if no default\n     * scene is present and the specific ID is not registered.\n     * @param {string} id\n     * @returns {ISceneDescriptor}\n     * @throws {Error} if an appropriate scene implementation is not found\n     */\n    getScene(id) {\n        const scene = this.scenes[id] || this.defaultScene;\n        if (!scene) {\n            throw new Error(`No scene class was found for scene ID \"${id}\" and no default scene was ` +\n                `registered! If you have a default handler, make sure you pass it to the ` +\n                `Registry.register() function, or create a specific class for this scene.`);\n        }\n        return scene;\n    }\n    /**\n     * Returns inputs defined on the given control instance.\n     * @param {object} control\n     * @returns {IInputDescriptor[]}\n     * @throws {Error} if the passed object is not decorated with @{@link Scene}\n     * or @{@link Control}.\n     */\n    getInputs(control) {\n        const descriptor = control.constructor[descriptorMetaKey];\n        if (!descriptor) {\n            throw new Error(`Tried to get inputs on ${control.constructor.name}, but it isn't a ` +\n                `@Scene or @Control object!`);\n        }\n        return descriptor.inputs || [];\n    }\n    registerScene(scene, options) {\n        const existing = options.id && this.scenes[options.id];\n        const id = options.id || 'default';\n        if (existing) {\n            throw new Error(`Duplicate scene IDs registered! Both ${existing.ctor.name} and ` +\n                `${scene.name} registered themselves for scene ID ${id}`);\n        }\n        const descriptor = Object.assign({}, options, this.config.scenes[id], { ctor: scene });\n        Object.defineProperty(scene, descriptorMetaKey, { value: descriptor });\n        this.scenes[id] = descriptor;\n        if (options.default) {\n            this.defaultScene = descriptor;\n        }\n    }\n    registerControl(control, options) {\n        const existing = options.kind && this.controls[options.kind];\n        if (existing) {\n            throw new Error(`Duplicate controls registered! Both ${existing.ctor.name} and ` +\n                `${control.name} registered themselves for control kind ${options.kind}`);\n        }\n        const descriptor = Object.assign({}, options, this.config.controls[options.kind], { ctor: control });\n        Object.defineProperty(control, descriptorMetaKey, { value: descriptor });\n        this.controls[options.kind] = descriptor;\n    }\n}\n/**\n * Scene is a decorator you can use to designate a class as a Scene. See\n * documentation on {@link ISceneOptions} for more info.\n * @param {ISceneOptions} [options]\n */\nexport function Scene(options = { default: true }) {\n    return (ctor) => {\n        Object.defineProperty(ctor, sceneMetaKey, { value: options });\n    };\n}\n/**\n * Scene is a decorator you can use to designate a class as a Scene. See\n * documentation on {@link IControlOptions} for more info.\n * @param {IControlOptions} [options]\n */\nexport function Control(options) {\n    return (ctor) => {\n        Object.defineProperty(ctor, controlMetaKey, { value: options });\n    };\n}\n/**\n * @Input decorates a property on a control. It makes it configurable in the\n * Interactive studio and settable for Preact components. See the\n * {@link IInputOptions} for more info.\n * @param {IInputOptions} [_options]\n */\nexport function Input(_options = {}) {\n    return (_host, _propertyName) => {\n        // noop, this is handled by static analysis\n    };\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/decoration.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 106,
+    "kind": "variable",
+    "name": "sceneMetaKey",
+    "memberof": "dist/decoration.js",
+    "static": true,
+    "longname": "dist/decoration.js~sceneMetaKey",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 31,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "variable",
+    "name": "controlMetaKey",
+    "memberof": "dist/decoration.js",
+    "static": true,
+    "longname": "dist/decoration.js~controlMetaKey",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "variable",
+    "name": "descriptorMetaKey",
+    "memberof": "dist/decoration.js",
+    "static": true,
+    "longname": "dist/decoration.js~descriptorMetaKey",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "class",
+    "name": "Registry",
+    "memberof": "dist/decoration.js",
+    "static": true,
+    "longname": "dist/decoration.js~Registry",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": "{Registry}",
+    "description": "The Registry is a simple class that maintains a list of available\ncontrols and scenes, and can return them given control kinds or scene IDs.",
+    "lineNumber": 38,
+    "interface": false
+  },
+  {
+    "__docId__": 110,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "name": "scenes",
+    "memberof": "dist/decoration.js~Registry",
+    "static": false,
+    "longname": "dist/decoration.js~Registry#scenes",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "member",
+    "name": "controls",
+    "memberof": "dist/decoration.js~Registry",
+    "static": false,
+    "longname": "dist/decoration.js~Registry#controls",
+    "access": "public",
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "member",
+    "name": "config",
+    "memberof": "dist/decoration.js~Registry",
+    "static": false,
+    "longname": "dist/decoration.js~Registry#config",
+    "access": "public",
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "register",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#register",
+    "access": "public",
+    "description": "Adds a collection of controls and scenes to the registry. This will throw\nif anything given is not a scene or control.",
+    "lineNumber": 50,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Registry}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "...*"
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "things",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Registry"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "getControl",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#getControl",
+    "access": "public",
+    "description": "Returns the Control descriptor for a control of the given kind, or\nthows if it's not found.",
+    "lineNumber": 72,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{IControlDescriptor}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "kind",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "IControlDescriptor"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "if the control kind is not found"
+      }
+    ]
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "getScene",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#getScene",
+    "access": "public",
+    "description": "Returns the Scene descriptor for the given scene ID, returning the\ndefault scene if a specific handler wasn't found. Throws if no default\nscene is present and the specific ID is not registered.",
+    "lineNumber": 88,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{ISceneDescriptor}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ISceneDescriptor"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "if an appropriate scene implementation is not found"
+      }
+    ]
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "getInputs",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#getInputs",
+    "access": "public",
+    "description": "Returns inputs defined on the given control instance.",
+    "lineNumber": 104,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{IInputDescriptor[]}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "control",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "IInputDescriptor[]"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "if the passed object is not decorated with @{@link Scene}\nor @{@link Control}."
+      }
+    ]
+  },
+  {
+    "__docId__": 118,
+    "kind": "method",
+    "name": "registerScene",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#registerScene",
+    "access": "public",
+    "description": null,
+    "lineNumber": 112,
+    "undocument": true,
+    "params": [
+      {
+        "name": "scene",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "member",
+    "name": "defaultScene",
+    "memberof": "dist/decoration.js~Registry",
+    "static": false,
+    "longname": "dist/decoration.js~Registry#defaultScene",
+    "access": "public",
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "registerControl",
+    "memberof": "dist/decoration.js~Registry",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/decoration.js~Registry#registerControl",
+    "access": "public",
+    "description": null,
+    "lineNumber": 126,
+    "undocument": true,
+    "params": [
+      {
+        "name": "control",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 121,
+    "kind": "function",
+    "name": "Scene",
+    "memberof": "dist/decoration.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/decoration.js~Scene",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": "{Scene}",
+    "description": "Scene is a decorator you can use to designate a class as a Scene. See\ndocumentation on {@link ISceneOptions} for more info.",
+    "lineNumber": 142,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "ISceneOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "function",
+    "name": "Control",
+    "memberof": "dist/decoration.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/decoration.js~Control",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": "{Control}",
+    "description": "Scene is a decorator you can use to designate a class as a Scene. See\ndocumentation on {@link IControlOptions} for more info.",
+    "lineNumber": 152,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IControlOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 123,
+    "kind": "function",
+    "name": "Input",
+    "memberof": "dist/decoration.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/decoration.js~Input",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/decoration.js",
+    "importStyle": "{Input}",
+    "description": "",
+    "lineNumber": 163,
+    "unknown": [
+      {
+        "tagName": "@Input",
+        "tagValue": "decorates a property on a control. It makes it configurable in the\nInteractive studio and settable for Preact components. See the\n{@link IInputOptions} for more info."
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IInputOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "_options",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "file",
+    "name": "dist/doc.js",
+    "content": "/**\n * Contains the configuration of your project, in addition to any decorated\n * controls and scenes we detected. Most top-level parameters are sourced\n * from your package.json upon compilation.\n *\n * @typedef {object} IPackageConfig\n * @property {string} name\n * @property {string} version\n * @property {string} [description]\n * @property {string[]} [keywords]\n * @property {boolean} [private]\n * @property {string} [homepage]\n */\n/**\n * IVideoPositionOptions are passed into display.moveVideo() to change\n * where the video is shown on the screen.\n *\n * @typedef {object} IVideoPositionOptions\n * @property {number} [left='auto'] Position of the video on screen from the\n * left-hand edge of the container.\n * @property {number} [right='auto'] Position of the video on screen from the\n * right-hand edge of the container.\n * @property {number} [top='auto'] Position of the video on screen from the\n * top of the container.\n * @property {number} [bottom='auto'] Position of the video on screen from the\n * bottom of the container.\n * @property {number} [width='auto'] Width of the video on screen in pixels.\n * @property {number} [width='auto'] Height of the video on screen in pixels.\n * @property {number} [duration=0] Duration of the movement easing\n * in milliseconds.\n * @property {number} [easing='linear'] CSS easing function. Defaults to 'linear'.\n * See {@link https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function}.\n */\n/**\n * ISettings are settings specific to each run of the custom controls. They contain\n * some data about where the controls are displayed and the client displaying them.\n *\n * @typedef {object} ISettings\n * @property {string} language The user's current language setting, as defined\n * in {@link http://www.ietf.org/rfc/bcp/bcp47.txt}: This is generally in the\n * form `<language>[-<locale>]`. For example, `en`, or `en-US`.\n * @property {boolean} placesVideo Whether the video is included in and placed\n * by the control area. On mobile layouts, this will generally be false.\n * @property {'mobile'|'xbox'|'desktop'} platform  The platform the controls\n * are currently running on.\n */\n/**\n * IVideoPosition contains data about the position of the video relative\n * to the iframe, in addition to its channel ID.\n *\n * @typedef {object} IVideoPosition\n * @property {number} channelId The channel this video belongs to.\n * @property {number} bottom The video's offset from the bottom of\n * the container in pixels.\n * @property {number} top The video's offset from the top of\n * the container in pixels.\n * @property {number} left The video's offset from the left edge of\n * the container in pixels.\n * @property {number} right The video's offset from the right edge of\n * the container in pixels.\n * @property {number} height The video's height in pixels.\n * @property {number} width The video's width in pixels.\n */\n/**\n * IVideoPositionList is given in the `positions()`\n * observable from the {@link Display}.\n *\n * @typedef {object} IVideoPositionList\n * @property {IVideoPosition} connectedPlayer connectedPlayer is the position\n * of the video which the interactive integration is currently connected to.\n * (In a Mixer costream, there can be multiple players displayed at once.)\n * @property {IVideoPosition[]} costreamPlayers costreamPlayers is a list of\n * all players in a Mixer costream. Costreaming allows multiple people to\n * stream together, you can read more about it at the link below. This wil\n * always contain, at minimumum, the connectedPlayer. Additional channels may\n * come and go over the course of the broadcast.\n *\n * See {@link https://watchbeam.zendesk.com/hc/en-us/articles/115003032426-Co-Stream-FAQ}\n * for more information about costreams.\n */\n/**\n * IStateDump is a dump of the raw object tree. The Mixer.socket has an\n * `onStateDump` handler which should be attached to; the editor will use\n * this during runtime for debugging.\n *\n * @typedef {object} IStateDump\n * @property {IScene[]} scenes\n * @property {IGroup[]} groups\n * @property {IParticipant} participant\n */\n/**\n * ISceneOptions can be passed into the @{@link Scene} decorator.\n *\n * @typedef {object} ISceneOptions\n * @property {boolean} [default=true]\n * Whether to use this scene as the handler for all scenes.\n *\n * You can override scenes by their `id` to use a different scene for a\n * certain sceneID. In cases where there isn't a specific class for a\n * sceneID, the default will be used.\n *\n * ```\n * @Scene({ default: true })\n * class MyAwesomeScene {\n *   // ...\n * }\n * ```\n * @property {string} [id]\n * When specified, registers this class to handle a specific scene ID.\n * For instance, if you wanted the scene IOD `lobby` and `arena` to be\n * implemented with two different classes, you could do that with\n * something like the following:\n *\n * ```\n * @Scene({ id: 'lobby' })\n * class Lobbby {\n *   // ...\n * }\n *\n * @Scene({ id: 'arena' })\n * class Arena {\n *   // ...\n * }\n * ```\n * @property {IInputDescriptor[]} [inputs]\n * Scene inputs. Note: this will be filled in automatically for you\n * if you use the @{@link Input decorator, but this may come in handy if you\n * don't want to or can't use them in your environment.\n */\n/**\n * IInputOptions are passed into the @{@link Input} decorator.\n *\n * @typedef {object} IInputOptions\n * @property {string} [alias]\n * Alias of the property as sent to the Interactive game client and sent\n * on the wire. Defaults to the property's name.\n * @property {string} [displayName]\n * Human-readable name of the input as displayed on the interactive\n * editor. Defaults to the property's name.\n * @property {*} [defaultValue] Default value for the option.\n * @property {InputKind} [kind]\n * The type of data this input takes. See the InputKind enum for more\n * information and a description. If you are not using TypeScript, this\n * MUST be defined!\n */\n/**\n * ISceneDescriptor is returned from the {@link Registry}'s `.getScene()`.\n * This contains the scene options along with its constructor.\n *\n * @typedef {ISceneOptions} ISceneDescriptor\n * @property {Function} ctor The scene's constructor\n */\n/**\n * IInputDescriptors are returned from the {@link Registry}'s .getInputs().\n * This contains the inputs options along with its constructor.\n *\n * @typedef {IInputOptions} IInputDescriptor\n * @property {string} propertyName The name of the property the input decorates\n */\n/**\n * IControlOptions are passed to the @{@link Control} decorator to describe how\n * the control is rendered.\n *\n * @typedef {object} IControlOptions\n * @property {string} kind The kind of the control that this class should\n * render. The some default kinds are \"button\" and \"joystick\".\n * @property {IInputDescriptor[]} [inputs]\n * Control inputs. Note: this will be filled in automatically for you\n * if you use the @Input decorator, but this may come in handy if you\n * don't want to or can't use them in your environment.\n */\n/**\n * IControlDescriptor is returned from the {@link Registry}'s\n * .getControl(). This contains the {@link Control} options along\n * with its constructor.\n *\n * @typedef {IControlOptions} IControlDescriptor\n * @property {Function} ctor The control's constructor\n */\n/**\n * An RxJS observable. See {@link http://reactivex.io/rxjs/manual/overview.html#introduction}.\n * @typedef {object} Observable\n */\n// hack: some export is needed for esdoc to see this as a module\nexport const foo = 'bar';\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/doc.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 125,
+    "kind": "typedef",
+    "name": "IPackageConfig",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IPackageConfig",
+    "access": "public",
+    "description": "Contains the configuration of your project, in addition to any decorated\ncontrols and scenes we detected. Most top-level parameters are sourced\nfrom your package.json upon compilation.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "version",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "description",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "keywords",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "private",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "homepage",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IPackageConfig"
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "typedef",
+    "name": "IVideoPositionOptions",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IVideoPositionOptions",
+    "access": "public",
+    "description": "IVideoPositionOptions are passed into display.moveVideo() to change\nwhere the video is shown on the screen.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "left",
+        "description": "Position of the video on screen from the\nleft-hand edge of the container."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "right",
+        "description": "Position of the video on screen from the\nright-hand edge of the container."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "top",
+        "description": "Position of the video on screen from the\ntop of the container."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "bottom",
+        "description": "Position of the video on screen from the\nbottom of the container."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "width",
+        "description": "Width of the video on screen in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'auto'",
+        "defaultRaw": "'auto'",
+        "name": "width",
+        "description": "Height of the video on screen in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "duration",
+        "description": "Duration of the movement easing\nin milliseconds."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'linear'",
+        "defaultRaw": "'linear'",
+        "name": "easing",
+        "description": "CSS easing function. Defaults to 'linear'.\nSee {@link https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function}."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IVideoPositionOptions"
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "typedef",
+    "name": "ISettings",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~ISettings",
+    "access": "public",
+    "description": "ISettings are settings specific to each run of the custom controls. They contain\nsome data about where the controls are displayed and the client displaying them.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "language",
+        "description": "The user's current language setting, as defined\nin {@link http://www.ietf.org/rfc/bcp/bcp47.txt}: This is generally in the\nform `<language>[-<locale>]`. For example, `en`, or `en-US`."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "placesVideo",
+        "description": "Whether the video is included in and placed\nby the control area. On mobile layouts, this will generally be false."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "'mobile'",
+          "'xbox'",
+          "'desktop'"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "platform",
+        "description": "The platform the controls\nare currently running on."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "ISettings"
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "typedef",
+    "name": "IVideoPosition",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IVideoPosition",
+    "access": "public",
+    "description": "IVideoPosition contains data about the position of the video relative\nto the iframe, in addition to its channel ID.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "channelId",
+        "description": "The channel this video belongs to."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "bottom",
+        "description": "The video's offset from the bottom of\nthe container in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "top",
+        "description": "The video's offset from the top of\nthe container in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "left",
+        "description": "The video's offset from the left edge of\nthe container in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "right",
+        "description": "The video's offset from the right edge of\nthe container in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "height",
+        "description": "The video's height in pixels."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "width",
+        "description": "The video's width in pixels."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IVideoPosition"
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "typedef",
+    "name": "IVideoPositionList",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IVideoPositionList",
+    "access": "public",
+    "description": "IVideoPositionList is given in the `positions()`\nobservable from the {@link Display}.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "IVideoPosition"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "connectedPlayer",
+        "description": "connectedPlayer is the position\nof the video which the interactive integration is currently connected to.\n(In a Mixer costream, there can be multiple players displayed at once.)"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "IVideoPosition[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "costreamPlayers",
+        "description": "costreamPlayers is a list of\nall players in a Mixer costream. Costreaming allows multiple people to\nstream together, you can read more about it at the link below. This wil\nalways contain, at minimumum, the connectedPlayer. Additional channels may\ncome and go over the course of the broadcast.\n\nSee {@link https://watchbeam.zendesk.com/hc/en-us/articles/115003032426-Co-Stream-FAQ}\nfor more information about costreams."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IVideoPositionList"
+    }
+  },
+  {
+    "__docId__": 130,
+    "kind": "typedef",
+    "name": "IStateDump",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IStateDump",
+    "access": "public",
+    "description": "IStateDump is a dump of the raw object tree. The Mixer.socket has an\n`onStateDump` handler which should be attached to; the editor will use\nthis during runtime for debugging.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "IScene[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "scenes",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "IGroup[]"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "groups",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "IParticipant"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "participant",
+        "description": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IStateDump"
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "typedef",
+    "name": "ISceneOptions",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~ISceneOptions",
+    "access": "public",
+    "description": "ISceneOptions can be passed into the @{@link Scene} decorator.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "default",
+        "description": "Whether to use this scene as the handler for all scenes.\n\nYou can override scenes by their `id` to use a different scene for a\ncertain sceneID. In cases where there isn't a specific class for a\nsceneID, the default will be used.\n\n```\n@Scene({ default: true })\nclass MyAwesomeScene {\n  // ...\n}\n```"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "id",
+        "description": "When specified, registers this class to handle a specific scene ID.\nFor instance, if you wanted the scene IOD `lobby` and `arena` to be\nimplemented with two different classes, you could do that with\nsomething like the following:\n\n```\n@Scene({ id: 'lobby' })\nclass Lobbby {\n  // ...\n}\n\n@Scene({ id: 'arena' })\nclass Arena {\n  // ...\n}\n```"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "IInputDescriptor[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "inputs",
+        "description": "Scene inputs. Note: this will be filled in automatically for you\nif you use the @{@link Input decorator, but this may come in handy if you\ndon't want to or can't use them in your environment."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "ISceneOptions"
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "typedef",
+    "name": "IInputOptions",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IInputOptions",
+    "access": "public",
+    "description": "IInputOptions are passed into the @{@link Input} decorator.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "alias",
+        "description": "Alias of the property as sent to the Interactive game client and sent\non the wire. Defaults to the property's name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "displayName",
+        "description": "Human-readable name of the input as displayed on the interactive\neditor. Defaults to the property's name."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "defaultValue",
+        "description": "Default value for the option."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "InputKind"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "kind",
+        "description": "The type of data this input takes. See the InputKind enum for more\ninformation and a description. If you are not using TypeScript, this\nMUST be defined!"
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IInputOptions"
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "typedef",
+    "name": "ISceneDescriptor",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~ISceneDescriptor",
+    "access": "public",
+    "description": "ISceneDescriptor is returned from the {@link Registry}'s `.getScene()`.\nThis contains the scene options along with its constructor.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctor",
+        "description": "The scene's constructor"
+      }
+    ],
+    "type": {
+      "types": [
+        "ISceneOptions"
+      ],
+      "optional": false,
+      "name": "ISceneDescriptor"
+    }
+  },
+  {
+    "__docId__": 134,
+    "kind": "typedef",
+    "name": "IInputDescriptor",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IInputDescriptor",
+    "access": "public",
+    "description": "IInputDescriptors are returned from the {@link Registry}'s .getInputs().\nThis contains the inputs options along with its constructor.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "propertyName",
+        "description": "The name of the property the input decorates"
+      }
+    ],
+    "type": {
+      "types": [
+        "IInputOptions"
+      ],
+      "optional": false,
+      "name": "IInputDescriptor"
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "typedef",
+    "name": "IControlOptions",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IControlOptions",
+    "access": "public",
+    "description": "IControlOptions are passed to the @{@link Control} decorator to describe how\nthe control is rendered.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "kind",
+        "description": "The kind of the control that this class should\nrender. The some default kinds are \"button\" and \"joystick\"."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "IInputDescriptor[]"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "inputs",
+        "description": "Control inputs. Note: this will be filled in automatically for you\nif you use the @Input decorator, but this may come in handy if you\ndon't want to or can't use them in your environment."
+      }
+    ],
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "IControlOptions"
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "typedef",
+    "name": "IControlDescriptor",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~IControlDescriptor",
+    "access": "public",
+    "description": "IControlDescriptor is returned from the {@link Registry}'s\n.getControl(). This contains the {@link Control} options along\nwith its constructor.",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "ctor",
+        "description": "The control's constructor"
+      }
+    ],
+    "type": {
+      "types": [
+        "IControlOptions"
+      ],
+      "optional": false,
+      "name": "IControlDescriptor"
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "typedef",
+    "name": "Observable",
+    "memberof": "dist/doc.js",
+    "static": true,
+    "longname": "dist/doc.js~Observable",
+    "access": "public",
+    "description": "An RxJS observable. See {@link http://reactivex.io/rxjs/manual/overview.html#introduction}.",
+    "lineNumber": 185,
+    "type": {
+      "types": [
+        "object"
+      ],
+      "optional": false,
+      "name": "Observable"
+    }
+  },
+  {
+    "__docId__": 138,
+    "kind": "file",
+    "name": "dist/internal.js",
+    "content": "export * from './rpc';\nexport * from './typings';\nexport * from './decoration';\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/internal.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 139,
+    "kind": "file",
+    "name": "dist/package.js",
+    "content": "",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/package.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 140,
+    "kind": "file",
+    "name": "dist/participant.js",
+    "content": "import { EventEmitter } from 'eventemitter3';\nimport { stringify } from 'querystring';\nimport { RPC, RPCError } from './rpc';\nimport { ErrorCode } from './typings';\n/**\n * Stringifies and appends the given query string to the URL.\n */\nfunction appendQueryString(url, qs) {\n    const delimiter = url.indexOf('?') > -1 ? '&' : '?';\n    return `${url}${delimiter}${stringify(qs)}`;\n}\n/**\n * Participant is a bridge between the Interactive service and an iframe that\n * shows custom controls. It proxies calls between them and emits events\n * when states change.\n * @private (at least to most consumers!)\n */\nexport class Participant extends EventEmitter {\n    constructor(frame, settings) {\n        super();\n        this.frame = frame;\n        /**\n         * Buffer of packets from to replay once the controls load.\n         * As soon as we connect to interactive it'll send the initial state\n         * messages, but there's a good chance we won't have loaded the controls\n         * by that time, so buffer 'em until the controls say they're ready.\n         */\n        this.replayBuffer = [];\n        /**\n         * Controls state.\n         */\n        this.state = 0 /* Loading */;\n        /**\n         * onFrameLoad is called once the iframe loads.\n         * @private\n         */\n        this.onFrameLoad = () => {\n            if (this.state === 0 /* Loading */) {\n                this.attachListeners();\n            }\n            this.frame.removeEventListener('load', this.onFrameLoad);\n        };\n        this.runOnRpc(rpc => {\n            rpc.call('updateSettings', settings, false);\n            const windowsAPI = window.Windows;\n            if (windowsAPI) {\n                const viewPane = windowsAPI.UI.ViewManagement.InputPane.getForCurrentView();\n                viewPane.onshowing = () => {\n                    rpc.call('keyboardShowing', {}, false);\n                };\n                viewPane.onhiding = () => {\n                    rpc.call('keyboardHiding', {}, false);\n                };\n            }\n        });\n    }\n    /**\n     * Creates a connection to the given Interactive address.\n     */\n    connect(options) {\n        const qs = {\n            // cache bust the iframe to ensure that it reloads\n            // whenever we get a new connection.\n            bustCache: Date.now(),\n            key: options.key,\n            'x-protocol-version': Participant.protocolVersion,\n            'x-auth-user': options.xAuthUser ? JSON.stringify(options.xAuthUser) : undefined,\n        };\n        const ws = (this.websocket = new WebSocket(appendQueryString(options.socketAddress, qs)));\n        this.frame.src = options.contentAddress;\n        this.frame.addEventListener('load', this.onFrameLoad);\n        ws.addEventListener('message', data => {\n            this.sendInteractive(data.data);\n        });\n        ws.addEventListener('close', ev => {\n            this.emit('close', {\n                code: ev.code,\n                message: ev.reason,\n                expected: this.state === 2 /* Closing */,\n                ev,\n            });\n            this.state = 3 /* Closed */;\n            this.destroy();\n        });\n        ws.addEventListener('error', ev => {\n            this.handleWebsocketError(ev);\n        });\n        return this;\n    }\n    add(method, fn) {\n        this.runOnRpc(rpc => {\n            rpc.expose(method, fn);\n        });\n        return this;\n    }\n    /**\n     * Updates the controls' settings.\n     */\n    updateSettings(settings) {\n        this.runOnRpc(rpc => {\n            rpc.call('updateSettings', settings, false);\n        });\n    }\n    /**\n     * Triggers a dump of state from the nested controls. Returns undefined if\n     * the controls do not expose a dumpState method.\n     */\n    dumpState() {\n        if (!this.rpc) {\n            return Promise.resolve(undefined);\n        }\n        return this.rpc.call('dumpState', {}, true).catch(err => {\n            if (err instanceof RPCError && err.code === ErrorCode.AppBadMethod) {\n                return undefined; // controls don't expose dumpState, sad but we'll hide our sadness\n            }\n            throw new err();\n        });\n    }\n    /**\n     * Closes the participant connection and frees resources.\n     */\n    destroy() {\n        if (this.state < 2 /* Closing */) {\n            this.state = 2 /* Closing */;\n        }\n        if (this.rpc) {\n            this.rpc.destroy();\n        }\n        try {\n            if (this.websocket) {\n                this.websocket.close();\n            }\n        }\n        catch (_e) {\n            // Ignored. Sockets can be fussy if they're closed at\n            // the wrong time but it doesn't cause issues.\n        }\n    }\n    on(event, handler) {\n        super.on(event, handler);\n        return this;\n    }\n    /**\n     * Calls the function with the RPC instance once it's ready and attached.\n     */\n    runOnRpc(fn) {\n        if (this.state !== 1 /* Ready */) {\n            this.replayBuffer.push(fn);\n        }\n        else {\n            fn(this.rpc);\n        }\n    }\n    /**\n     * sendInteractive broadcasts the interactive payload down to the controls,\n     * and emits a `transmit` event.\n     */\n    sendInteractive(data) {\n        const parsed = JSON.parse(data);\n        this.runOnRpc(rpc => {\n            rpc.call('recieveInteractivePacket', parsed, false);\n        });\n        this.emit('transmit', parsed);\n    }\n    /**\n     * attachListeners is called once the frame contents load to boot up\n     * the RPC system.\n     */\n    attachListeners() {\n        this.rpc = new RPC(this.frame.contentWindow, '1.0');\n        this.rpc.expose('sendInteractivePacket', data => {\n            this.websocket.send(JSON.stringify(Object.assign({}, data, { type: 'method', discard: true })));\n        });\n        this.rpc.expose('controlsReady', () => {\n            if (this.state !== 0 /* Loading */) {\n                return;\n            }\n            this.state = 1 /* Ready */;\n            this.replayBuffer.forEach(p => {\n                p(this.rpc);\n            });\n            this.replayBuffer = [];\n            this.emit('loaded');\n        });\n        this.rpc.expose('maximize', (params) => {\n            this.emit('maximize', params.maximized, params.message);\n        });\n        this.rpc.expose('moveVideo', (options) => {\n            this.emit('moveVideo', options);\n        });\n        this.rpc.expose('unloading', () => {\n            this.emit('unload');\n        });\n        this.rpc.expose('log', params => {\n            this.emit('log', params);\n        });\n        this.rpc.expose('focusOut', () => {\n            this.emit('focusOut');\n        });\n        this.rpc.expose('handleExit', () => {\n            this.emit('handleExit');\n        });\n        this.rpc.expose('navigate', () => {\n            this.emit('navigate');\n        });\n        this.rpc.call('resendReady', {}, false);\n    }\n    /**\n     * handleWebsocketError is called when the websocket emits an `error`. This\n     * is generally called when the connection is terminated before a socket\n     * connection is established. We want to go back and get the error code/body.\n     */\n    handleWebsocketError(ev) {\n        // tslint:disable-next-line\n        fetch(this.websocket.url.replace(/^ws/, 'http'))\n            .then(res => {\n            return res.text().then(message => {\n                this.emit('close', {\n                    message,\n                    code: res.status,\n                    expected: this.state === 2 /* Closing */,\n                    ev,\n                });\n            });\n        })\n            .catch(err => {\n            this.emit('close', {\n                code: -1,\n                message: err.message,\n                expected: this.state === 2 /* Closing */,\n                ev,\n            });\n        })\n            .then(() => {\n            this.state = 3 /* Closed */;\n            this.destroy();\n        });\n    }\n}\n/**\n * Interactive protocol version this participant implements.\n */\nParticipant.protocolVersion = '2.0';\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/participant.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 141,
+    "kind": "function",
+    "name": "appendQueryString",
+    "memberof": "dist/participant.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/participant.js~appendQueryString",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/participant.js",
+    "importStyle": null,
+    "description": "Stringifies and appends the given query string to the URL.",
+    "lineNumber": 8,
+    "params": [
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "qs",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "class",
+    "name": "Participant",
+    "memberof": "dist/participant.js",
+    "static": true,
+    "longname": "dist/participant.js~Participant",
+    "access": "private",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/participant.js",
+    "importStyle": "{Participant}",
+    "description": "Participant is a bridge between the Interactive service and an iframe that\nshows custom controls. It proxies calls between them and emits events\nwhen states change.",
+    "lineNumber": 18,
+    "interface": false,
+    "extends": [
+      "eventemitter3~EventEmitter"
+    ],
+    "ignore": true
+  },
+  {
+    "__docId__": 143,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 144,
+    "kind": "member",
+    "name": "frame",
+    "memberof": "dist/participant.js~Participant",
+    "static": false,
+    "longname": "dist/participant.js~Participant#frame",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 145,
+    "kind": "member",
+    "name": "replayBuffer",
+    "memberof": "dist/participant.js~Participant",
+    "static": false,
+    "longname": "dist/participant.js~Participant#replayBuffer",
+    "access": "public",
+    "description": "Buffer of packets from to replay once the controls load.\nAs soon as we connect to interactive it'll send the initial state\nmessages, but there's a good chance we won't have loaded the controls\nby that time, so buffer 'em until the controls say they're ready.",
+    "lineNumber": 28,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 146,
+    "kind": "member",
+    "name": "state",
+    "memberof": "dist/participant.js~Participant",
+    "static": false,
+    "longname": "dist/participant.js~Participant#state",
+    "access": "public",
+    "description": "Controls state.",
+    "lineNumber": 32,
+    "type": {
+      "types": [
+        "number"
+      ]
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "member",
+    "name": "onFrameLoad",
+    "memberof": "dist/participant.js~Participant",
+    "static": false,
+    "longname": "dist/participant.js~Participant#onFrameLoad",
+    "access": "private",
+    "description": "onFrameLoad is called once the iframe loads.",
+    "lineNumber": 37,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "connect",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#connect",
+    "access": "public",
+    "description": "Creates a connection to the given Interactive address.",
+    "lineNumber": 60,
+    "params": [
+      {
+        "name": "options",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 150,
+    "kind": "method",
+    "name": "add",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#add",
+    "access": "public",
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "params": [
+      {
+        "name": "method",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "fn",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 151,
+    "kind": "method",
+    "name": "updateSettings",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#updateSettings",
+    "access": "public",
+    "description": "Updates the controls' settings.",
+    "lineNumber": 99,
+    "params": [
+      {
+        "name": "settings",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 152,
+    "kind": "method",
+    "name": "dumpState",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#dumpState",
+    "access": "public",
+    "description": "Triggers a dump of state from the nested controls. Returns undefined if\nthe controls do not expose a dumpState method.",
+    "lineNumber": 108,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "method",
+    "name": "destroy",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#destroy",
+    "access": "public",
+    "description": "Closes the participant connection and frees resources.",
+    "lineNumber": 122,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 155,
+    "kind": "method",
+    "name": "on",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#on",
+    "access": "public",
+    "description": null,
+    "lineNumber": 139,
+    "undocument": true,
+    "params": [
+      {
+        "name": "event",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "handler",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 156,
+    "kind": "method",
+    "name": "runOnRpc",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#runOnRpc",
+    "access": "public",
+    "description": "Calls the function with the RPC instance once it's ready and attached.",
+    "lineNumber": 146,
+    "params": [
+      {
+        "name": "fn",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 157,
+    "kind": "method",
+    "name": "sendInteractive",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#sendInteractive",
+    "access": "public",
+    "description": "sendInteractive broadcasts the interactive payload down to the controls,\nand emits a `transmit` event.",
+    "lineNumber": 158,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 158,
+    "kind": "method",
+    "name": "attachListeners",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#attachListeners",
+    "access": "public",
+    "description": "attachListeners is called once the frame contents load to boot up\nthe RPC system.",
+    "lineNumber": 169,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 159,
+    "kind": "member",
+    "name": "rpc",
+    "memberof": "dist/participant.js~Participant",
+    "static": false,
+    "longname": "dist/participant.js~Participant#rpc",
+    "access": "public",
+    "description": null,
+    "lineNumber": 170,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 162,
+    "kind": "method",
+    "name": "handleWebsocketError",
+    "memberof": "dist/participant.js~Participant",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/participant.js~Participant#handleWebsocketError",
+    "access": "public",
+    "description": "handleWebsocketError is called when the websocket emits an `error`. This\nis generally called when the connection is terminated before a socket\nconnection is established. We want to go back and get the error code/body.",
+    "lineNumber": 213,
+    "params": [
+      {
+        "name": "ev",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 164,
+    "kind": "file",
+    "name": "dist/reactive.js",
+    "content": "import { Subject } from 'rxjs/Subject';\nimport { ObjectUnsubscribedError } from 'rxjs/util/ObjectUnsubscribedError';\n/**\n * MemorizingSubject acts like a BehaviorSubject, except that it is seeded\n * with no value, calls to getValue() will fail before the first `next` call,\n * and it does not push a value to subscribers if `next` has not been called.\n */\nexport class MemorizingSubject extends Subject {\n    constructor() {\n        super(...arguments);\n        this.hasSet = false;\n    }\n    hasValue() {\n        return this.hasSet;\n    }\n    forget() {\n        this.hasSet = false;\n    }\n    next(value) {\n        this.hasSet = true;\n        super.next((this.value = value));\n    }\n    getValue() {\n        if (this.hasError) {\n            throw this.thrownError;\n        }\n        if (this.closed) {\n            throw new ObjectUnsubscribedError();\n        }\n        if (!this.hasSet) {\n            throw new Error('Attempted to call `getValue` on a MemorizingSubject' +\n                'which did not previous have its value set.');\n        }\n        return this.value;\n    }\n    // tslint:disable-next-line\n    _subscribe(subscriber) {\n        const subscription = super._subscribe(subscriber);\n        if (subscription && this.hasSet && !subscription.closed) {\n            subscriber.next(this.value);\n        }\n        return subscription;\n    }\n}\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/reactive.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 165,
+    "kind": "class",
+    "name": "MemorizingSubject",
+    "memberof": "dist/reactive.js",
+    "static": true,
+    "longname": "dist/reactive.js~MemorizingSubject",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/reactive.js",
+    "importStyle": "{MemorizingSubject}",
+    "description": "MemorizingSubject acts like a BehaviorSubject, except that it is seeded\nwith no value, calls to getValue() will fail before the first `next` call,\nand it does not push a value to subscribers if `next` has not been called.",
+    "lineNumber": 8,
+    "interface": false,
+    "extends": [
+      "rxjs/Subject~Subject"
+    ]
+  },
+  {
+    "__docId__": 166,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 167,
+    "kind": "member",
+    "name": "hasSet",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#hasSet",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 168,
+    "kind": "method",
+    "name": "hasValue",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#hasValue",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 169,
+    "kind": "method",
+    "name": "forget",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#forget",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 171,
+    "kind": "method",
+    "name": "next",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#next",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 173,
+    "kind": "method",
+    "name": "getValue",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#getValue",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 174,
+    "kind": "method",
+    "name": "_subscribe",
+    "memberof": "dist/reactive.js~MemorizingSubject",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/reactive.js~MemorizingSubject#_subscribe",
+    "access": "private",
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "ignore": true,
+    "params": [
+      {
+        "name": "subscriber",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "file",
+    "name": "dist/rpc.js",
+    "content": "import { EventEmitter } from 'eventemitter3';\n/**\n * Checks whether the message duck-types into an Interactive message.\n * This is needed to distinguish between postmessages that we get,\n * and postmessages from other sources.\n */\nfunction isRPCMessage(data) {\n    return (data.type === 'method' || data.type === 'reply') && typeof data.counter === 'number';\n}\n/**\n * An RPCError can be thrown in socket.call() if bad input is\n * passed to the service. See the Interactive protocol doc for an enumaration\n * of codes and messages: https://dev.mixer.com/reference/interactive/protocol/protocol.pdf\n */\nexport class RPCError extends Error {\n    constructor(code, message, path) {\n        super(`Error #${code}: ${message}`);\n        this.code = code;\n        this.message = message;\n        this.path = path;\n    }\n}\nexport function objToError(obj) {\n    return new RPCError(obj.code, obj.message, obj.path);\n}\n/**\n * Primitive postMessage based RPC for the controls to interact with the\n * parent frame.\n */\nexport class RPC extends EventEmitter {\n    /**\n     * Creates a new RPC instance. Note: you should use the `rpc` singleton,\n     * rather than creating this class directly, in your controls.\n     *\n     * @param {window} target The window instance to make calls to or from.\n     * @param {string} protocolVersion The protocol version to communicate\n     * to the remote.\n     * @param {string} [origin='*'] Optionally, allow communication with the\n     * target if its origin matches this.\n     */\n    constructor(target, protocolVersion, origin = '*') {\n        super();\n        this.target = target;\n        this.origin = origin;\n        this.idCounter = 0;\n        this.calls = Object.create(null);\n        this.callCounter = 0;\n        this.remoteCallQueue = [];\n        this.lastSequentialCall = -1;\n        this.listener = (ev) => {\n            const packet = ev.data;\n            if (!isRPCMessage(packet) || packet.serviceID !== RPC.serviceID) {\n                return;\n            }\n            // postMessage does not guarantee message order, reorder messages as needed.\n            // Reset the call counter when we get a \"ready\" so that the other end sees\n            // calls starting from 0.\n            if (packet.type === 'method' && packet.method === 'ready') {\n                this.lastSequentialCall = packet.counter - 1;\n                this.remoteProtocolVersion = packet.params.protocolVersion;\n                this.callCounter = 0;\n            }\n            if (packet.counter <= this.lastSequentialCall + 1) {\n                this.dispatchIncoming(packet);\n                this.replayQueue();\n                return;\n            }\n            for (let i = 0; i < this.remoteCallQueue.length; i++) {\n                if (this.remoteCallQueue[i].counter > packet.counter) {\n                    this.remoteCallQueue.splice(i, 0, packet);\n                    return;\n                }\n            }\n            this.remoteCallQueue.push(packet);\n        };\n        window.addEventListener('message', this.listener);\n        this.call('ready', { protocolVersion }, false);\n    }\n    /**\n     * Attaches a method callable by the other window, to this one. The handler\n     * function will be invoked with whatever the other window gives us. Can\n     * return a Promise, or the results directly.\n     *\n     * @param {string} method\n     * @param {function(params: any): Promise|*} handler\n     */\n    expose(method, handler) {\n        this.on(method, (data) => {\n            if (data.discard) {\n                handler(data.params);\n                return;\n            }\n            // tslint:disable-next-line\n            Promise.resolve(handler(data.params)).then(result => {\n                const packet = {\n                    type: 'reply',\n                    serviceID: RPC.serviceID,\n                    id: data.id,\n                    result,\n                };\n                this.emit('sendReply', packet);\n                this.post(packet);\n            });\n        });\n    }\n    /**\n     * Makes an RPC call out to the target window.\n     *\n     * @param {string} method\n     * @param {*} params\n     * @param {boolean} [waitForReply=true]\n     * @return {Promise.<object> | undefined} If waitForReply is true, a\n     * promise is returned that resolves once the server responds.\n     */\n    call(method, params, waitForReply = true) {\n        const id = this.idCounter++;\n        const packet = {\n            type: 'method',\n            serviceID: RPC.serviceID,\n            id,\n            params,\n            method,\n            discard: !waitForReply,\n        };\n        this.emit('sendMethod', packet);\n        this.post(packet);\n        if (!waitForReply) {\n            return;\n        }\n        return new Promise((resolve, reject) => {\n            this.calls[id] = (err, res) => {\n                if (err) {\n                    reject(err);\n                }\n                else {\n                    resolve(res);\n                }\n            };\n        });\n    }\n    /**\n     * Tears down resources associated with the RPC client.\n     */\n    destroy() {\n        this.emit('destroy');\n        window.removeEventListener('message', this.listener);\n    }\n    /**\n     * Returns the protocol version that the remote client implements. This\n     * will return `undefined` until we get a `ready` event.\n     * @return {string | undefined}\n     */\n    remoteVersion() {\n        return this.remoteProtocolVersion;\n    }\n    handleReply(packet) {\n        const handler = this.calls[packet.id];\n        if (!handler) {\n            return;\n        }\n        if (packet.error) {\n            handler(objToError(packet.error), null);\n        }\n        else {\n            handler(null, packet.result);\n        }\n        delete this.calls[packet.id];\n    }\n    post(message) {\n        message.counter = this.callCounter++;\n        this.target.postMessage(message, this.origin);\n    }\n    replayQueue() {\n        while (this.remoteCallQueue.length) {\n            const next = this.remoteCallQueue[0];\n            if (next.counter > this.lastSequentialCall + 1) {\n                return;\n            }\n            this.dispatchIncoming(this.remoteCallQueue.shift());\n        }\n    }\n    dispatchIncoming(packet) {\n        this.lastSequentialCall = packet.counter;\n        switch (packet.type) {\n            case 'method':\n                this.emit('recvMethod', packet);\n                if (this.listeners(packet.method).length > 0) {\n                    this.emit(packet.method, packet);\n                    return;\n                }\n                this.post({\n                    type: 'reply',\n                    serviceID: RPC.serviceID,\n                    id: packet.id,\n                    error: { code: 4003, message: 'Unknown method name' },\n                    result: null,\n                });\n                break;\n            case 'reply':\n                this.emit('recvReply', packet);\n                this.handleReply(packet);\n                break;\n            default:\n        }\n    }\n}\n/**\n * Service ID for this module. This is used to prevent\n * multiple postMessage-based APIs for clobbering each other.\n */\nRPC.serviceID = '8f5b3a83-dd7b-4b8a-84ad-146948bc8d27';\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/rpc.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 176,
+    "kind": "function",
+    "name": "isRPCMessage",
+    "memberof": "dist/rpc.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/rpc.js~isRPCMessage",
+    "access": "public",
+    "export": false,
+    "importPath": "@mixer/cdk-std/dist/rpc.js",
+    "importStyle": null,
+    "description": "Checks whether the message duck-types into an Interactive message.\nThis is needed to distinguish between postmessages that we get,\nand postmessages from other sources.",
+    "lineNumber": 7,
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 177,
+    "kind": "class",
+    "name": "RPCError",
+    "memberof": "dist/rpc.js",
+    "static": true,
+    "longname": "dist/rpc.js~RPCError",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/rpc.js",
+    "importStyle": "{RPCError}",
+    "description": "An RPCError can be thrown in socket.call() if bad input is\npassed to the service. See the Interactive protocol doc for an enumaration\nof codes and messages: https://dev.mixer.com/reference/interactive/protocol/protocol.pdf",
+    "lineNumber": 15,
+    "interface": false,
+    "extends": [
+      "Error"
+    ]
+  },
+  {
+    "__docId__": 178,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/rpc.js~RPCError",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPCError#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "ignore": true
+  },
+  {
+    "__docId__": 179,
+    "kind": "member",
+    "name": "code",
+    "memberof": "dist/rpc.js~RPCError",
+    "static": false,
+    "longname": "dist/rpc.js~RPCError#code",
+    "access": "public",
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 180,
+    "kind": "member",
+    "name": "message",
+    "memberof": "dist/rpc.js~RPCError",
+    "static": false,
+    "longname": "dist/rpc.js~RPCError#message",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 181,
+    "kind": "member",
+    "name": "path",
+    "memberof": "dist/rpc.js~RPCError",
+    "static": false,
+    "longname": "dist/rpc.js~RPCError#path",
+    "access": "public",
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 182,
+    "kind": "function",
+    "name": "objToError",
+    "memberof": "dist/rpc.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "dist/rpc.js~objToError",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/rpc.js",
+    "importStyle": "{objToError}",
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "obj",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 183,
+    "kind": "class",
+    "name": "RPC",
+    "memberof": "dist/rpc.js",
+    "static": true,
+    "longname": "dist/rpc.js~RPC",
+    "access": "public",
+    "export": true,
+    "importPath": "@mixer/cdk-std/dist/rpc.js",
+    "importStyle": "{RPC}",
+    "description": "Primitive postMessage based RPC for the controls to interact with the\nparent frame.",
+    "lineNumber": 30,
+    "interface": false,
+    "extends": [
+      "eventemitter3~EventEmitter"
+    ]
+  },
+  {
+    "__docId__": 184,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#constructor",
+    "access": "public",
+    "description": "Creates a new RPC instance. Note: you should use the `rpc` singleton,\nrather than creating this class directly, in your controls.",
+    "lineNumber": 41,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "window"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": "The window instance to make calls to or from."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "protocolVersion",
+        "description": "The protocol version to communicate\nto the remote."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "'*'",
+        "defaultRaw": "'*'",
+        "name": "origin",
+        "description": "Optionally, allow communication with the\ntarget if its origin matches this."
+      }
+    ]
+  },
+  {
+    "__docId__": 185,
+    "kind": "member",
+    "name": "target",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#target",
+    "access": "public",
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 186,
+    "kind": "member",
+    "name": "origin",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#origin",
+    "access": "public",
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 187,
+    "kind": "member",
+    "name": "idCounter",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#idCounter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 188,
+    "kind": "member",
+    "name": "calls",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#calls",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 189,
+    "kind": "member",
+    "name": "callCounter",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#callCounter",
+    "access": "public",
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 190,
+    "kind": "member",
+    "name": "remoteCallQueue",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#remoteCallQueue",
+    "access": "public",
+    "description": null,
+    "lineNumber": 48,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 191,
+    "kind": "member",
+    "name": "lastSequentialCall",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#lastSequentialCall",
+    "access": "public",
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 192,
+    "kind": "member",
+    "name": "listener",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#listener",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 194,
+    "kind": "member",
+    "name": "remoteProtocolVersion",
+    "memberof": "dist/rpc.js~RPC",
+    "static": false,
+    "longname": "dist/rpc.js~RPC#remoteProtocolVersion",
+    "access": "public",
+    "description": null,
+    "lineNumber": 60,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 196,
+    "kind": "method",
+    "name": "expose",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#expose",
+    "access": "public",
+    "description": "Attaches a method callable by the other window, to this one. The handler\nfunction will be invoked with whatever the other window gives us. Can\nreturn a Promise, or the results directly.",
+    "lineNumber": 87,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(params: any): Promise",
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "handler",
+        "description": ""
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 197,
+    "kind": "method",
+    "name": "call",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#call",
+    "access": "public",
+    "description": "Makes an RPC call out to the target window.",
+    "lineNumber": 115,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "method",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "true",
+        "defaultRaw": true,
+        "name": "waitForReply",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<object> ",
+        " undefined"
+      ],
+      "spread": false,
+      "description": "If waitForReply is true, a\npromise is returned that resolves once the server responds."
+    }
+  },
+  {
+    "__docId__": 198,
+    "kind": "method",
+    "name": "destroy",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#destroy",
+    "access": "public",
+    "description": "Tears down resources associated with the RPC client.",
+    "lineNumber": 144,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 199,
+    "kind": "method",
+    "name": "remoteVersion",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#remoteVersion",
+    "access": "public",
+    "description": "Returns the protocol version that the remote client implements. This\nwill return `undefined` until we get a `ready` event.",
+    "lineNumber": 153,
+    "return": {
+      "nullable": null,
+      "types": [
+        "string ",
+        " undefined"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "params": []
+  },
+  {
+    "__docId__": 200,
+    "kind": "method",
+    "name": "handleReply",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#handleReply",
+    "access": "public",
+    "description": null,
+    "lineNumber": 156,
+    "undocument": true,
+    "params": [
+      {
+        "name": "packet",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "method",
+    "name": "post",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#post",
+    "access": "public",
+    "description": null,
+    "lineNumber": 169,
+    "undocument": true,
+    "params": [
+      {
+        "name": "message",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 202,
+    "kind": "method",
+    "name": "replayQueue",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#replayQueue",
+    "access": "public",
+    "description": null,
+    "lineNumber": 173,
+    "undocument": true,
+    "params": [],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 203,
+    "kind": "method",
+    "name": "dispatchIncoming",
+    "memberof": "dist/rpc.js~RPC",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "dist/rpc.js~RPC#dispatchIncoming",
+    "access": "public",
+    "description": null,
+    "lineNumber": 182,
+    "undocument": true,
+    "params": [
+      {
+        "name": "packet",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 205,
+    "kind": "file",
+    "name": "dist/typings.js",
+    "content": "/**\n * Layout contains type definitions for various layout primitives.\n */\nexport var Layout;\n(function (Layout) {\n    /**\n     * Offers constant information values to use in an application.\n     */\n    Layout.gridLayouts = [\n        {\n            size: 'large',\n            minWidth: 900,\n            width: 80,\n            height: 20,\n        },\n        {\n            size: 'medium',\n            minWidth: 540,\n            width: 45,\n            height: 25,\n        },\n        {\n            size: 'small',\n            minWidth: 0,\n            width: 30,\n            height: 40,\n        },\n    ];\n})(Layout || (Layout = {}));\n/**\n * Enumeration of Interactive error codes. More docs and descriptions can be found in:\n * {@link https://dev.mixer.com/reference/interactive/protocol/protocol.pdf}\n */\nexport var ErrorCode;\n(function (ErrorCode) {\n    ErrorCode[ErrorCode[\"HttpBadRequest\"] = 400] = \"HttpBadRequest\";\n    ErrorCode[ErrorCode[\"HttpNotFound\"] = 404] = \"HttpNotFound\";\n    ErrorCode[ErrorCode[\"HttpInternalServerError\"] = 500] = \"HttpInternalServerError\";\n    ErrorCode[ErrorCode[\"HttpServiceUnavailable\"] = 503] = \"HttpServiceUnavailable\";\n    ErrorCode[ErrorCode[\"CloseNormal\"] = 1000] = \"CloseNormal\";\n    ErrorCode[ErrorCode[\"CloseGoingAway\"] = 1001] = \"CloseGoingAway\";\n    ErrorCode[ErrorCode[\"CloseProtocolError\"] = 1002] = \"CloseProtocolError\";\n    ErrorCode[ErrorCode[\"CloseUnsupported\"] = 1003] = \"CloseUnsupported\";\n    // 1004 is reserved\n    ErrorCode[ErrorCode[\"CloseNoStatus\"] = 1005] = \"CloseNoStatus\";\n    ErrorCode[ErrorCode[\"CloseAbnormal\"] = 1006] = \"CloseAbnormal\";\n    ErrorCode[ErrorCode[\"CloseUnsupportedData\"] = 1007] = \"CloseUnsupportedData\";\n    ErrorCode[ErrorCode[\"ClosePolicyViolation\"] = 1008] = \"ClosePolicyViolation\";\n    ErrorCode[ErrorCode[\"CloseTooLarge\"] = 1009] = \"CloseTooLarge\";\n    ErrorCode[ErrorCode[\"CloseMissingExtension\"] = 1010] = \"CloseMissingExtension\";\n    ErrorCode[ErrorCode[\"CloseInternalError\"] = 1011] = \"CloseInternalError\";\n    ErrorCode[ErrorCode[\"CloseRestarting\"] = 1012] = \"CloseRestarting\";\n    ErrorCode[ErrorCode[\"AppBadJson\"] = 4000] = \"AppBadJson\";\n    ErrorCode[ErrorCode[\"AppBadCompression\"] = 4001] = \"AppBadCompression\";\n    ErrorCode[ErrorCode[\"AppBadPacketType\"] = 4002] = \"AppBadPacketType\";\n    ErrorCode[ErrorCode[\"AppBadMethod\"] = 4003] = \"AppBadMethod\";\n    ErrorCode[ErrorCode[\"AppBadArgs\"] = 4004] = \"AppBadArgs\";\n    ErrorCode[ErrorCode[\"AppBadEtag\"] = 4005] = \"AppBadEtag\";\n    ErrorCode[ErrorCode[\"AppExpiredTransaction\"] = 4006] = \"AppExpiredTransaction\";\n    ErrorCode[ErrorCode[\"AppNotEnoughSparks\"] = 4007] = \"AppNotEnoughSparks\";\n    ErrorCode[ErrorCode[\"AppUnknownGroup\"] = 4008] = \"AppUnknownGroup\";\n    ErrorCode[ErrorCode[\"AppGroupExists\"] = 4009] = \"AppGroupExists\";\n    ErrorCode[ErrorCode[\"AppUnknownScene\"] = 4010] = \"AppUnknownScene\";\n    ErrorCode[ErrorCode[\"AppSceneExists\"] = 4011] = \"AppSceneExists\";\n    ErrorCode[ErrorCode[\"AppUnknownControl\"] = 4012] = \"AppUnknownControl\";\n    ErrorCode[ErrorCode[\"AppControlExists\"] = 4013] = \"AppControlExists\";\n    ErrorCode[ErrorCode[\"AppUnknownControlType\"] = 4014] = \"AppUnknownControlType\";\n    ErrorCode[ErrorCode[\"AppUnknownParticipant\"] = 4015] = \"AppUnknownParticipant\";\n    ErrorCode[ErrorCode[\"AppSessionClosing\"] = 4016] = \"AppSessionClosing\";\n    ErrorCode[ErrorCode[\"AppOutOfMemory\"] = 4017] = \"AppOutOfMemory\";\n    ErrorCode[ErrorCode[\"AppCannotDeleteDefault\"] = 4018] = \"AppCannotDeleteDefault\";\n    ErrorCode[ErrorCode[\"AppCannotAuthenticate\"] = 4019] = \"AppCannotAuthenticate\";\n    ErrorCode[ErrorCode[\"AppNoInteractiveVersion\"] = 4020] = \"AppNoInteractiveVersion\";\n    ErrorCode[ErrorCode[\"AppExistingInteractiveSession\"] = 4021] = \"AppExistingInteractiveSession\";\n    ErrorCode[ErrorCode[\"AppChannelNotOnline\"] = 4022] = \"AppChannelNotOnline\";\n    ErrorCode[ErrorCode[\"AppBadUserInput\"] = 4999] = \"AppBadUserInput\";\n})(ErrorCode || (ErrorCode = {}));\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/typings.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "kind": "index",
+    "content": "#  cdk-std\n\nThe `cdk-std` is the standard library for development with Mixer Interactive controls. It provides foundational functionality to communicate from your controls to the Mixer webpage. If you're using the Preact starter, this library is already largely wrapped up for you. If you're using the HTML starter code, you'll be dealing with this more directly.\n\n### Usage & Documentation\n\nAPI documentation is available [here](https://mixer.github.io/cdk-std/simple-ref.html).\n\nWe recommend importing this script through our CDN by adding a script tag in the `<head>` of your webpage:\n\n```html\n<script  src=\"https://mixercc.azureedge.net/lib/std-v0.2.js\"></script>\n```\n\nAfter importing it, `mixer` will be available as a global variable in your code. To send input, for example, you can call:\n\n```js\ndocument.getElementById('hello-world').onclick = function(event) {\n  mixer.socket.call('giveInput', {\n    controlID: 'hello-world',\n    event: 'click',\n    button: event.button,\n  });\n};\n```\n\nFor more information, head to our [developer site](https://dev.mixer.com/)!\n\n### Why is this needed?\n\nFor security reasons, all custom control code you write runs in a sandboxes iframe in the Mixer page. However, there's information we want to tell you about, such as the data coming down the Interactive websocket, the position of the video, and so on and so forth. This package provides a bridge and pleasant wrappers over postMessage, the protocol that allows that to happen.\n\n```\n                   │\n┌──────────────┐       ┌──────────────┐\n│Mixer webpage │   │   │ Your Custom  │\n│    or app    │       │   Controls   │\n│           ┌──┴───┴───┴──┐           │\n│         ◀─┤   cdk-std   ├─▶         │\n│           └──┬───┬───┬──┘           │\n└──────────────┘       └──────────────┘\n                   │\n\n            Frame boundary\n\n```\n",
+    "longname": "/Users/copeet/Github/miix-std/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"@mixer/cdk-std\",\n  \"version\": \"0.2.14\",\n  \"description\": \"Standard library for Mixer Interactive controls\",\n  \"main\": \"dist/bundle.min.js\",\n  \"typings\": \"dist/bundle.d.ts\",\n  \"scripts\": {\n    \"test\": \"npm-run-all --parallel --silent test:lint fmt test:unit\",\n    \"test:unit\": \"karma start test/karma.conf.js --single-run\",\n    \"test:lint\": \"tslint -t verbose --project tsconfig.json '{src,test}/**/*.ts'\",\n    \"test:watch\": \"karma start test/karma.conf.js --no-single-run\",\n    \"fmt\": \"prettier --single-quote --trailing-comma all --parser typescript --print-width 100 --write \\\"{src,test}/**/*.ts\\\" && npm run -s test:lint -- --fix\",\n    \"build\": \"npm-run-all --parallel --silent build:ts build:bundle\",\n    \"build:ts\": \"tsc\",\n    \"build:bundle\": \"webpack\",\n    \"build:doc\": \"rimraf dist && tsc -m es2015 -t es6 --moduleResolution node && esdoc -c esdoc.json\",\n    \"publish:azure\": \"node bin/upload-to-azure.js\",\n    \"prepare\": \"npm run -s build\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/mixer/cdk-std.git\"\n  },\n  \"keywords\": [\n    \"mixer\",\n    \"cdk\",\n    \"interactive\",\n    \"controls\",\n    \"custom\"\n  ],\n  \"author\": \"Connor Peet <connor@peet.io>\",\n  \"license\": \"MIT\",\n  \"bugs\": {\n    \"url\": \"https://github.com/mixer/cdk-std/issues\"\n  },\n  \"homepage\": \"https://github.com/mixer/cdk-std#readme\",\n  \"devDependencies\": {\n    \"@types/chai\": \"^4.1.2\",\n    \"@types/mocha\": \"^2.2.48\",\n    \"@types/node\": \"^8.9.4\",\n    \"@types/sinon\": \"^4.1.3\",\n    \"awesome-typescript-loader\": \"^3.4.1\",\n    \"chai\": \"^4.1.2\",\n    \"cheerio\": \"^1.0.0-rc.2\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"karma\": \"^1.7.1\",\n    \"karma-browserstack-launcher\": \"^1.3.0\",\n    \"karma-chrome-launcher\": \"^2.2.0\",\n    \"karma-mocha\": \"^1.3.0\",\n    \"karma-mocha-reporter\": \"^2.2.5\",\n    \"karma-webpack\": \"^2.0.9\",\n    \"mocha\": \"^4.1.0\",\n    \"npm-run-all\": \"^4.1.2\",\n    \"prettier\": \"^1.10.2\",\n    \"rimraf\": \"^2.6.2\",\n    \"sinon\": \"^4.3.0\",\n    \"tslint\": \"^5.9.1\",\n    \"tslint-microsoft-contrib\": \"^5.0.3\",\n    \"typedoc\": \"^0.8.0\",\n    \"typescript\": \"^2.7.2\",\n    \"webpack\": \"^3.11.0\"\n  },\n  \"dependencies\": {\n    \"eventemitter3\": \"^2.0.3\",\n    \"rxjs\": \"^5.5.8\"\n  }\n}\n",
+    "longname": "/Users/copeet/Github/miix-std/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "__docId__": 206,
+    "kind": "testFile",
+    "name": "dist/bundle/clock.test.js",
+    "content": "var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nimport { expect } from 'chai';\nimport * as sinon from 'sinon';\nimport { Clock } from './clock';\ndescribe('Clock', () => {\n    let clock;\n    let timer;\n    beforeEach(() => {\n        const socket = {\n            once(ev, fn) {\n                expect(ev).to.equal('interactivePacket');\n                fn();\n            },\n            call(method) {\n                expect(method).to.equal('getTime');\n                // Simulate 20ms RTT with a clock 100ms ahead of the local.\n                timer.tick(10);\n                const result = Promise.resolve({ time: Date.now() + 100 });\n                timer.tick(10);\n                return result;\n            },\n        };\n        timer = sinon.useFakeTimers();\n        clock = new Clock(socket);\n    });\n    afterEach(() => {\n        timer.restore();\n    });\n    it('syncs time forwards', () => __awaiter(this, void 0, void 0, function* () {\n        expect(yield clock.localToRemote(0)).to.equal(100);\n    }));\n    it('syncs time backwards', () => __awaiter(this, void 0, void 0, function* () {\n        expect(yield clock.remoteToLocal(0)).to.equal(-100);\n    }));\n});\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/bundle/clock.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 207,
+    "kind": "test",
+    "name": "describe0",
+    "testId": 0,
+    "memberof": "dist/bundle/clock.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "dist/bundle/clock.test.js~describe0",
+    "access": null,
+    "description": "Clock",
+    "lineNumber": 12
+  },
+  {
+    "__docId__": 208,
+    "kind": "test",
+    "name": "it1",
+    "testId": 1,
+    "memberof": "dist/bundle/clock.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/bundle/clock.test.js~describe0.it1",
+    "access": null,
+    "description": "syncs time forwards",
+    "lineNumber": 36
+  },
+  {
+    "__docId__": 209,
+    "kind": "test",
+    "name": "it2",
+    "testId": 2,
+    "memberof": "dist/bundle/clock.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/bundle/clock.test.js~describe0.it2",
+    "access": null,
+    "description": "syncs time backwards",
+    "lineNumber": 39
+  },
+  {
+    "__docId__": 210,
+    "kind": "testFile",
+    "name": "dist/rpc.test.js",
+    "content": "var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {\n    return new (P || (P = Promise))(function (resolve, reject) {\n        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }\n        function rejected(value) { try { step(generator[\"throw\"](value)); } catch (e) { reject(e); } }\n        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }\n        step((generator = generator.apply(thisArg, _arguments || [])).next());\n    });\n};\nimport { expect } from 'chai';\nimport { RPC } from './rpc';\ndescribe('RPC', () => {\n    let rpc;\n    let messages;\n    beforeEach(() => {\n        messages = [];\n        rpc = new RPC({ postMessage: (data) => messages.push(data) }, '1.0');\n    });\n    afterEach(() => {\n        rpc.destroy();\n    });\n    const readyUp = () => __awaiter(this, void 0, void 0, function* () {\n        const promise = new Promise(resolve => {\n            rpc.expose('ready', (params) => {\n                expect(params.protocolVersion).to.equal('1.1');\n                resolve();\n            });\n        });\n        window.postMessage({\n            type: 'method',\n            method: 'ready',\n            serviceID: RPC.serviceID,\n            counter: 0,\n            params: {\n                protocolVersion: '1.1',\n            },\n        }, '*');\n        yield promise;\n        expect(rpc.remoteVersion()).to.equal('1.1');\n    });\n    it('should announce itself to the remote when created', () => {\n        expect(messages).to.deep.equal([\n            {\n                type: 'method',\n                serviceID: RPC.serviceID,\n                id: 0,\n                method: 'ready',\n                discard: true,\n                counter: 0,\n                params: { protocolVersion: '1.0' },\n            },\n        ]);\n    });\n    it('should receive ready messages', () => __awaiter(this, void 0, void 0, function* () { return readyUp(); }));\n    it('should reject messages recieved from other services', () => __awaiter(this, void 0, void 0, function* () {\n        yield readyUp();\n        const promise = new Promise(resolve => {\n            rpc.expose('foo', (params) => {\n                expect(params.isInvalid).to.equal(false, 'expected to have rejected wrong service ID');\n                resolve();\n            });\n        });\n        window.postMessage({\n            type: 'method',\n            method: 'foo',\n            serviceID: 'invalid service ID',\n            counter: 1,\n            params: { isInvalid: true },\n        }, '*');\n        window.postMessage({\n            type: 'method',\n            method: 'foo',\n            serviceID: RPC.serviceID,\n            counter: 1,\n            params: { isInvalid: false },\n        }, '*');\n        yield promise;\n    }));\n    it('should reorder messages', () => __awaiter(this, void 0, void 0, function* () {\n        yield readyUp();\n        const sequence = [4, 2, 1, 3];\n        const promise = new Promise(resolve => {\n            let seen = 0;\n            rpc.expose('foo', (params) => {\n                seen++;\n                expect(params.counter).to.equal(seen);\n                if (seen === sequence.length) {\n                    resolve();\n                }\n            });\n        });\n        sequence.forEach(counter => {\n            window.postMessage({\n                type: 'method',\n                method: 'foo',\n                serviceID: RPC.serviceID,\n                counter,\n                params: { counter },\n            }, '*');\n        });\n        yield promise;\n    }));\n});\n",
+    "static": true,
+    "longname": "/Users/copeet/Github/miix-std/dist/rpc.test.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 211,
+    "kind": "test",
+    "name": "describe3",
+    "testId": 3,
+    "memberof": "dist/rpc.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "dist/rpc.test.js~describe3",
+    "access": null,
+    "description": "RPC",
+    "lineNumber": 11
+  },
+  {
+    "__docId__": 212,
+    "kind": "test",
+    "name": "it4",
+    "testId": 4,
+    "memberof": "dist/rpc.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/rpc.test.js~describe3.it4",
+    "access": null,
+    "description": "should announce itself to the remote when created",
+    "lineNumber": 40
+  },
+  {
+    "__docId__": 213,
+    "kind": "test",
+    "name": "it5",
+    "testId": 5,
+    "memberof": "dist/rpc.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/rpc.test.js~describe3.it5",
+    "access": null,
+    "description": "should receive ready messages",
+    "lineNumber": 53
+  },
+  {
+    "__docId__": 214,
+    "kind": "test",
+    "name": "it6",
+    "testId": 6,
+    "memberof": "dist/rpc.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/rpc.test.js~describe3.it6",
+    "access": null,
+    "description": "should reject messages recieved from other services",
+    "lineNumber": 54
+  },
+  {
+    "__docId__": 215,
+    "kind": "test",
+    "name": "it7",
+    "testId": 7,
+    "memberof": "dist/rpc.test.js~describe3",
+    "testDepth": 1,
+    "static": true,
+    "longname": "dist/rpc.test.js~describe3.it7",
+    "access": null,
+    "description": "should reorder messages",
+    "lineNumber": 78
+  }
+]
