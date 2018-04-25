@@ -4,6 +4,8 @@ import { Navigation } from './bundle/navigation';
 import { Socket } from './bundle/socket';
 import { IPackageConfig } from './package';
 import { RPC } from './rpc';
+
+// tslint:disable-next-line
 import './doc';
 
 export * from './rpc';

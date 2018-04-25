@@ -1,4 +1,4 @@
-#  cdk-std
+# cdk-std [![Build Status](https://travis-ci.org/mixer/cdk-std.svg?branch=master)](https://travis-ci.org/mixer/cdk-std)
 
 The `cdk-std` is the standard library for development with Mixer Interactive controls. It provides foundational functionality to communicate from your controls to the Mixer webpage. If you're using the Preact starter, this library is already largely wrapped up for you. If you're using the HTML starter code, you'll be dealing with this more directly.
 

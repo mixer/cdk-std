@@ -23,6 +23,8 @@
     "no-non-null-assertion": false,
     "promise-function-async": false,
     "unified-signatures": false,
+    "no-redundant-jsdoc": false,
+    "no-unnecessary-type-assertion": false,
 
     // Prettier-incompatible or prettier-handled rules
     "align": false,

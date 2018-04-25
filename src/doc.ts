@@ -1,4 +1,3 @@
-
 /**
  * Contains the configuration of your project, in addition to any decorated
  * controls and scenes we detected. Most top-level parameters are sourced

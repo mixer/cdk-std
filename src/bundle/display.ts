@@ -1,10 +1,9 @@
 import { EventEmitter } from 'eventemitter3';
 import { Observable } from 'rxjs/Observable';
 
-import { RPC } from '../rpc';
-import { IVideoPositionList } from '../typings';
 import { MemorizingSubject } from '../reactive';
-import { ISettings, IVideoPositionOptions } from '../typings';
+import { RPC } from '../rpc';
+import { ISettings, IVideoPositionList, IVideoPositionOptions } from '../typings';
 /**
  * Display modified the display of interactive controls.
  */

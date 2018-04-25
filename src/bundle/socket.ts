@@ -19,7 +19,6 @@ import {
 interface IInteractiveRPCMethod<T> extends IRPCMethod<T> {} // tslint:disable-line
 // interface IInteractiveRPCReply<T> extends IRPCReply<T> {} // tslint:disable-line
 
-
 /**
  * The socket wraps the RPC instance and provides an event emitter than
  * fires when various Interactive events come in. These events correspond
