@@ -266,9 +266,19 @@ export class Participant extends EventEmitter {
   public on(event: 'focusOut', handler: () => void): this;
 
   /**
-   * HandleExit is sent if we want to disable exiting with gamepadB
+   * HandleExit is sent if we want to disable exiting with gamepadB for a single input
    */
   public on(event: 'handleExit', handler: () => void): this;
+
+  /**
+   * PreventExit is sent if we want to disable exiting with gamepadB
+   */
+  public on(event: 'preventExit', handler: () => void): this;
+
+  /**
+   * AllowExit is sent if we want to enable exiting with gamepadB
+   */
+  public on(event: 'allowExit', handler: () => void): this;
 
   /**
    * Navigate is fired when using keyboard nav
