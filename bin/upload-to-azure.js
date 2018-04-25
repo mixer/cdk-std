@@ -18,15 +18,18 @@ webpack(wpconfig, err => {
   console.log(' ✔ Compiled library');
 
   console.log(' → Upload to Azure');
-  execSync([
-    'az storage blob upload',
-    '--content-type "text/javascript; charset=utf-8"',
-    '-c lib',
-    '-f ../dist/bundle.min.js',
-    `-n std-${blobVersion}.js`
-  ].join(' '), {
-    cwd: __dirname,
-    env: process.env,
-  });
+  execSync(
+    [
+      'az storage blob upload',
+      '--content-type "text/javascript; charset=utf-8"',
+      '-c lib',
+      '-f ../dist/bundle.min.js',
+      `-n std-mobile-again-${blobVersion}.js`,
+    ].join(' '),
+    {
+      cwd: __dirname,
+      env: process.env,
+    },
+  );
   console.log(' → Uploaded to Azure');
 });

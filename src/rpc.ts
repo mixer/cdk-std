@@ -99,7 +99,7 @@ export class RPC extends EventEmitter {
     private readonly origin: string = '*',
   ) {
     super();
-    window.addEventListener('message', this.listener);
+    document.addEventListener('message', this.listener);
     this.call('ready', { protocolVersion }, false);
   }
 
@@ -179,7 +179,7 @@ export class RPC extends EventEmitter {
    */
   public destroy() {
     this.emit('destroy');
-    window.removeEventListener('message', this.listener);
+    document.removeEventListener('message', this.listener);
   }
 
   /**
@@ -208,7 +208,7 @@ export class RPC extends EventEmitter {
 
   private post<T>(message: RPCMessage<T>) {
     (<RPCMessageWithCounter<T>>message).counter = this.callCounter++;
-    this.target.postMessage(message, this.origin);
+    this.target.postMessage(JSON.stringify(message), this.origin);
   }
 
   private replayQueue() {
@@ -222,8 +222,8 @@ export class RPC extends EventEmitter {
     }
   }
 
-  private listener = (ev: MessageEvent) => {
-    const packet: RPCMessageWithCounter<any> = ev.data;
+  private listener = (ev: any) => {
+    const packet: RPCMessageWithCounter<any> = JSON.parse(ev.data);
     if (!isRPCMessage(packet) || packet.serviceID !== RPC.serviceID) {
       return;
     }

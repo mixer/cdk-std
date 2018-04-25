@@ -1,5 +1,4 @@
 import { EventEmitter } from 'eventemitter3';
-import { Observable } from 'rxjs/Observable';
 
 import { MemorizingSubject } from '../reactive';
 import { RPC } from '../rpc';
@@ -63,7 +62,7 @@ export class Display extends EventEmitter {
    * ```
    * @return {Observable.<IVideoPositionList>}
    */
-  public position(): Observable<IVideoPositionList> {
+  public position(): MemorizingSubject<IVideoPositionList> {
     return this.videoPositionSubj;
   }
 
@@ -71,7 +70,7 @@ export class Display extends EventEmitter {
    * Returns an observable of the current project settings.
    * @return {Observable.<ISettings>}
    */
-  public settings(): Observable<ISettings> {
+  public settings(): MemorizingSubject<ISettings> {
     return this.settingsSubj;
   }
 
