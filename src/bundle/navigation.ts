@@ -13,6 +13,12 @@ const enum Keys {
   View = 208,
 }
 
+const enum ExitHandler {
+  Disabled,
+  Enabled,
+  EnableOnce,
+}
+
 /**
  * The Navigation class provides utilities for dealing with user requests
  * to nevigate around or away from the interactive controls.
@@ -23,7 +29,7 @@ export class Navigation {
     view: false,
   };
 
-  private handlingExit = false;
+  private handlingExit = ExitHandler.Disabled;
 
   constructor(private readonly rpc: RPC) {
     window.addEventListener(
@@ -57,17 +63,33 @@ export class Navigation {
   }
 
   /**
-   * Should be called when the integration wants to intercept an event which
-   * would otherwise cause the Interactive integration to close, such as
-   * the "X" button on the user's controller when watching on their Xbox.
-   * Calling this will cause the next press of "X" to have no effect.
+   * Should be called when the integration wants to intercept a single event
+   * which would otherwise cause the Interactive integration to close, such as
+   * the "B" button on the user's controller when watching on their Xbox.
+   * Calling this will cause the next press of "B" to have no effect.
    */
-  public preventExit(): void {
-    this.handlingExit = true;
+  public handleExit(): void {
+    this.handlingExit = ExitHandler.EnableOnce;
   }
 
+  /**
+   * Should be called when the integration wants to intercept all events which
+   * would otherwise cause the Interactive integration to close, such as
+   * the "B" button on the user's controller when watching on their Xbox.
+   * Calling this will cause the next press of "B" to have no effect.
+   */
+  public preventExit(): void {
+    this.handlingExit = ExitHandler.Enabled;
+  }
+
+  /**
+   * Should be called when the integration wants to re-enable event which
+   * would cause the Interactive integration to close, such as
+   * the "B" button on the user's controller when watching on their Xbox.
+   * Calling this will cause the next press of "B" to have no effect.
+   */
   public allowExit(): void {
-    this.handlingExit = false;
+    this.handlingExit = ExitHandler.Disabled;
   }
 
   /**
@@ -76,9 +98,15 @@ export class Navigation {
    * @param {KeyboardEvent} ev
    */
   private handleKeydown(ev: KeyboardEvent) {
-    if (this.handlingExit && ev.keyCode === Keys.GamepadB) {
+    if (this.handlingExit !== ExitHandler.Disabled && ev.keyCode === Keys.GamepadB) {
       ev.preventDefault();
       ev.stopPropagation();
+
+      if (this.handlingExit === ExitHandler.EnableOnce) {
+        setTimeout(() => {
+          this.handlingExit = ExitHandler.Disabled;
+        })
+      }
       return;
     }
 
