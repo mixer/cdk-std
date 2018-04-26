@@ -105,7 +105,7 @@ export class Navigation {
       if (this.handlingExit === ExitHandler.EnableOnce) {
         setTimeout(() => {
           this.handlingExit = ExitHandler.Disabled;
-        })
+        });
       }
       return;
     }
