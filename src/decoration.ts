@@ -133,6 +133,7 @@ export enum InputKind {
   Duration, // number, duration give in milliseconds           (not inferrable)
   Url, // string, fully qualified with the http prefix         (not inferrable)
   JSON, // any JSON data, allows users to enter raw JSON       (not inferrable)
+  Array, // any array data to support list objects             (not inferrable)
 }
 
 /**
