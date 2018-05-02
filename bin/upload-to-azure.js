@@ -24,7 +24,7 @@ webpack(wpconfig, err => {
       '--content-type "text/javascript; charset=utf-8"',
       '-c lib',
       '-f ../dist/bundle.min.js',
-      `-n std-mobile-app8-${blobVersion}.js`,
+      `-n std-mobile-app9-${blobVersion}.js`,
     ].join(' '),
     {
       cwd: __dirname,
