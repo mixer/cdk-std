@@ -41,6 +41,9 @@ describe('RPC', () => {
   };
 
   it('should announce itself to the remote when created', () => {
+    messages = messages.map(
+      message => (typeof message === 'string' ? JSON.parse(message) : message),
+    );
     expect(messages).to.deep.equal([
       {
         type: 'method',
