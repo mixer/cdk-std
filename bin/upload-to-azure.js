@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 
 const webpack = require('webpack');
-const { execSync } = require('child_process');
+const {
+  execSync
+} = require('child_process');
 const wpconfig = require('../webpack.config');
-const { version } = require('../package.json');
+const {
+  version
+} = require('../package.json');
 
 const [major, minor] = version.split('.');
 const blobVersion = process.argv[2] || `v${major}.${minor}`;
@@ -24,9 +28,8 @@ webpack(wpconfig, err => {
       '--content-type "text/javascript; charset=utf-8"',
       '-c lib',
       '-f ../dist/bundle.min.js',
-      `-n std-mobile-app9-${blobVersion}.js`,
-    ].join(' '),
-    {
+      `-n std-${blobVersion}.js`,
+    ].join(' '), {
       cwd: __dirname,
       env: process.env,
     },
