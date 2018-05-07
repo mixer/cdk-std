@@ -448,6 +448,7 @@ export class Participant extends EventEmitter {
       this.frame.contentWindow,
       '1.0',
       '*',
+      false,
       this.frame.setOnMessage,
       this.frame.removeOnMessage,
     );

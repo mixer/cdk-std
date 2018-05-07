@@ -99,12 +99,12 @@ export class RPC extends EventEmitter {
     private readonly target: IPostable,
     protocolVersion: string,
     private readonly origin: string = '*',
+    isApp?: boolean,
     private readonly setOnMessage?: (fn: (ev: any) => void) => void,
     private readonly removeOnMessage?: (fn: (ev: any) => void) => void,
-    private readonly isApp?: boolean,
   ) {
     super();
-    this.handler = this.isApp ? document : window;
+    this.handler = isApp ? document : window;
     if (this.setOnMessage) {
       this.setOnMessage(this.listener);
     } else {
