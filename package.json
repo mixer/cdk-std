@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm-run-all --parallel --silent test:lint fmt test:unit",
     "test:unit": "karma start test/karma.conf.js --single-run",
-    "test:lint": "tslint -t verbose --project tsconfig.json '{src,test}/**/*.ts'",
+    "test:lint": "tslint -t verbose --project tsconfig.json \"{src,test}/**/*.ts\"",
     "test:watch": "karma start test/karma.conf.js --no-single-run",
     "fmt": "prettier --single-quote --trailing-comma all --parser typescript --print-width 100 --write \"{src,test}/**/*.ts\" && npm run -s test:lint -- --fix",
     "build": "npm-run-all --parallel --silent build:ts build:bundle",

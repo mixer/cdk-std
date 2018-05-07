@@ -68,6 +68,108 @@ function appendQueryString(url: string, qs: object) {
 }
 
 /**
+ * Represents raw data received from the interactive server.
+ */
+interface IIncomingPacket {
+  type: string;
+  method: string;
+  params: any;
+}
+
+interface IScene {
+  sceneID: string;
+  controls: IControl[] | null;
+}
+
+interface IControl {
+  controlID: string;
+  kind: string;
+}
+
+interface IGroup {
+  groupID: string;
+  sceneID: string;
+}
+
+/**
+ * Internally retains data required to acquire a control's kind.
+ * @private
+ */
+class ControlsState extends EventEmitter {
+  private scenes: { [sceneID: string]: { [controlID: string]: string } } = {};
+  private groups: { [groupID: string]: string } = {};
+  private currentGroup = 'default';
+
+  /**
+   * Handles a packet sent from the client.
+   */
+  public handleIncomingPacket({ type, method, params }: IIncomingPacket) {
+    if (type !== 'method') {
+      return;
+    }
+
+    if (method === 'onControlCreate' || method === 'onControlUpdate') {
+      this.cacheScene(params, true);
+    }
+
+    if (method === 'onSceneCreate') {
+      params.scenes.forEach((scene: IScene) => {
+        this.cacheScene(scene);
+      });
+    }
+
+    if (method === 'onSceneDelete') {
+      delete this.scenes[params.sceneID];
+    }
+
+    if (method === 'onGroupCreate' || method === 'onGroupUpdate') {
+      params.groups.forEach((group: IGroup) => {
+        this.cacheGroup(group);
+      });
+    }
+
+    if (method === 'onGroupDelete') {
+      delete this.groups[params.groupID];
+    }
+
+    if (method === 'onParticipantJoin' || method === 'onParticipantUpdate') {
+      this.currentGroup = params.participants[0].groupID;
+    }
+  }
+
+  /**
+   * Gets a control's kind by its control ID.
+   */
+  public getControlKind(controlID: string) {
+    return this.scenes[this.groups[this.currentGroup]][controlID];
+  }
+
+  /**
+   * Caches the control kind for a scene.
+   */
+  private cacheScene(scene: IScene, isPartial = false) {
+    if (!this.scenes[scene.sceneID] || !isPartial) {
+      this.scenes[scene.sceneID] = {};
+    }
+
+    if (!scene.controls) {
+      return;
+    }
+
+    scene.controls.forEach(control => {
+      this.scenes[scene.sceneID][control.controlID] = control.kind;
+    });
+  }
+
+  /**
+   * Caches a group.
+   */
+  private cacheGroup(group: IGroup) {
+    this.groups[group.groupID] = group.sceneID;
+  }
+}
+
+/**
  * Participant is a bridge between the Interactive service and an iframe that
  * shows custom controls. It proxies calls between them and emits events
  * when states change.
@@ -101,6 +203,12 @@ export class Participant extends EventEmitter {
    * Controls state.
    */
   private state = State.Loading;
+
+  /**
+   * Holds a map of control IDs and their kinds outside of the iframe to be
+   * used for analytics.
+   */
+  private controls = new ControlsState();
 
   constructor(private readonly frame: HTMLIFrameElement, settings: ISettings) {
     super();
@@ -285,6 +393,14 @@ export class Participant extends EventEmitter {
    */
   public on(event: 'navigate', handler: () => void): this;
 
+  /**
+   * Input is fired when the client sends an input to the server.
+   */
+  public on(
+    event: 'input',
+    handler: (input: { controlID: string; kind: string; event: string }) => void,
+  ): this;
+
   public on(event: string, handler: (...args: any[]) => void): this {
     super.on(event, handler);
     return this;
@@ -311,6 +427,7 @@ export class Participant extends EventEmitter {
       rpc.call('recieveInteractivePacket', parsed, false);
     });
     this.emit('transmit', parsed);
+    this.controls.handleIncomingPacket(parsed);
   }
 
   /**
@@ -320,7 +437,7 @@ export class Participant extends EventEmitter {
   private attachListeners() {
     this.rpc = new RPC(this.frame.contentWindow!, '1.0');
 
-    this.rpc.expose('sendInteractivePacket', data => {
+    this.rpc.expose<{ method: string; params: any }>('sendInteractivePacket', data => {
       this.websocket!.send(
         JSON.stringify({
           ...data,
@@ -328,6 +445,20 @@ export class Participant extends EventEmitter {
           discard: true,
         }),
       );
+
+      if (data.method !== 'giveInput') {
+        return;
+      }
+
+      const kind = this.controls.getControlKind(data.params.controlID);
+      if (!kind) {
+        return;
+      }
+
+      this.emit('input', {
+        ...data.params,
+        kind,
+      });
     });
 
     this.rpc.expose('controlsReady', () => {
