@@ -34,6 +34,7 @@ export interface IConnectionOptions {
 export interface IInteractiveFrame {
   src: string;
   contentWindow: IPostable;
+  isApp?: boolean;
   addEventListener(event: string, listener: (ev: any) => void): void;
   removeEventListener(event: string, listener: (ev: any) => void): void;
   setOnMessage?(listener: (ev: any) => void): void;
@@ -448,7 +449,7 @@ export class Participant extends EventEmitter {
       this.frame.contentWindow,
       '1.0',
       '*',
-      false,
+      this.frame.isApp,
       this.frame.setOnMessage,
       this.frame.removeOnMessage,
     );

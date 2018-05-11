@@ -83,7 +83,6 @@ export class RPC extends EventEmitter {
   private lastSequentialCall = -1;
   private remoteProtocolVersion: string | undefined;
   private handler: Window | Document = window;
-  private dataIsObject: boolean = false;
 
   /**
    * Creates a new RPC instance. Note: you should use the `rpc` singleton,
@@ -99,12 +98,12 @@ export class RPC extends EventEmitter {
     private readonly target: IPostable,
     protocolVersion: string,
     private readonly origin: string = '*',
-    isApp?: boolean,
+    private readonly isApp?: boolean,
     private readonly setOnMessage?: (fn: (ev: any) => void) => void,
     private readonly removeOnMessage?: (fn: (ev: any) => void) => void,
   ) {
     super();
-    this.handler = isApp ? document : window;
+    this.handler = this.isApp ? document : window;
     if (this.setOnMessage) {
       this.setOnMessage(this.listener);
     } else {
@@ -222,7 +221,7 @@ export class RPC extends EventEmitter {
 
   private post<T>(message: RPCMessage<T>) {
     (<RPCMessageWithCounter<T>>message).counter = this.callCounter++;
-    this.target.postMessage(this.dataIsObject ? message : JSON.stringify(message), this.origin);
+    this.target.postMessage(this.isApp ? JSON.stringify(message) : message, this.origin);
   }
 
   private replayQueue() {
@@ -239,8 +238,7 @@ export class RPC extends EventEmitter {
   private listener = (ev: any) => {
     // If we got data that wasn't a string, the client is outdated,
     // and we need to send data back.
-    this.dataIsObject = !(typeof ev.data === 'string');
-    const packet: RPCMessageWithCounter<any> = this.dataIsObject ? ev.data : JSON.parse(ev.data);
+    const packet: RPCMessageWithCounter<any> = this.isApp ? JSON.parse(ev.data) : ev.data;
     if (!isRPCMessage(packet) || packet.serviceID !== RPC.serviceID) {
       return;
     }
