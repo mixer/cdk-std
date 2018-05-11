@@ -103,7 +103,15 @@ export class RPC extends EventEmitter {
     private readonly removeOnMessage?: (fn: (ev: any) => void) => void,
   ) {
     super();
-    this.handler = this.isApp ? document : window;
+    if (this.isApp) {
+      try {
+        this.handler = document;
+      } catch (error) {
+        this.handler = window;
+      }
+    } else {
+      this.handler = window;
+    }
     if (this.setOnMessage) {
       this.setOnMessage(this.listener);
     } else {

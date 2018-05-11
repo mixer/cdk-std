@@ -529,7 +529,13 @@ export class Participant extends EventEmitter {
    */
   private handleWebsocketError(ev: Event) {
     // tslint:disable-next-line
-    fetch(this.websocket!.url.replace(/^ws/, 'http'))
+    if (!this.websocket || !this.websocket.url) {
+      this.state = State.Closed;
+      this.destroy();
+      return;
+    }
+
+    fetch(this.websocket.url.replace(/^ws/, 'http'))
       .then(res => {
         return res.text().then(message => {
           this.emit('close', {
@@ -540,6 +546,10 @@ export class Participant extends EventEmitter {
           });
         });
       })
+      .then(() => {
+        this.state = State.Closed;
+        this.destroy();
+      })
       .catch(err => {
         this.emit('close', {
           code: -1,
@@ -547,10 +557,6 @@ export class Participant extends EventEmitter {
           expected: this.state === State.Closing,
           ev,
         });
-      })
-      .then(() => {
-        this.state = State.Closed;
-        this.destroy();
       });
   }
 
