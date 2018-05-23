@@ -7,42 +7,42 @@ export interface IVideoPositionOptions {
    * Position of the video on screen from the left-hand edge of the container.
    * If omitted, any previous setting is cleared
    */
-  left?: number;
+  left?: number | string;
 
   /**
    * Position of the video on screen from the top edge of the container.
    * If omitted, any previous setting is cleared
    */
-  top?: number;
+  top?: number | string;
 
   /**
    * Position of the video on screen from the right-hand edge of the container.
    * If omitted, any previous setting is cleared
    */
-  right?: number;
+  right?: number | string;
 
   /**
    * Position of the video on screen from the bottom edge of the container.
    * If omitted, any previous setting is cleared
    */
-  bottom?: number;
+  bottom?: number | string;
 
   /**
-   * Width of the video on screen in pixels.
+   * Width of the video on screen or a CSS position attribute.
    * If omitted, any previous setting is cleared
    */
-  width?: number;
+  width?: number | string;
 
   /**
-   * Height of the video on screen in pixels
+   * Height of the video on screen or a CSS position attribute.
    * If omitted, any previous setting is cleared
    */
-  height?: number;
+  height?: number | string;
 
   /**
    * Duration of the movement easing in milliseconds. Defaults to 0.
    */
-  duration?: number;
+  duration?: number | string;
 
   /**
    * CSS easing function. Defaults to 'linear'.

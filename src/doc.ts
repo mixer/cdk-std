@@ -53,16 +53,18 @@
  *
  * @typedef {object} IVideoPosition
  * @property {number} channelId The channel this video belongs to.
- * @property {number} bottom The video's offset from the bottom of
- * the container in pixels.
- * @property {number} top The video's offset from the top of
- * the container in pixels.
- * @property {number} left The video's offset from the left edge of
- * the container in pixels.
- * @property {number} right The video's offset from the right edge of
- * the container in pixels.
- * @property {number} height The video's height in pixels.
- * @property {number} width The video's width in pixels.
+ * @property {number | string} bottom The video's offset from the bottom of
+ * the container in pixels or a css position.
+ * @property {number | string} top The video's offset from the top of
+ * the container in pixels or a css position.
+ * @property {number | string} left The video's offset from the left edge of
+ * the container in pixels or a css position.
+ * @property {number | string} right The video's offset from the right edge of
+ * the container in pixels or a css position.
+ * @property {number | string} height The video's height in pixels
+ * or a css position.
+ * @property {number | string} width The video's width in pixels
+ * or a css position.
  */
 
 /**
