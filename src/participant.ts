@@ -525,39 +525,17 @@ export class Participant extends EventEmitter {
   /**
    * handleWebsocketError is called when the websocket emits an `error`. This
    * is generally called when the connection is terminated before a socket
-   * connection is established. We want to go back and get the error code/body.
+   * connection is established.
    */
   private handleWebsocketError(ev: Event) {
-    // tslint:disable-next-line
-    if (!this.websocket || !this.websocket.url) {
-      this.state = State.Closed;
-      this.destroy();
-      return;
-    }
-
-    fetch(this.websocket.url.replace(/^ws/, 'http'))
-      .then(res => {
-        return res.text().then(message => {
-          this.emit('close', {
-            message,
-            code: res.status,
-            expected: this.state === State.Closing,
-            ev,
-          });
-        });
-      })
-      .then(() => {
-        this.state = State.Closed;
-        this.destroy();
-      })
-      .catch(err => {
-        this.emit('close', {
-          code: -1,
-          message: err.message,
-          expected: this.state === State.Closing,
-          ev,
-        });
-      });
+    this.emit('close', {
+      code: -1,
+      message: 'No websocket or websocket url',
+      expected: this.state === State.Closing,
+      ev,
+    });
+    this.state = State.Closed;
+    this.destroy();
   }
 
   /**
