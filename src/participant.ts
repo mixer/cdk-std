@@ -432,12 +432,19 @@ export class Participant extends EventEmitter {
    * and emits a `transmit` event.
    */
   private sendInteractive(data: string) {
-    const parsed = JSON.parse(data);
+    let parsed: IIncomingPacket | IIncomingPacket[] = JSON.parse(data);
+    if (!Array.isArray(parsed)) {
+      parsed = [parsed];
+    }
+
     this.runOnRpc(rpc => {
-      rpc.call('recieveInteractivePacket', parsed, false);
+      (<IIncomingPacket[]> parsed).forEach(p => {
+        rpc.call('recieveInteractivePacket', p, false);
+        this.emit('transmit', p);
+        this.controls.handleIncomingPacket(p);
+      });
     });
-    this.emit('transmit', parsed);
-    this.controls.handleIncomingPacket(parsed);
+
   }
 
   /**
