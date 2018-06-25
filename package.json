@@ -1,6 +1,6 @@
 {
   "name": "@mixer/cdk-std",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Standard library for Mixer Interactive controls",
   "main": "dist/bundle.min.js",
   "typings": "dist/bundle.d.ts",
