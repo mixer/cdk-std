@@ -438,13 +438,12 @@ export class Participant extends EventEmitter {
     }
 
     this.runOnRpc(rpc => {
-      (<IIncomingPacket[]> parsed).forEach(p => {
+      (<IIncomingPacket[]>parsed).forEach(p => {
         rpc.call('recieveInteractivePacket', p, false);
         this.emit('transmit', p);
         this.controls.handleIncomingPacket(p);
       });
     });
-
   }
 
   /**

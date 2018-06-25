@@ -481,5 +481,9 @@ export enum ErrorCode {
   AppNoInteractiveVersion,
   AppExistingInteractiveSession,
   AppChannelNotOnline,
+  AppNoInteractiveBundle,
+  AppBadBroadcastScope,
+  AppNoAccess,
+  AppUnauthedTransaction,
   AppBadUserInput = 4999,
 }
