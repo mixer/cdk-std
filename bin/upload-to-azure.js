@@ -13,9 +13,9 @@ const [major, minor] = version.split('.');
 const blobVersion = process.argv[2] || `v${major}.${minor}`;
 
 console.log(` → Compiling library ${blobVersion}`);
-webpack(wpconfig, err => {
-  if (err) {
-    console.error(err);
+webpack(wpconfig, (err, stats) => {
+  if (err || (stats.compilation.errors && stats.compilation.errors.length)) {
+    console.error(err ? err : stats.compilation.errors);
     return process.exit(1);
   }
 

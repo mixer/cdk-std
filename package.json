@@ -14,7 +14,7 @@
     "build:ts": "tsc",
     "build:bundle": "webpack",
     "build:doc": "rimraf dist && tsc -m es2015 -t es6 --moduleResolution node && esdoc -c esdoc.json",
-    "publish:azure": "node bin/upload-to-azure.js",
+    "publish:azure": "npm run test && node bin/upload-to-azure.js",
     "prepare": "npm run -s build"
   },
   "repository": {
