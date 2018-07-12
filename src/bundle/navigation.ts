@@ -135,7 +135,9 @@ export class Navigation {
       return;
     }
 
-    this.rpc.call('navigate', {}, false);
+    if (this.handlingExit === ExitHandler.Disabled) {
+      this.rpc.call('navigate', {}, false);
+    }
   }
 
   /**
