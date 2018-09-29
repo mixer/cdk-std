@@ -128,18 +128,21 @@ export class RPC extends EventEmitter {
         return;
       }
 
-      // tslint:disable-next-line
-      Promise.resolve(handler(data.params)).then(result => {
-        const packet: IRPCReply<any> = {
-          type: 'reply',
-          serviceID: RPC.serviceID,
-          id: data.id,
-          result,
-        };
+      const packet: IRPCReply<any> = {
+        type: 'reply',
+        serviceID: RPC.serviceID,
+        id: data.id,
+        result: null,
+      };
 
-        this.emit('sendReply', packet);
-        this.post(packet);
-      });
+      Promise.resolve()
+        .then(() => handler(data.params))
+        .then(r => packet.result = r)
+        .catch(e => packet.error = e)
+        .then(() => {
+          this.emit('sendReply', packet);
+          this.post(packet);
+        });
     });
   }
 
@@ -284,7 +287,7 @@ export class RPC extends EventEmitter {
           type: 'reply',
           serviceID: RPC.serviceID,
           id: packet.id,
-          error: { code: 4003, message: 'Unknown method name' },
+          error: { code: 4003, message: `Unknown method name: ${packet.method}` },
           result: null,
         });
         break;
