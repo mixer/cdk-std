@@ -137,12 +137,13 @@ export class RPC extends EventEmitter {
 
       Promise.resolve()
         .then(() => handler(data.params))
-        .then(r => packet.result = r)
-        .catch(e => packet.error = e)
+        .then(r => (packet.result = r))
+        .catch(e => (packet.error = e))
         .then(() => {
           this.emit('sendReply', packet);
           this.post(packet);
-        });
+        })
+        .catch();
     });
   }
 
