@@ -289,6 +289,7 @@ export class Participant extends EventEmitter {
     method: 'verificationChallenge',
     fn: (params: { challenge: string }) => Promise<string>,
   ): this;
+  public add(method: string, fn: (params: any) => any): this;
   public add(method: string, fn: (params: any) => any): this {
     this.runOnRpc(rpc => {
       rpc.expose(method, fn);
