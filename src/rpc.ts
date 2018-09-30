@@ -288,7 +288,7 @@ export class RPC extends EventEmitter {
           type: 'reply',
           serviceID: RPC.serviceID,
           id: packet.id,
-          error: { code: 4003, message: `Unknown method name: ${packet.method}` },
+          error: { code: 4003, message: `Unknown method name ${packet.method}` },
           result: null,
         });
         break;
