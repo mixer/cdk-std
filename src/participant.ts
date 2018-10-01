@@ -220,6 +220,11 @@ export class Participant extends EventEmitter {
    */
   private controls = new ControlsState();
 
+  /**
+   * Holds the list of exposed methods via RPC
+   */
+  private rpcExposedMethods: string[] = [];
+
   constructor(private readonly frame: IInteractiveFrame, settings: ISettings) {
     super();
     this.runOnRpc(rpc => {
@@ -284,6 +289,7 @@ export class Participant extends EventEmitter {
     method: 'verificationChallenge',
     fn: (params: { challenge: string }) => Promise<string>,
   ): this;
+  public add(method: string, fn: (params: any) => any): this;
   public add(method: string, fn: (params: any) => any): this {
     this.runOnRpc(rpc => {
       rpc.expose(method, fn);
@@ -411,7 +417,12 @@ export class Participant extends EventEmitter {
     handler: (input: { controlID: string; kind: string; event: string }) => void,
   ): this;
 
+  public on(event: string, handler: (...args: any[]) => void): this;
   public on(event: string, handler: (...args: any[]) => void): this {
+    this.exposeRPC(event, (...params: any[]) => {
+      params.splice(0, 0, event);
+      this.emit.apply(this, params);
+    });
     super.on(event, handler);
     return this;
   }
@@ -460,7 +471,7 @@ export class Participant extends EventEmitter {
       this.frame.removeOnMessage,
     );
 
-    this.rpc.expose<{ method: string; params: any }>('sendInteractivePacket', data => {
+    this.exposeRPC<{ method: string; params: any }>('sendInteractivePacket', data => {
       this.websocket!.send(
         JSON.stringify({
           ...data,
@@ -484,7 +495,7 @@ export class Participant extends EventEmitter {
       });
     });
 
-    this.rpc.expose('controlsReady', () => {
+    this.exposeRPC('controlsReady', () => {
       if (this.state !== State.Loading) {
         return;
       }
@@ -497,35 +508,56 @@ export class Participant extends EventEmitter {
       this.emit('loaded');
     });
 
-    this.rpc.expose('maximize', (params: { maximized: boolean; message?: string }) => {
+    this.exposeRPC('maximize', (params: { maximized: boolean; message?: string }) => {
       this.emit('maximize', params.maximized, params.message);
     });
 
-    this.rpc.expose('moveVideo', (options: IVideoPositionOptions) => {
+    this.exposeRPC('moveVideo', (options: IVideoPositionOptions) => {
       this.emit('moveVideo', options);
     });
 
-    this.rpc.expose('unloading', () => {
+    this.exposeRPC('unloading', () => {
       this.emit('unload');
     });
 
-    this.rpc.expose('log', params => {
+    this.exposeRPC('log', params => {
       this.emit('log', params);
     });
 
-    this.rpc.expose('focusOut', () => {
+    this.exposeRPC('focusOut', () => {
       this.emit('focusOut');
     });
 
-    this.rpc.expose('handleExit', () => {
+    this.exposeRPC('handleExit', () => {
       this.emit('handleExit');
     });
 
-    this.rpc.expose('navigate', () => {
+    this.exposeRPC('navigate', () => {
       this.emit('navigate');
     });
 
     this.rpc.call('resendReady', {}, false);
+  }
+
+  /**
+   * Exposes an RPC event handler. If the RPC object is not yet created the
+   * method will be queued and added later.
+   * @param event The event to expose a handler for
+   * @param handler The event handler
+   */
+  private exposeRPC<T>(event: string, handler: (arg: T) => void): void;
+  private exposeRPC(event: string, handler: (...args: any[]) => void): void {
+    const register = (rpc: RPC) => {
+      if (this.rpcExposedMethods.indexOf(event) === -1) {
+        rpc.expose(event, handler);
+      }
+    };
+
+    if (this.rpc) {
+      register(this.rpc);
+    } else {
+      this.runOnRpc(register);
+    }
   }
 
   /**
