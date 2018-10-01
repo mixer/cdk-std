@@ -135,6 +135,7 @@ export class RPC extends EventEmitter {
         result: null,
       };
 
+      // tslint:disable-next-line:no-floating-promises
       Promise.resolve()
         .then(() => handler(data.params))
         .then(r => (packet.result = r))
@@ -142,8 +143,7 @@ export class RPC extends EventEmitter {
         .then(() => {
           this.emit('sendReply', packet);
           this.post(packet);
-        })
-        .catch();
+        });
     });
   }
 
