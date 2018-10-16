@@ -1,6 +1,9 @@
 import { EventEmitter } from 'eventemitter3';
 import { stringify } from 'querystring';
 
+import { ControlsState } from './ControlState';
+import { InterceptorManager } from './intercept';
+import { IIncomingPacket } from './interfaces';
 import { IPostable, RPC, RPCError } from './rpc';
 import { ErrorCode, ILogEntry, ISettings, IStateDump, IVideoPositionOptions } from './typings';
 
@@ -78,108 +81,6 @@ function appendQueryString(url: string, qs: object) {
 }
 
 /**
- * Represents raw data received from the interactive server.
- */
-interface IIncomingPacket {
-  type: string;
-  method: string;
-  params: any;
-}
-
-interface IScene {
-  sceneID: string;
-  controls: IControl[] | null;
-}
-
-interface IControl {
-  controlID: string;
-  kind: string;
-}
-
-interface IGroup {
-  groupID: string;
-  sceneID: string;
-}
-
-/**
- * Internally retains data required to acquire a control's kind.
- * @private
- */
-class ControlsState extends EventEmitter {
-  private scenes: { [sceneID: string]: { [controlID: string]: string } } = {};
-  private groups: { [groupID: string]: string } = {};
-  private currentGroup = 'default';
-
-  /**
-   * Handles a packet sent from the client.
-   */
-  public handleIncomingPacket({ type, method, params }: IIncomingPacket) {
-    if (type !== 'method') {
-      return;
-    }
-
-    if (method === 'onControlCreate' || method === 'onControlUpdate') {
-      this.cacheScene(params, true);
-    }
-
-    if (method === 'onSceneCreate') {
-      params.scenes.forEach((scene: IScene) => {
-        this.cacheScene(scene);
-      });
-    }
-
-    if (method === 'onSceneDelete') {
-      delete this.scenes[params.sceneID];
-    }
-
-    if (method === 'onGroupCreate' || method === 'onGroupUpdate') {
-      params.groups.forEach((group: IGroup) => {
-        this.cacheGroup(group);
-      });
-    }
-
-    if (method === 'onGroupDelete') {
-      delete this.groups[params.groupID];
-    }
-
-    if (method === 'onParticipantJoin' || method === 'onParticipantUpdate') {
-      this.currentGroup = params.participants[0].groupID;
-    }
-  }
-
-  /**
-   * Gets a control's kind by its control ID.
-   */
-  public getControlKind(controlID: string) {
-    return this.scenes[this.groups[this.currentGroup]][controlID];
-  }
-
-  /**
-   * Caches the control kind for a scene.
-   */
-  private cacheScene(scene: IScene, isPartial = false) {
-    if (!this.scenes[scene.sceneID] || !isPartial) {
-      this.scenes[scene.sceneID] = {};
-    }
-
-    if (!scene.controls) {
-      return;
-    }
-
-    scene.controls.forEach(control => {
-      this.scenes[scene.sceneID][control.controlID] = control.kind;
-    });
-  }
-
-  /**
-   * Caches a group.
-   */
-  private cacheGroup(group: IGroup) {
-    this.groups[group.groupID] = group.sceneID;
-  }
-}
-
-/**
  * Participant is a bridge between the Interactive service and an iframe that
  * shows custom controls. It proxies calls between them and emits events
  * when states change.
@@ -191,8 +92,10 @@ export class Participant extends EventEmitter {
    */
   public static readonly protocolVersion = '2.0';
 
+  public interceptor = new InterceptorManager();
+
   /**
-   * Websocket connecte
+   * Websocket connected
    */
   private websocket?: WebSocket;
 
@@ -420,8 +323,13 @@ export class Participant extends EventEmitter {
   public on(event: string, handler: (...args: any[]) => void): this;
   public on(event: string, handler: (...args: any[]) => void): this {
     this.exposeRPC(event, (...params: any[]) => {
-      params.splice(0, 0, event);
-      this.emit.apply(this, params);
+      this.interceptor.run(event, params).then(res => {
+        if (!res) {
+          return;
+        }
+        params.splice(0, 0, event);
+        this.emit.apply(this, params);
+      });
     });
     super.on(event, handler);
     return this;
@@ -436,6 +344,13 @@ export class Participant extends EventEmitter {
     } else {
       fn(this.rpc!);
     }
+  }
+
+  public getControlKind(controlId: string) {
+    return this.controls.getControlKind(controlId);
+  }
+  public getControlCost(controlId: string) {
+    return this.controls.getControlCost(controlId);
   }
 
   /**
@@ -457,6 +372,17 @@ export class Participant extends EventEmitter {
     });
   }
 
+  private giveInputHandler(data: { method: string; params: any }) {
+    const kind = this.controls.getControlKind(data.params.controlID);
+    if (!kind) {
+      return;
+    }
+
+    this.emit('input', {
+      ...data.params,
+      kind,
+    });
+  }
   /**
    * attachListeners is called once the frame contents load to boot up
    * the RPC system.
@@ -472,26 +398,20 @@ export class Participant extends EventEmitter {
     );
 
     this.exposeRPC<{ method: string; params: any }>('sendInteractivePacket', data => {
-      this.websocket!.send(
-        JSON.stringify({
-          ...data,
-          type: 'method',
-          discard: true,
-        }),
-      );
-
-      if (data.method !== 'giveInput') {
-        return;
-      }
-
-      const kind = this.controls.getControlKind(data.params.controlID);
-      if (!kind) {
-        return;
-      }
-
-      this.emit('input', {
-        ...data.params,
-        kind,
+      this.interceptor.run(data.method, data.params).then(res => {
+        if (!res) {
+          return;
+        }
+        this.websocket!.send(
+          JSON.stringify({
+            ...data,
+            type: 'method',
+            discard: true,
+          }),
+        );
+        if (data.method === 'giveInput') {
+          this.giveInputHandler(data);
+        }
       });
     });
 
