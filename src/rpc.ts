@@ -59,6 +59,9 @@ export function objToError(obj: { code: number; message: string; path?: string[]
  * in tests.
  */
 export interface IPostable {
+  location?: {
+    replace(address: string): void;
+  }
   postMessage(data: any, targetOrigin: string): void;
 }
 
