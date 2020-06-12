@@ -256,7 +256,8 @@ export class Participant extends EventEmitter {
     };
 
     const ws = (this.websocket = new WebSocket(appendQueryString(options.socketAddress, qs)));
-    this.frame.src = options.contentAddress;
+    // resolves issue with FireFox storing iframe address assignment in browswer history
+    this.frame.contentWindow.location!.replace(options.contentAddress);
     this.frame.addEventListener('load', this.onFrameLoad);
 
     ws.addEventListener('message', data => {
